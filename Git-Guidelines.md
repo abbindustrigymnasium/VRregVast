@@ -13,6 +13,6 @@
 
 ## Push
 
-1. Se till att koden fungerar som den ska, utan några buggar.
+1. Se till att koden fungerar som den ska, utan några buggar
 2. Skapa en pull-request från din branch till main
 3. Om den inte blir godkänd, åtgärda problemet och försök igen
