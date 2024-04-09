@@ -8,7 +8,7 @@
 ## Commits
 
 1. Gör en commit efter varje fungerande förändring
-2. En commit bör endast innehålla en eller ett par filer, som påverkar varandra, t.ex. en html-fil och en css-fil.
+2. En commit bör endast innehålla en eller ett par filer, som påverkar varandra, t.ex. en html-fil och en css-fil
 3. Varje commit borde ha ett tydligt commit-message som förklarar förändringen.
 
 ## Push
