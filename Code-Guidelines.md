@@ -1,4 +1,4 @@
-### 1. Använd _camel_case_ för variabler och _Title_Case_ för funktioner
+### 1. Använd _snake_case_ för variabler och _Title_Case_ för funktioner
 
 ```csharp
 // Lättare att läsa (snake_case)
