@@ -1,9 +1,10 @@
 ## Git
 
 1. Varje branch ska bara innehålla en förändring och vara namnsatt för den, t.ex. _player_movement_
-2. Jobba inte på en förändring som kräver kod som någon annan håller på att utveckla
-3. Jobba inte på samma branch som någon annan
-4. Om du ser ett problem som inte har med din utveckling att göra, skapa ett issue för det.
+2. Branches borde namnges enligt samma standard som variabler (snake_case)
+3. Jobba inte på en förändring som kräver kod som någon annan håller på att utveckla
+4. Jobba inte på samma branch som någon annan
+5. Om du ser ett problem som inte har med din utveckling att göra, skapa ett issue för det.
 
 ## Commits
 
