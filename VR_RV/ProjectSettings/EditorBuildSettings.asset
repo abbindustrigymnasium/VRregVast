@@ -5,7 +5,12 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scoring System/vr.unity
+    guid: 5747d6550dfba7f4dbb0a8c1af514803
+  m_configObjects:
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 7877a627d3bae3148bc7ea90e6a5c16a,
+      type: 2}
