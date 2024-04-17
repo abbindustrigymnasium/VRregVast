@@ -14,7 +14,7 @@ EditorBuildSettings:
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2f0392a9bd0a7ac4290d91a40a9724b3,
       type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 3bfde58bd2454554caf99b9ebc9efd0f,
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 6a28102bfe326d348be7930b84361e6d,
       type: 2}
-    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: b457f0211eaaf5647955bcf0c48b36c7,
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: cd38b304dd0a0b445906b8f57a2f95c8,
       type: 2}
