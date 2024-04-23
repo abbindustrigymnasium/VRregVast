@@ -1,0 +1,46 @@
+/*
+ * This script should be added to each object that will be interacted by the hands
+ *
+ * Written by Hampus Fridholm
+ *
+ * 2024-04-23
+ */
+
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
+
+public class OutlineReceiver : MonoBehaviour
+{
+  private GameObject         outlineObject;
+  private MeshRenderer       outlineRenderer;
+
+  /*
+   * Create an outline object for the hands to add outlines to
+   */
+  void Awake()
+  {
+    // Create a new GameObject to display the outline material
+    outlineObject = new GameObject("Outline");
+    outlineObject.transform.SetParent(transform, false);
+
+    // Copy the MeshFilter from the original object
+    MeshFilter meshFilter = outlineObject.AddComponent<MeshFilter>();
+    meshFilter.sharedMesh = GetComponent<MeshFilter>().sharedMesh;
+
+    // Add a MeshRenderer and apply the outline material
+    outlineRenderer = outlineObject.AddComponent<MeshRenderer>();
+
+    // Initially disable the outline object
+    outlineObject.SetActive(false);
+  }
+
+  /*
+   * Destory the created outline object
+   */
+  void onDestory()
+  {
+    // Add code here if you want :D
+  }
+}
