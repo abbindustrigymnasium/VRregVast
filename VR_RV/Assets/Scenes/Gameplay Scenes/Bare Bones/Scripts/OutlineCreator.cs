@@ -14,25 +14,25 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class OutlineCreator : MonoBehaviour
 {
   // This is the type of outline you want to give all nerby objects
-  public  Material           outlineMaterial;
-  private XRDirectInteractor directInteractor;
+  public  Material           outline_material;
+  private XRDirectInteractor direct_interactor;
 
-  private List<GameObject> outlineObjects = new List<GameObject>();
+  private List<GameObject> outline_objects = new List<GameObject>();
 
   /*
    * Add listeners to hover and select events
    */
   void Awake()
   {
-    directInteractor = GetComponent<XRDirectInteractor>();
+    direct_interactor = GetComponent<XRDirectInteractor>();
 
     // Add listeners to hover events
-    directInteractor.hoverEntered.AddListener(OnHoverEnter);
-    directInteractor.hoverExited.AddListener(OnHoverExit);
+    direct_interactor.hoverEntered.AddListener(On_Hover_Enter);
+    direct_interactor.hoverExited.AddListener(On_Hover_Exit);
 
     // Add listeners to select events
-    directInteractor.selectEntered.AddListener(OnSelectEnter);
-    directInteractor.selectExited.AddListener(OnSelectExit);
+    direct_interactor.selectEntered.AddListener(On_Select_Enter);
+    direct_interactor.selectExited.AddListener(On_Select_Exit);
   }
 
   /*
@@ -41,73 +41,73 @@ public class OutlineCreator : MonoBehaviour
   void onDestroy()
   {
     // Remove listeners to hover events
-    directInteractor.hoverEntered.RemoveListener(OnHoverEnter);
-    directInteractor.hoverExited.RemoveListener(OnHoverExit);
+    direct_interactor.hoverEntered.RemoveListener(On_Hover_Enter);
+    direct_interactor.hoverExited.RemoveListener(On_Hover_Exit);
 
     // Remove listeners to select events
-    directInteractor.selectEntered.RemoveListener(OnSelectEnter);
-    directInteractor.selectExited.RemoveListener(OnSelectExit);
+    direct_interactor.selectEntered.RemoveListener(On_Select_Enter);
+    direct_interactor.selectExited.RemoveListener(On_Select_Exit);
   }
 
   /*
    * Get outline object from interactable object
    *
    * PARAMS
-   * - IXRInteractable interactableObject | The interactable object from XR direct interactor
+   * - IXRInteractable interactable_object | The interactable object from XR direct interactor
    *
-   * RETURN (GameObject outlineObject)
+   * RETURN (GameObject outline_object)
    */
-  private GameObject GetOutlineObject(IXRInteractable interactableObject)
+  private GameObject Get_Outline_Object(IXRInteractable interactable_object)
   {
-    return interactableObject.transform.Find("Outline").gameObject;
+    return interactable_object.transform.Find("Outline").gameObject;
   }
 
   /*
    * Add outline material to outline object mesh renderer
    *
    * PARAMS
-   * - GameObject outlineObject | The outline object to add the material to
+   * - GameObject outline_object | The outline object to add the material to
    */
-  private void AddOutlineMaterial(GameObject outlineObject)
+  private void Add_Outline_Material(GameObject outline_object)
   {
-    MeshRenderer outlineRenderer = outlineObject.GetComponent<MeshRenderer>();
+    MeshRenderer outline_renderer = outline_object.GetComponent<MeshRenderer>();
 
-    outlineRenderer.material = outlineMaterial;
+    outline_renderer.material = outline_material;
   }
 
   /*
    * Inactivate all outlines around nerby outline objects
    */
-  private void InactivateAllOutlines()
+  private void Inactivate_All_Outlines()
   {
-    foreach(GameObject outlineObject in outlineObjects)
+    foreach(GameObject outline_object in outline_objects)
     {
-      outlineObject.SetActive(false);
+      outline_object.SetActive(false);
     }
   }
 
   /*
    * This method is called when the hand selects an object
    */
-  private void OnSelectEnter(SelectEnterEventArgs args)
+  private void On_Select_Enter(SelectEnterEventArgs args)
   {
-    InactivateAllOutlines();
+    Inactivate_All_Outlines();
 
     // Remove all cached outline objects
-    outlineObjects.Clear();
+    outline_objects.Clear();
   }
 
   /*
    * Add material to the inputted outline object and add it to the list
    *
    * PARAMS
-   * - GameObject outlineObject | The outline object to add
+   * - GameObject outline_object | The outline object to add
    */
-  private void AddOutlineObject(GameObject outlineObject)
+  private void Add_Outline_Object(GameObject outline_object)
   {
-    AddOutlineMaterial(outlineObject);
+    Add_Outline_Material(outline_object);
 
-    outlineObjects.Add(outlineObject);
+    outline_objects.Add(outline_object);
   }
 
   /*
@@ -117,36 +117,36 @@ public class OutlineCreator : MonoBehaviour
    *
    * Therefor you should add the object emidiatly to the outline objects list
    */
-  private void OnSelectExit(SelectExitEventArgs args)
+  private void On_Select_Exit(SelectExitEventArgs args)
   {
-    GameObject outlineObject = GetOutlineObject(args.interactableObject);
+    GameObject outline_object = Get_Outline_Object(args.interactableObject);
 
-    AddOutlineObject(outlineObject);
+    Add_Outline_Object(outline_object);
   }
 
   /*
    * This method is called when the hand is nerby an object and can pick it up
    */
-  private void OnHoverEnter(HoverEnterEventArgs args)
+  private void On_Hover_Enter(HoverEnterEventArgs args)
   {
-    GameObject outlineObject = GetOutlineObject(args.interactableObject);
+    GameObject outline_object = Get_Outline_Object(args.interactableObject);
 
-    AddOutlineObject(outlineObject);
+    Add_Outline_Object(outline_object);
   }
 
   /*
    * Get the index of the specified outline object in the list
    *
    * PARAMS
-   * - GameObject outlineObject | The specified outline object
+   * - GameObject outline_object | The specified outline object
    *
    * RETURN (int index)
    */
-  private int GetOutlineObjectIndex(GameObject outlineObject)
+  private int Get_Outline_Object_Index(GameObject outline_object)
   {
-    for(int index = 0; index < outlineObjects.Count; index++)
+    for(int index = 0; index < outline_objects.Count; index++)
     {
-      if(GameObject.ReferenceEquals(outlineObjects[index], outlineObject))
+      if(GameObject.ReferenceEquals(outline_objects[index], outline_object))
       {
         return index;
       }
@@ -158,19 +158,19 @@ public class OutlineCreator : MonoBehaviour
    * Remove the specified outline object from the list and inactivate it
    *
    * PARAMS
-   * - GameObject outlineObject | The outline object to remove
+   * - GameObject outline_object | The outline object to remove
    *
    * RETURN (bool result)
    */
-  private bool RemoveOutlineObject(GameObject outlineObject)
+  private bool Remove_Outline_Object(GameObject outline_object)
   {
-    int index = GetOutlineObjectIndex(outlineObject);
+    int index = Get_Outline_Object_Index(outline_object);
 
     if(index == -1) return false;
 
-    outlineObject.SetActive(false);
+    outline_object.SetActive(false);
 
-    outlineObjects.RemoveAt(index);
+    outline_objects.RemoveAt(index);
 
     return true;
   }
@@ -178,72 +178,71 @@ public class OutlineCreator : MonoBehaviour
   /*
    * This method is called when the hand is no longer in reach of a specific object
    */
-  private void OnHoverExit(HoverExitEventArgs args)
+  private void On_Hover_Exit(HoverExitEventArgs args)
   {
-    GameObject outlineObject = GetOutlineObject(args.interactableObject);
+    GameObject outline_object = Get_Outline_Object(args.interactableObject);
 
-    RemoveOutlineObject(outlineObject);
+    Remove_Outline_Object(outline_object);
   }
 
   /*
    * Get the distance to a specific game object
    *
    * PARAMS
-   * - GameObject gameObject
+   * - GameObject game_object
    *
    * RETURN (float distance)
    */
-  private float GetGameObjectDistance(GameObject gameObject)
+  private float Get_Game_Object_Distance(GameObject game_object)
   {
-    return Vector3.Distance(transform.position, gameObject.transform.position);
+    return Vector3.Distance(transform.position, game_object.transform.position);
   }
 
   /*
    * Get the closest outline object to the hand
    *
-   * RETURN (GameObject outlineObject)
+   * RETURN (GameObject outline_object)
    */
-  private GameObject GetClosestOutlineObject()
+  private GameObject Get_Closest_Outline_Object()
   {
-    if(outlineObjects.Count <= 0) return null;
+    if(outline_objects.Count <= 0) return null;
 
-    GameObject closestOutlineObject = outlineObjects[0];
-    float      closestDistance      = GetGameObjectDistance(closestOutlineObject);
+    GameObject closest_outline_object = outline_objects[0];
+    float      closest_distance       = Get_Game_Object_Distance(closest_outline_object);
 
-    for(int index = 1; index < outlineObjects.Count; index++)
+    for(int index = 1; index < outline_objects.Count; index++)
     {
-      GameObject outlineObject = outlineObjects[index];
+      GameObject outline_object = outline_objects[index];
+      float      distance       = Get_Game_Object_Distance(outline_object);
 
-      float distance = GetGameObjectDistance(outlineObject);
-
-      if(distance < closestDistance)
+      if(distance < closest_distance)
       {
-        closestOutlineObject = outlineObject;
-        closestDistance      = distance;
+        closest_outline_object = outline_object;
+        closest_distance       = distance;
       }
     }
 
-    return closestOutlineObject;
+    return closest_outline_object;
   }
 
   /*
    * Draw outline around the closest object
    */
-  private void DrawOutline()
+  private void Draw_Outline()
   {
     // No outline has to be drawn if there are no objects
-    if(outlineObjects.Count <= 0) return;
+    if(outline_objects.Count <= 0) return;
 
     // Inactivate all outlines and only draw an outline around the closest object 
-    InactivateAllOutlines();
+    Inactivate_All_Outlines();
 
-    GameObject closestOutlineObject = GetClosestOutlineObject();
+    GameObject closest_outline_object = Get_Closest_Outline_Object();
 
-    closestOutlineObject?.SetActive(true);
+    closest_outline_object?.SetActive(true);
   }
 
   void Update()
   {
-    DrawOutline();
+    Draw_Outline();
   }
 }

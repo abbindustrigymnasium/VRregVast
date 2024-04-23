@@ -13,8 +13,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class OutlineReceiver : MonoBehaviour
 {
-  private GameObject         outlineObject;
-  private MeshRenderer       outlineRenderer;
+  private GameObject outline_object;
 
   /*
    * Create an outline object for the hands to add outlines to
@@ -22,18 +21,19 @@ public class OutlineReceiver : MonoBehaviour
   void Awake()
   {
     // Create a new GameObject to display the outline material
-    outlineObject = new GameObject("Outline");
-    outlineObject.transform.SetParent(transform, false);
+    outline_object = new GameObject("Outline");
+    outline_object.transform.SetParent(transform, false);
 
     // Copy the MeshFilter from the original object
-    MeshFilter meshFilter = outlineObject.AddComponent<MeshFilter>();
-    meshFilter.sharedMesh = GetComponent<MeshFilter>().sharedMesh;
+    MeshFilter mesh_filter = outline_object.AddComponent<MeshFilter>();
+    mesh_filter.sharedMesh = GetComponent<MeshFilter>().sharedMesh;
 
     // Add a MeshRenderer and apply the outline material
-    outlineRenderer = outlineObject.AddComponent<MeshRenderer>();
+    MeshRenderer outline_renderer = outline_object.AddComponent<MeshRenderer>();
+    outline_renderer.material = null;
 
     // Initially disable the outline object
-    outlineObject.SetActive(false);
+    outline_object.SetActive(false);
   }
 
   /*
