@@ -19,6 +19,11 @@ public class OutlineCreator : MonoBehaviour
 
   private List<GameObject> outline_objects = new List<GameObject>();
 
+  // Instead of inactivating every other outline except the closest,
+  // which created a bug, where one hands closest object would be inactivated by the other hand,
+  // only the last closest object will be inactivated
+  private GameObject last_closest_outline_object;
+
   /*
    * Add listeners to hover and select events
    */
@@ -76,22 +81,11 @@ public class OutlineCreator : MonoBehaviour
   }
 
   /*
-   * Inactivate all outlines around nerby outline objects
-   */
-  private void Inactivate_All_Outlines()
-  {
-    foreach(GameObject outline_object in outline_objects)
-    {
-      outline_object.SetActive(false);
-    }
-  }
-
-  /*
    * This method is called when the hand selects an object
    */
   private void On_Select_Enter(SelectEnterEventArgs args)
   {
-    Inactivate_All_Outlines();
+    last_closest_outline_object?.SetActive(false);
 
     // Remove all cached outline objects
     outline_objects.Clear();
@@ -233,10 +227,16 @@ public class OutlineCreator : MonoBehaviour
     // No outline has to be drawn if there are no objects
     if(outline_objects.Count <= 0) return;
 
-    // Inactivate all outlines and only draw an outline around the closest object 
-    Inactivate_All_Outlines();
-
     GameObject closest_outline_object = Get_Closest_Outline_Object();
+
+    // If the closest outline object is not the same that was previously outlined,
+    // inactivate that outline and update the current closest outline object
+    if(!GameObject.ReferenceEquals(last_closest_outline_object, closest_outline_object))
+    {
+      last_closest_outline_object?.SetActive(false);
+
+      last_closest_outline_object = closest_outline_object;
+    }
 
     closest_outline_object?.SetActive(true);
   }
