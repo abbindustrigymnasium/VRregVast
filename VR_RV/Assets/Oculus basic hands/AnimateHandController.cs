@@ -9,28 +9,28 @@ public class AnimateHandController : MonoBehaviour
     public InputActionReference gripInputActionReference;
     public InputActionReference triggerInputActionReference;
 
-    private Animator _handAnimator;
-    private float _gripValue;
-    private float _triggerValue;
+    private Animator _hand_animator;
+    private float _grip_value;
+    private float _trigger_value;
 
     private void Start()
     {
-        _handAnimator = GetComponent<Animator>();
+        _hand_animator = GetComponent<Animator>();
     }
 
     private void Update()
     {
-        AnimateGrip();
-        AnimateTrigger();
+        Animate_Grip();
+        Animate_Trigger();
     }
-    private void AnimateGrip()
+    private void Animate_Grip()
     {
-        _gripValue = gripInputActionReference.action.ReadValue<float>();
-        _handAnimator.SetFloat("Grip", _gripValue);
+        _grip_value = gripInputActionReference.action.ReadValue<float>();
+        _hand_animator.SetFloat("Grip", _grip_value);
     }
-    private void AnimateTrigger()
+    private void Animate_Trigger()
     {
-        _triggerValue = triggerInputActionReference.action.ReadValue<float>();
-        _handAnimator.SetFloat("Trigger", _triggerValue);
+        _trigger_value = triggerInputActionReference.action.ReadValue<float>();
+        _hand_animator.SetFloat("Trigger", _trigger_value);
     }
 }
