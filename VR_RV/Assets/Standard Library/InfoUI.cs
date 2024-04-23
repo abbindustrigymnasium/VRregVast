@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class InfoUI : MonoBehaviour
 {
+    public void Test() {
+        transform.position = new Vector3(0, 5, 0);
+    }
 
     public Transform camera;
     public Transform item;

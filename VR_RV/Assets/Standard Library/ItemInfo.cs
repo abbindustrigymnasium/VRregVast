@@ -27,6 +27,10 @@ public class ItemInfo : MonoBehaviour
     private Transform selection;
     private RaycastHit raycastHit;
 
+    public void Test() {
+        transform.position = new Vector3(0, 5, 0);
+    }
+
     void Update()
     {
         // Highlight
