@@ -21,4 +21,4 @@ If you have questions, ask Olle or Simon.
 
 ### Unity Play Mode (May be unstable):
 
-Go to **Build Settings** -> **Player Settings** -> **OpenXR**, go to the Computer tab. In Enabled Interaction Profiles add **Valve Index Controller Profile** Start the Oculus App, make sure to update drivers. **Go to Settings** -> **General**, make sure that the **Unknown Sources** option is enabled. Allow all popups that come up in the Headset. Go to Quest Link then press launch. Prees the button with the computer screen in the dock on the bottom of the screen. Press play in Unity.
+Go to **Build Settings** -> **Player Settings** -> **OpenXR**, go to the Computer tab. In Enabled Interaction Profiles add **Valve Index Controller Profile** Start the Oculus App, make sure to update drivers. **Go to Settings** -> **General**, make sure that the **Unknown Sources** option is enabled. Allow all pop ups that come up in the Headset. Go to Quest Link then press launch. Press the button with the computer screen in the dock on the bottom of the screen. Press play in Unity.
