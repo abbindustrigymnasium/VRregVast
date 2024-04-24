@@ -14,9 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Gameplay Scenes/Bare Bones/HoverUI.unity
     guid: 39968aab7f9782b438bde4ee3c837c13
-    path: Assets/Scenes/Barebones.unity
-    guid: be45fc31e587b914c9b344bf4b53237c
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Gameplay Scenes/Bare Bones/Grabbing.unity
     guid: aa33446e44705e3428e3b45d17342ef7
   m_configObjects:
