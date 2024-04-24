@@ -10,30 +10,26 @@ public class new_mark_area : MonoBehaviour
     private bool inside_sphere = false;
     private List<GameObject> current_markers = new List<GameObject>();
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider collider)
     {
-        if (!collision.gameObject.CompareTag("Marker_Cube")) return;
+        if (!collider.gameObject.CompareTag("Marker_Cube")) return;
         inside_sphere = true;
     }
 
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider collider)
     {
-        if (!collision.gameObject.CompareTag("Marker_Cube")) return;
+        if (!collider.gameObject.CompareTag("Marker_Cube")) return;
         inside_sphere = false;
     }
 
     private void OnCollisionStay(Collision collision)
     {
+        Debug.Log("Collided");
         // Skips the function if it's not only colliding with the area
         if (!collision.gameObject.CompareTag("Disinfectable")) return;
-        if (!inside_sphere) return;
+        
+        if (inside_sphere) return;
 
         // Calculates wich side of the "rag" the marker should spawn
         float selected_axis_ofset = collision.gameObject.transform.position[disinfectable_area_axis] - transform.position[disinfectable_area_axis];
@@ -47,6 +43,7 @@ public class new_mark_area : MonoBehaviour
         current_markers.Add(GameObject.CreatePrimitive(PrimitiveType.Cube));
         current_markers[current_markers.Count - 1].transform.position = marker_position_vector;
         current_markers[current_markers.Count - 1].tag = "Marker_Cube";
+        current_markers[current_markers.Count - 1].GetComponent<BoxCollider>().isTrigger = true;
     }
 
 }
