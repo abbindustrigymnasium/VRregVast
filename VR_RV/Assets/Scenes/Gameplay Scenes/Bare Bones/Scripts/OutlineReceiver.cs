@@ -37,9 +37,9 @@ public class OutlineReceiver : MonoBehaviour
   }
 
   /*
-   * Destory the created outline object
+   * Destroy the created outline object
    */
-  void onDestory()
+  void onDestroy()
   {
     // Add code here if you want :D
   }
