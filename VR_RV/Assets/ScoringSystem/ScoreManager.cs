@@ -13,6 +13,11 @@ public class ScoreManager : MonoBehaviour
   public static ScoreManager instance;
 
 
+  [SerializeField] private int time;
+  [SerializeField] private int penalty_period;
+  [SerializeField] private int time_score_penalty;
+
+
   #region Singleton
   void Awake()
   {
@@ -30,6 +35,8 @@ public class ScoreManager : MonoBehaviour
   void Start()
   {
     current_player_score = max_player_score;
+
+    Check_Time_Penalty();
   }
 
   private void OnEnable()
@@ -52,5 +59,18 @@ public class ScoreManager : MonoBehaviour
   {
     current_player_score -= score_to_remove;
     Debug.Log("Score: " + current_player_score);
+  }
+
+
+  private void Check_Time_Penalty()
+  {
+    time -= 600;
+    if (time >= 0)
+    {
+      int penalty_multiplyer = (int)Mathf.Floor(time / penalty_period);
+      int time_score_to_remove = time_score_penalty * penalty_multiplyer;
+
+      Update_Score(time_score_to_remove);
+    }
   }
 }
