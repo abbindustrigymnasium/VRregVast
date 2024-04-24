@@ -253,8 +253,8 @@ GameObject:
   - component: {fileID: 955858936}
   - component: {fileID: 955858935}
   - component: {fileID: 955858934}
-  - component: {fileID: 955858939}
   - component: {fileID: 955858938}
+  - component: {fileID: 955858939}
   m_Layer: 0
   m_Name: Rag
   m_TagString: Untagged
@@ -342,7 +342,7 @@ Transform:
   m_GameObject: {fileID: 955858933}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.6}
+  m_LocalPosition: {x: 0, y: 0, z: -1.27}
   m_LocalScale: {x: 1, y: 1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -370,7 +370,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
@@ -384,9 +384,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 955858933}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8a11349800c0724d903041c54c4ed6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 7a9f1fa5be546834a83375dd70de9347, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disinfectable_area_axis: 2
 --- !u!1 &972186439
 GameObject:
   m_ObjectHideFlags: 0
