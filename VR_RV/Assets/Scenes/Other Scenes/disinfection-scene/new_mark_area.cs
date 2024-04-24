@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Animations;
 
@@ -10,7 +11,11 @@ public class new_mark_area : MonoBehaviour
     private bool inside_sphere = false;
     private List<GameObject> current_markers = new List<GameObject>();
 
-
+    private GameObject mesh_object;
+    private void Start()
+    {
+        mesh_object = new GameObject();
+    }
     private void OnTriggerEnter(Collider collider)
     {
         if (!collider.gameObject.CompareTag("Marker_Cube")) return;
@@ -46,4 +51,24 @@ public class new_mark_area : MonoBehaviour
         current_markers[current_markers.Count - 1].GetComponent<BoxCollider>().isTrigger = true;
     }
 
+    private Mesh AddObjectToMesh(GameObject object_to_mesh, Mesh previous_mesh)
+    {
+        
+        Mesh combined_mesh = new Mesh();
+
+        MeshFilter[] mesh_filters = new MeshFilter[] { object_to_mesh.GetComponent<MeshFilter>(), previous_mesh.GetComponent<MeshFilter>() };
+        
+        // Creates an array of combine instances for the gameObjects
+        CombineInstance[] combiners = new CombineInstance[2];
+        for(int a = 0; a < 2; a++)
+        {
+            combiners[a].subMeshIndex = 0;
+            combiners[a].mesh = mesh_filters[a].sharedMesh;
+            combiners[a].transform = mesh_filters[a].transform.localToWorldMatrix;
+        }
+
+        combined_mesh.CombineMeshes(combiners);
+
+        return combined_mesh;
+    }
 }
