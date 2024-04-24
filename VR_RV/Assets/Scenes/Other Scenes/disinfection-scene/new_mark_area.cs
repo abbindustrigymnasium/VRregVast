@@ -19,23 +19,22 @@ public class new_mark_area : MonoBehaviour
         mesh_object.AddComponent<MeshFilter>();
         mesh_object.AddComponent<MeshRenderer>();
         mesh_object.AddComponent<MeshCollider>();
-        mesh_object.GetComponent<MeshCollider>().convex = true;
-        mesh_object.GetComponent<MeshCollider>().isTrigger = true;
+        
     }
 
     private void Update()
     {
         mesh_object.transform.position = disinfectable_area.transform.position;
     }
-    private void OnTriggerEnter(Collider collider)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (!collider.gameObject.CompareTag("Marker_Cube")) return;
+        if (!collision.gameObject == mesh_object) return;
         inside_sphere = true;
     }
 
-    private void OnTriggerExit(Collider collider)
+    private void OnCollisionExit(Collision collision)
     {
-        if (!collider.gameObject.CompareTag("Marker_Cube")) return;
+        if (!collision.gameObject == mesh_object) return;
         inside_sphere = false;
     }
 
