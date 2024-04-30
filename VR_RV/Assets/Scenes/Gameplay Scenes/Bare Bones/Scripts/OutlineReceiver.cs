@@ -28,11 +28,19 @@ public class OutlineReceiver : MonoBehaviour
     MeshFilter mesh_filter = outline_object.AddComponent<MeshFilter>();
     mesh_filter.sharedMesh = GetComponent<MeshFilter>().sharedMesh;
 
-    // Add a MeshRenderer to later add the outline material to
+    // Add a MeshRenderer and apply the outline material
     MeshRenderer outline_renderer = outline_object.AddComponent<MeshRenderer>();
     outline_renderer.material = null;
 
     // Initially disable the outline object
     outline_object.SetActive(false);
+  }
+
+  /*
+   * Destroy the created outline object
+   */
+  void onDestroy()
+  {
+    // Add code here if you want :D
   }
 }
