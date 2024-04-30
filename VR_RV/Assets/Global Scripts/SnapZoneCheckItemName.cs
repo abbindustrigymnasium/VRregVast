@@ -20,7 +20,7 @@ public class SnapZoneCheckItemName : MonoBehaviour
         }
     }
 
-    public void OnSelectExitedSnap(SelectExitEventArgs args)
+    public void On_Select_Exited_Snap(SelectExitEventArgs args)
     {
         GetComponent<MeshRenderer>().material.color = Color.white;
     }
