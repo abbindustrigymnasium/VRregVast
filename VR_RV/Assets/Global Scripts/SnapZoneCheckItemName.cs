@@ -7,7 +7,7 @@ public class SnapZoneCheckItemName : MonoBehaviour
 {
     public XRBaseInteractable correct_item;
 
-    public void OnSelectEnteredSnap(SelectEnterEventArgs args)
+    public void On_Select_Entered_Snap(SelectEnterEventArgs args)
     {
         if (GameObject.ReferenceEquals(args.interactableObject, correct_item))
         {
