@@ -21,15 +21,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+
+
 public class ItemInfo : MonoBehaviour
 {
     private Transform highlight;
     private Transform selection;
     private RaycastHit raycastHit;
 
+    private Renderer renderer;
+
     public void Test() {
         transform.position = new Vector3(0, 5, 0);
     }
+
+    public Material activeMaterial;
+
+    void start() {
+        Renderer renderer = GetComponent<Renderer>();
+        renderer.material = activeMaterial;
+        renderer.enabled = false;
+    }
+
+    public void Select() {
+                // Get the Renderer component of the GameObject
+        renderer.enabled = true; // Activate the Renderer to show the material
+    }
+    public void Deselect() {
+        renderer.enabled = false; // Deactivate the Renderer to hide the material
+    }
+
 
     void Update()
     {

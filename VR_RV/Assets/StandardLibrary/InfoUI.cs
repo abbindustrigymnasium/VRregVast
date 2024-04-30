@@ -11,6 +11,22 @@ public class InfoUI : MonoBehaviour
     public Transform camera;
     public Transform item;
     public bool isGrabbed = false;
+    public bool isSelected = false;
+
+    public void Grab() {
+        isGrabbed = true;
+    }
+    public void Release() {
+        isGrabbed = false;
+    }
+
+    public void Select() {
+        isSelected = true;
+    }
+    public void Deselect() {
+        isSelected = false;
+    }
+    
     // Start is called before the first frame update
     void Start()
     { 
