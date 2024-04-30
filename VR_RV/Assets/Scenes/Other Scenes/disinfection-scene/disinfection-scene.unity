@@ -384,11 +384,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 955858933}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a9f1fa5be546834a83375dd70de9347, type: 3}
+  m_Script: {fileID: 11500000, guid: 55004ad34bdbd084d8bbae46af525a1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  disinfectable_area_axis: 2
-  disinfectable_area: {fileID: 972186439}
 --- !u!1 &972186439
 GameObject:
   m_ObjectHideFlags: 0
