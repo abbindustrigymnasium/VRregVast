@@ -9,7 +9,7 @@ float height_of_player = 1.64
 float yPosition = 0.32
 float heightOfPlayer = 1.64
 
-// Funktion (Title_Case)
+// Metod (Title_Case)
 void Print_Hello(){
     Console.WriteLine("Hello")
 }
@@ -26,12 +26,12 @@ float target_player_rotation_y = 1.64
 float c_play_rot_y = 0.32
 float t_play_rot_y = 1.64
 
-// Jobbigt att att använda
+// Jobbigt att använda
 float current_player_rotation_around_y_axis = 0.32
 float target_player_rotation_around_y_axis = 1.64
 ```
 
-### 3. Kommentera koden för att förklara vad en funktion eller en otydlig del kod gör
+### 3. Kommentera koden för att förklara vad en metod eller en otydlig del kod gör
 
 ```csharp
 // Prints every item exept the last in an array
@@ -42,5 +42,4 @@ void Print_Array(string[] option_array){
 		Console.WriteLine(option_array[i])
 	}
 }
-
 ```
