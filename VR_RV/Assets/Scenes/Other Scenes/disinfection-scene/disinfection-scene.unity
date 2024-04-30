@@ -387,6 +387,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55004ad34bdbd084d8bbae46af525a1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  columns: 14
+  disinfectable_area_normal_axis: 2
 --- !u!1 &972186439
 GameObject:
   m_ObjectHideFlags: 0
