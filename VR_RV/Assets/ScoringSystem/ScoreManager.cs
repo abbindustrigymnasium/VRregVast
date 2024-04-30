@@ -58,7 +58,7 @@ public class ScoreManager : MonoBehaviour
       Update_Score(score_to_remove);
     };
 
-    if(current_player_score == 100f){
+    if(current_player_score == max_player_score){
       Debug.Log("You Win!");
     }
     else{
@@ -86,7 +86,7 @@ public class ScoreManager : MonoBehaviour
   }
 
   private void Set_Desinfection_Penalty(int percent_clean){
-    int score_to_remove = 100 - percent_clean;
+    int score_to_remove = max_player_score - percent_clean;
     Update_Score(score_to_remove);
   }
 
