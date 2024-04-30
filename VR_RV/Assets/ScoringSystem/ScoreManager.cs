@@ -16,6 +16,7 @@ public class ScoreManager : MonoBehaviour
   [SerializeField] private int penalty_period;
   [SerializeField] private int time_score_penalty;
   [SerializeField] private int percentage_cleaned;
+  [SerializeField] private int overall_time_limit;
 
   // Only one instance of ScoreManager can exist in the scene
   #region Singleton
@@ -37,7 +38,7 @@ public class ScoreManager : MonoBehaviour
   {
     current_player_score = max_player_score;
 
-    Set_Time_Penalty(time);
+    Set_Time_Penalty(time, overall_time_limit);
     Set_Desinfection_Penalty(percentage_cleaned);
   }
 
@@ -72,9 +73,9 @@ public class ScoreManager : MonoBehaviour
   }
 
 
-  private void Set_Time_Penalty(int time)
+  private void Set_Time_Penalty(int time, int time_limit)
   {
-    time -= 600;
+    time -= time_limit;
     if (time >= 0)
     {
       int penalty_multiplyer = (int)Mathf.Floor(time / penalty_period);
