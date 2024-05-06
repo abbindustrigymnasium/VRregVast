@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -277,7 +277,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -384,11 +384,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 955858933}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a9f1fa5be546834a83375dd70de9347, type: 3}
+  m_Script: {fileID: 11500000, guid: 55004ad34bdbd084d8bbae46af525a1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  disinfectable_area_axis: 2
-  disinfectable_area: {fileID: 972186439}
+  columns: 14
+  disinfectable_area_normal_axis: 2
 --- !u!1 &972186439
 GameObject:
   m_ObjectHideFlags: 0
