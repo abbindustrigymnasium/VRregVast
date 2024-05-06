@@ -49,13 +49,59 @@ public class OutlineCreator : MonoBehaviour
    * PARAMS
    * - GameObject outline_object | The outline object to add the material to
    */
-  private void Add_Outline_Material(GameObject outline_object)
+  private IEnumerator Add_Outline_Material(GameObject outline_object)
   {
     MeshRenderer outline_renderer = outline_object?.GetComponent<MeshRenderer>();
 
-    if(outline_renderer) outline_renderer.material = outline_material;
+    if(outline_renderer)
+    {
+      Material fading_material = new Material(outline_material);
+
+      outline_renderer.material = fading_material;
+
+      outline_object?.SetActive(true);
+
+      yield return Fade_Outline_Material(fading_material, true, 5f);
+    }
   }
 
+  /*
+   *
+   */
+  private IEnumerator Remove_Outline_Material(GameObject outline_object)
+  {
+    MeshRenderer outline_renderer = outline_object?.GetComponent<MeshRenderer>();
+
+    if(outline_renderer)
+    {
+      Material fading_material = outline_renderer.material;
+
+      yield return Fade_Outline_Material(fading_material, false, 5f);
+
+      outline_object?.SetActive(false);
+    }
+  }
+  
+  /*
+   *
+   */
+  private IEnumerator Fade_Outline_Material(Material fading_material, bool fade_in, float duration)
+  {
+    Color fading_color = fading_material.color;
+
+    for(float counter = 0; counter < duration; counter += Time.deltaTime)
+    {
+      float a = (fade_in ? 1 : 0);
+      float b = (fade_in ? 0 : 1);
+
+      float alpha = Mathf.Lerp(a, b, counter / duration);
+
+      fading_material.color = new Color(fading_color.r, fading_color.g, fading_color.b, alpha);
+
+      yield return null;
+    }
+  }
+  
   /*
    * Get the outline object for the object that the hand is targeting
    *
@@ -85,7 +131,7 @@ public class OutlineCreator : MonoBehaviour
     // If the hand is holding an object, no object should be outlined
     if(direct_interactor.hasSelection)
     {
-      last_outline_object?.SetActive(false);
+      StartCoroutine(Remove_Outline_Material(last_outline_object));
 
       last_outline_object = null;
     }
@@ -93,11 +139,9 @@ public class OutlineCreator : MonoBehaviour
     {
       GameObject outline_object = Get_Target_Outline_Object();
 
-      Add_Outline_Material(outline_object);
+      StartCoroutine(Add_Outline_Material(outline_object));
 
-      last_outline_object?.SetActive(false);
-
-      outline_object?.SetActive(true);
+      StartCoroutine(Remove_Outline_Material(last_outline_object));
 
       last_outline_object = outline_object;
     }
