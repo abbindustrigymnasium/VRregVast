@@ -45,7 +45,7 @@ public class track_area_no_overlap : MonoBehaviour
     {   
         // Skips if the rag isn't only colliding with the right objects
         if (!collision.gameObject.CompareTag("Disinfectable")) return;
-        if (Physics.OverlapBox(transform.position, transform.localScale / 2, Quaternion.identity).Length > 4) return;
+        if (Physics.OverlapBox(transform.position, GetComponent<BoxCollider>().size / 2, Quaternion.identity).Length > 4) return;
 
         // Create an array of contact points
         int contact_point_count = collision.contactCount;
@@ -56,7 +56,6 @@ public class track_area_no_overlap : MonoBehaviour
         Vector3 center = new Vector3();
         for(int i = 0; i < 3; i++) for (int j = 0; j < contact_point_count; j++) center[i] += contact_points[j][i];
         center /= contact_point_count;
-
 
         // Exit function if center is outside the correct box
         Vector3 comparable_center = new Vector3(center[0], center[1], bounds[current_column].transform.position[2]); // Only works if z is the normal axis
@@ -71,5 +70,6 @@ public class track_area_no_overlap : MonoBehaviour
         Debug.Log("SPAWNING" + center);
 
         // Check if center is in transition-area
+        
     }
 }
