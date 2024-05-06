@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class turnOn : MonoBehaviour
 {
-
     public bool bollean;
-    public GameObject gameObjectToControl;
+    public List<GameObject> gameObjectsToControl = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
@@ -17,9 +15,12 @@ public class turnOn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (bollean == true)
+        if (bollean)
         {
-            gameObjectToControl.SetActive(true);
+            foreach (GameObject obj in gameObjectsToControl)
+            {
+                obj.SetActive(true);
+            }
         }
     }
 }
