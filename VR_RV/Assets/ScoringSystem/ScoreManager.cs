@@ -18,7 +18,7 @@ public class ScoreManager : MonoBehaviour
   [SerializeField] private int percentage_cleaned;
   [SerializeField] private int overall_time_limit;
 
-  // Only one instance of ScoreManager can exist in the scene
+  // Only one instance of ScoreManager can exist in the game
   #region Singleton
   void Awake()
   {
@@ -37,9 +37,6 @@ public class ScoreManager : MonoBehaviour
   private void Start()
   {
     current_player_score = max_player_score;
-
-    Set_Time_Penalty(time, overall_time_limit);
-    Set_Desinfection_Penalty(percentage_cleaned);
   }
 
 
