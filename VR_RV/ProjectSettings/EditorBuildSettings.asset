@@ -9,8 +9,20 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: Assets/Scenes/Barebones.unity
+    path: Assets/Scenes/Gameplay Scenes/Bare Bones/BareBones.unity
     guid: be45fc31e587b914c9b344bf4b53237c
+  - enabled: 1
+    path: Assets/ScoringSystem/vr.unity
+    guid: 5747d6550dfba7f4dbb0a8c1af514803
+  - enabled: 0
+    path: Assets/Scenes/Gameplay Scenes/Bare Bones/Grabbing.unity
+    guid: 42d69bc7a6550634b96b8bc2b034802c
+  - enabled: 0
+    path: Assets/Scenes/Gameplay Scenes/Bare Bones/OutlineShader.unity
+    guid: 8baceead1b0653f4ba07ebd6b4289ffb
+  - enabled: 0
+    path: Assets/Scenes/Gameplay Scenes/Bare Bones/SnapZone.unity
+    guid: 6b62c3dd91463874a8ee8c7b9c47c1f6
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2f0392a9bd0a7ac4290d91a40a9724b3,
       type: 2}

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:VR_RV/Assets/Samples/XR Interaction Toolkit/2.4.3/Starter Assets/Scripts/GazeInputManager.cs.meta
+guid: 52aadffaaecde78459961b122899b004
+=======
+guid: 0e2e0a31572c0c44d90120e1655ce3b8
+>>>>>>> 0963a41126c7017b659f6b1a7904ef0cfaeb154e:VR_RV/Assets/Scenes/Gameplay Scenes/Bare Bones/Scripts/OutlineReceiver.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

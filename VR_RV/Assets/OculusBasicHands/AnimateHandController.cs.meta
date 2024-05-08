@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:VR_RV/Assets/Samples/XR Interaction Toolkit/2.4.3/Starter Assets/Scripts/ActionBasedControllerManager.cs.meta
+guid: 9daa3c5bf813c5e4c8416e29a441a8b9
+=======
+guid: b8c530173a7b3304bae6214a1327efbe
+>>>>>>> 0963a41126c7017b659f6b1a7904ef0cfaeb154e:VR_RV/Assets/OculusBasicHands/AnimateHandController.cs.meta
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
