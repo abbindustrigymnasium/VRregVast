@@ -10,10 +10,9 @@ public class LevelUpManager : MonoBehaviour
       Hard
     }
 
-    [SerializeField]private Level current_level;
+    [SerializeField] private Level current_level;
 
     // Placeholder
-    public bool highlight_items;
     public bool subtitles;
     public bool item_names;
     public bool strict_time;
@@ -32,7 +31,6 @@ public class LevelUpManager : MonoBehaviour
         Destroy(this.gameObject);
       }
     }
-
 #endregion
 
     void OnEnable()
@@ -44,7 +42,7 @@ public class LevelUpManager : MonoBehaviour
     private void Set_Level_Restrictions(Level current_user_level){
       switch(current_user_level){
         case Level.Easy:
-          highlight_items = true;
+          Enable_Item_Highlight(true);
           subtitles = true;
           item_names = true;
           strict_time = false;
@@ -52,7 +50,7 @@ public class LevelUpManager : MonoBehaviour
           strict_punishment = false;
           break;
         case Level.Medium:
-          highlight_items = false;
+          Enable_Item_Highlight(false);
           subtitles = false;
           item_names = false;
           doctor_help = true;
@@ -60,13 +58,20 @@ public class LevelUpManager : MonoBehaviour
           strict_punishment = false;
           break;
         case Level.Hard:
-          highlight_items = false;
+          Enable_Item_Highlight(false);
           subtitles = false;
           item_names = false;
           doctor_help = false;
           strict_time = true;
           strict_punishment = true;
           break;
+      }
+    }
+
+    private void Enable_Item_Highlight(bool enable_outline){
+      GameObject[] game_controllers = GameObject.FindGameObjectsWithTag("GameController");
+      foreach(GameObject game_controller in game_controllers){
+        game_controller.GetComponent<OutlineCreator>().enabled = enable_outline;
       }
     }
 }
