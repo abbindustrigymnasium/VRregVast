@@ -19,6 +19,7 @@ public class InfoUI : MonoBehaviour
     public void Release() {
         isGrabbed = false;
     }
+    
 
     public void Select() {
         isSelected = true;
