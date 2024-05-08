@@ -1,26 +1,40 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 public class turnOn : MonoBehaviour
 {
-    public bool bollean;
-    public List<GameObject> gameObjectsToControl = new List<GameObject>();
+    public bool bollean = false;
+    private bool hasStartedCoroutine = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    public List<GameObject> gameObjectsToTurnOn = new List<GameObject>();
+    public List<GameObject> gameObjectsToTurnOff = new List<GameObject>();
 
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if (bollean)
+        if (bollean && !hasStartedCoroutine)
         {
-            foreach (GameObject obj in gameObjectsToControl)
-            {
-                obj.SetActive(true);
-            }
+            StartCoroutine(TurnObjectsOn());
         }
+    }
+
+    IEnumerator TurnObjectsOn()
+    {
+        hasStartedCoroutine = true;
+        yield return new WaitForSeconds(0.2f);
+
+        foreach (GameObject obj in gameObjectsToTurnOff)
+        {
+            obj.SetActive(false);
+        }
+
+        foreach (GameObject obj in gameObjectsToTurnOn)
+        {
+            obj.SetActive(true);
+        }
+
+
+        hasStartedCoroutine = false;
+        bollean = false;
     }
 }
