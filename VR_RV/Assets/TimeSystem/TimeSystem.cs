@@ -6,6 +6,21 @@ public class TimeSystem : MonoBehaviour
 {
     public float current_time;
     public bool pause_timer;
+    TimeSystem instance;
+
+    //Singleton
+    void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
 
     void Update()
     {
