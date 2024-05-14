@@ -15,6 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Gameplay Scenes/Bare Bones/Grabbing.unity
     guid: 42d69bc7a6550634b96b8bc2b034802c
   - enabled: 0
+  - enabled: 0
     path: Assets/Scenes/Gameplay Scenes/Bare Bones/OutlineShader.unity
     guid: 8baceead1b0653f4ba07ebd6b4289ffb
   - enabled: 1
