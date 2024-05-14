@@ -21,8 +21,10 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Lit Variant
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
-  m_Parent: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_Shader: {fileID: -6465566751694194690, guid: e83bdc675f7500048845993b6ef588c5,
+    type: 3}
+  m_Parent: {fileID: -876546973899608171, guid: e83bdc675f7500048845993b6ef588c5,
+    type: 3}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -30,14 +32,30 @@ Material:
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: Opaque
+  stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - _SampleTexture2D_0c0035472d7f40cdacbf5e24c9c54b47_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: f04e908b8ff0de142a74ec7c3d741661, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_e6dfe01ce9a147c889ce2fee4a4c4958_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 8b2a7943be6c5e849a8c5635afa31810, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_fd29c3d973494261a81e5ef9ea520e83_Texture_1_Texture2D:
+        m_Texture: {fileID: 2800000, guid: d0133f7a2ade9e64a99e0eacb52f4c62, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: 214ccc394dde6b445a42d8614c75ce3b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats: []
+    m_Floats:
+    - _QueueControl: 0
     m_Colors: []
   m_BuildTextureStacks: []
