@@ -15,12 +15,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Gameplay Scenes/Bare Bones/Grabbing.unity
     guid: 42d69bc7a6550634b96b8bc2b034802c
   - enabled: 0
+    path: Assets/Scenes/Gameplay Scenes/Bare Bones/OutlineShader.unity
+    guid: 8baceead1b0653f4ba07ebd6b4289ffb
   - enabled: 0
     path: Assets/Scenes/Gameplay Scenes/Bare Bones/OutlineShader.unity
     guid: 8baceead1b0653f4ba07ebd6b4289ffb
   - enabled: 1
     path: Assets/Scenes/Gameplay Scenes/Bare Bones/StarterScene.unity
     guid: 923efce5c547e6a45b4d4496a463f475
+  - enabled: 0
+    path: Assets/Scenes/Gameplay Scenes/Bare Bones/SnapZone.unity
+    guid: 6b62c3dd91463874a8ee8c7b9c47c1f6
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 2f0392a9bd0a7ac4290d91a40a9724b3,
       type: 2}
