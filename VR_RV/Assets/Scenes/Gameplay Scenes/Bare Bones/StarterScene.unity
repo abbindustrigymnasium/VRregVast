@@ -2006,7 +2006,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 63295564cb5357043abca1ad3d75111f,
         type: 3}
       propertyPath: m_Name
-      value: ScissorMayoRak
+      value: SaxMayoRak
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 63295564cb5357043abca1ad3d75111f,
         type: 3}
@@ -2572,7 +2572,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e0d86b8e5b5877645979982cc55e0d6e,
         type: 3}
       propertyPath: m_Name
-      value: ScissorDura
+      value: SaxDura
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e0d86b8e5b5877645979982cc55e0d6e,
         type: 3}
@@ -3993,7 +3993,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9a648ab39f339e149a9fd499a46c448e,
         type: 3}
       propertyPath: m_Name
-      value: ScissorMetzenbaumBojd
+      value: SaxMetzenbaumBojd
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9a648ab39f339e149a9fd499a46c448e,
         type: 3}
