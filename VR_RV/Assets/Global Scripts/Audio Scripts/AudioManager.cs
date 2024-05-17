@@ -55,6 +55,7 @@ public class Audio : MonoBehaviour
         s.source.Play();
     }
 
+    //This is the part that other codes can access to turn play_sound to true. 
     public void TriggerSound(string soundName)
     {
         Sound s = Array.Find(sounds, sound => sound.name == soundName);
