@@ -3,6 +3,7 @@ using UnityEngine;
 using System;
 
 //This code was programed by Simon Meier, and is a part of the Audio functions.
+//Note: Volume of clips cannot be changed when the simulation is running, only before in the editor.
 
 public class Audio : MonoBehaviour
 {
@@ -52,5 +53,18 @@ public class Audio : MonoBehaviour
             return;
         }
         s.source.Play();
+    }
+
+    public void TriggerSound(string soundName)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == soundName);
+        if (s != null)
+        {
+            s.play_sound = true;
+        }
+        else
+        {
+            Debug.LogWarning("Sound: " + soundName + " not found");
+        }
     }
 }
