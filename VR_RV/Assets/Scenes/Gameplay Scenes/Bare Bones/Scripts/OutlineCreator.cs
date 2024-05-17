@@ -73,13 +73,59 @@ public class OutlineCreator : MonoBehaviour
    * PARAMS
    * - GameObject outline_object | The outline object to add the material to
    */
-  private void Add_Outline_Material(GameObject outline_object)
+  private IEnumerator Add_Outline_Material(GameObject outline_object)
   {
-    MeshRenderer outline_renderer = outline_object.GetComponent<MeshRenderer>();
+    MeshRenderer outline_renderer = outline_object?.GetComponent<MeshRenderer>();
 
-    outline_renderer.material = outline_material;
+    if(outline_renderer)
+    {
+      Material fading_material = new Material(outline_material);
+
+      outline_renderer.material = fading_material;
+
+      outline_object?.SetActive(true);
+
+      yield return Fade_Outline_Material(fading_material, true, 5f);
+    }
   }
 
+  /*
+   *
+   */
+  private IEnumerator Remove_Outline_Material(GameObject outline_object)
+  {
+    MeshRenderer outline_renderer = outline_object?.GetComponent<MeshRenderer>();
+
+    if(outline_renderer)
+    {
+      Material fading_material = outline_renderer.material;
+
+      yield return Fade_Outline_Material(fading_material, false, 5f);
+
+      outline_object?.SetActive(false);
+    }
+  }
+  
+  /*
+   *
+   */
+  private IEnumerator Fade_Outline_Material(Material fading_material, bool fade_in, float duration)
+  {
+    Color fading_color = fading_material.color;
+
+    for(float counter = 0; counter < duration; counter += Time.deltaTime)
+    {
+      float a = (fade_in ? 1 : 0);
+      float b = (fade_in ? 0 : 1);
+
+      float alpha = Mathf.Lerp(a, b, counter / duration);
+
+      fading_material.color = new Color(fading_color.r, fading_color.g, fading_color.b, alpha);
+
+      yield return null;
+    }
+  }
+  
   /*
    * This method is called when the hand selects an object
    */
@@ -206,34 +252,17 @@ public class OutlineCreator : MonoBehaviour
 
     for(int index = 1; index < outline_objects.Count; index++)
     {
-      GameObject outline_object = outline_objects[index];
-      float      distance       = Get_Game_Object_Distance(outline_object);
+      StartCoroutine(Remove_Outline_Material(last_outline_object));
 
-      if(distance < closest_distance)
-      {
-        closest_outline_object = outline_object;
-        closest_distance       = distance;
-      }
+      last_outline_object = null;
     }
-
-    return closest_outline_object;
-  }
-
-  /*
-   * Draw outline around the closest object
-   */
-  private void Draw_Outline()
-  {
-    // No outline has to be drawn if there are no objects
-    if(outline_objects.Count <= 0) return;
-
-    GameObject closest_outline_object = Get_Closest_Outline_Object();
-
-    // If the closest outline object is not the same that was previously outlined,
-    // inactivate that outline and update the current closest outline object
-    if(!GameObject.ReferenceEquals(last_closest_outline_object, closest_outline_object))
+    else // Outline just the object that the hand is targeting
     {
-      last_closest_outline_object?.SetActive(false);
+      GameObject outline_object = Get_Target_Outline_Object();
+
+      StartCoroutine(Add_Outline_Material(outline_object));
+
+      StartCoroutine(Remove_Outline_Material(last_outline_object));
 
       last_closest_outline_object = closest_outline_object;
     }
