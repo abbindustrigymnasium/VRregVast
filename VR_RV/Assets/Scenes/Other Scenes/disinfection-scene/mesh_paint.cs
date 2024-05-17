@@ -11,6 +11,8 @@ public class mesh_paint : MonoBehaviour
     private GameObject disinfectable_area;
     private Material disinfectable_area_material;
 
+    private Vector3 relative_position;
+
     void Start()
     {
         disinfectable_area = GameObject.FindGameObjectWithTag("Disinfectable");
@@ -26,7 +28,7 @@ public class mesh_paint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        relative_position = transform.position - disinfectable_area.transform.position;
     }
 
     private void OnCollisionStay(Collision collision)
