@@ -204,7 +204,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 234d25a6e07b33645a953874c96c847c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1025,7 +1025,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b793abff38e8f0e46885fe76cb9868e4,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1304,6 +1304,59 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1421079522}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &468573604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 468573606}
+  - component: {fileID: 468573605}
+  m_Layer: 0
+  m_Name: ToolSpawnpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &468573605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468573604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c0fbf2e340bf7f4c9ca1ba45f9f4068, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawned_tools:
+  - {fileID: 919132149155446097, guid: 9dfeac173014c8944ab61304fd14def7, type: 3}
+  - {fileID: 919132149155446097, guid: 3071c6fc0e0618b40aff6a8a0571a883, type: 3}
+  - {fileID: 919132149155446097, guid: 234d25a6e07b33645a953874c96c847c, type: 3}
+  - {fileID: 919132149155446097, guid: b9a95307865e83d4895b3d1e5f20fb11, type: 3}
+  - {fileID: 919132149155446097, guid: 32ce097875b51b84981cb8cc80fa51f3, type: 3}
+  - {fileID: 919132149155446097, guid: b793abff38e8f0e46885fe76cb9868e4, type: 3}
+  - {fileID: 919132149155446097, guid: ef7e4ceacf2a67649ac3df77313d6bee, type: 3}
+  - {fileID: 919132149155446097, guid: e0d86b8e5b5877645979982cc55e0d6e, type: 3}
+--- !u!4 &468573606
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 468573604}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.10270493, y: 1.3269633, z: 0.29016307}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &555934374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1471,7 +1524,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3071c6fc0e0618b40aff6a8a0571a883,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1825,7 +1878,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b9a95307865e83d4895b3d1e5f20fb11,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1378090415999995971, guid: b9a95307865e83d4895b3d1e5f20fb11,
         type: 3}
@@ -1953,12 +2006,12 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 63295564cb5357043abca1ad3d75111f,
         type: 3}
       propertyPath: m_Name
-      value: SaxMayoRak
+      value: ScissorMayoRak
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 63295564cb5357043abca1ad3d75111f,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -2519,12 +2572,12 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: e0d86b8e5b5877645979982cc55e0d6e,
         type: 3}
       propertyPath: m_Name
-      value: SaxDura
+      value: ScissorDura
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e0d86b8e5b5877645979982cc55e0d6e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1590762314750364424, guid: e0d86b8e5b5877645979982cc55e0d6e,
         type: 3}
@@ -3805,7 +3858,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1d0793c4b675eee459aad43deec5f343,
         type: 3}
       propertyPath: m_Name
-      value: VertygsKorg
+      value: ToolBasket
       objectReference: {fileID: 0}
     - target: {fileID: 6979220930480056898, guid: 1d0793c4b675eee459aad43deec5f343,
         type: 3}
@@ -3940,12 +3993,12 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9a648ab39f339e149a9fd499a46c448e,
         type: 3}
       propertyPath: m_Name
-      value: SaxMetzenbaumBojd
+      value: ScissorMetzenbaumBojd
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9a648ab39f339e149a9fd499a46c448e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -4551,7 +4604,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1853023664}
   m_Layer: 0
-  m_Name: Verktyg
+  m_Name: Tools
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5136,7 +5189,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ef7e4ceacf2a67649ac3df77313d6bee,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3451118302482216456, guid: ef7e4ceacf2a67649ac3df77313d6bee,
         type: 3}
@@ -5636,7 +5689,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9dfeac173014c8944ab61304fd14def7,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6260,3 +6313,4 @@ SceneRoots:
   - {fileID: 1543077515}
   - {fileID: 1853023664}
   - {fileID: 1985211868}
+  - {fileID: 468573606}
