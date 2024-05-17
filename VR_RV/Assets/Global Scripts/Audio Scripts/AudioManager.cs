@@ -2,6 +2,8 @@ using UnityEngine.Audio;
 using UnityEngine;
 using System;
 
+//This code was programed by Simon Meier, and is a part of the Audio functions.
+
 public class Audio : MonoBehaviour
 {
 
@@ -13,24 +15,33 @@ public class Audio : MonoBehaviour
     {
         foreach (Sound s in sounds)
         {
+
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
 
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
+
         }
 
     }
 
-    //Here we play the sound, If you want to set it up on anothere script ask Simon Meier or watch this video:
-    //https://www.youtube.com/watch?v=6OT43pvUyfY&ab_channel=Brackeys
-    // At the time 10:14
-    void Start()
+    //Here we go through each sound in the array and check if we should play it.
+    void Update()
     {
-        Play("Monkey");
+        foreach (Sound s in sounds)
+        {
+            if (s.play_sound)
+            {
+                Play(s.name);
+                //It's important to note that the play_sound variable will be put to false as to not play the same sound twice.
+                s.play_sound = false;
+            }
+        }
     }
 
+    //This is the function that plays the sound using the name of the sound in the array.
     public void Play(string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
@@ -38,6 +49,7 @@ public class Audio : MonoBehaviour
         if (s == null)
         {
             Debug.LogWarning("Sound: " + name + " not found");
+            return;
         }
         s.source.Play();
     }
