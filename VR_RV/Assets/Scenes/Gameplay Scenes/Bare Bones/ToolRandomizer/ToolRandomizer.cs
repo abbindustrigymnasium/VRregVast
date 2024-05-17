@@ -6,22 +6,28 @@ public class ToolRandomizer : MonoBehaviour
 {
     public GameObject[] all_tools;
 
-    public Vector3[] tool_spawnpoints;
 
-    // Start is called before the first frame update
+    public List<Vector3> tool_spawnpoints_list = new List<Vector3>();
+
     void Start()
     {
-      all_tools = GameObject.FindGameObjectsWithTag("Tool");
-
-      foreach(GameObject tool in all_tools){
-        tool.AddComponent<Rigidbody>();
-        tool.transform.position = tool_spawnpoints[Random.Range(0, tool_spawnpoints.Length)];
-      }
+      Randomize_Items("Tool");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    // Randomize spawn positions of items with tag
+    void Randomize_Items(string tag){
+      all_tools = GameObject.FindGameObjectsWithTag(tag);
+
+      foreach(GameObject tool in all_tools){
+        int index = Random.Range(0, tool_spawnpoints_list.Count);
+
+        //Temporary
+        tool.AddComponent<Rigidbody>();
+
+        tool.transform.position = tool_spawnpoints_list[index];
+
+        tool_spawnpoints_list.Remove(tool_spawnpoints_list[index]);
+      }
 
     }
 }
