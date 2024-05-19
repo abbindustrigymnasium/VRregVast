@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class ToolRandomizer : MonoBehaviour
 {
-    public GameObject[] all_tools;
+    [SerializeField] private GameObject[] all_tools;
 
-
-    public List<Vector3> tool_spawnpoints_list = new List<Vector3>();
+    [SerializeField] private List<Vector3> tool_spawnpoints_list = new List<Vector3>();
 
     void Start()
     {
@@ -24,8 +23,10 @@ public class ToolRandomizer : MonoBehaviour
         //Temporary
         tool.AddComponent<Rigidbody>();
 
+        // Set position to random position from list
         tool.transform.position = tool_spawnpoints_list[index];
 
+        // Remove position from list to avoid spawning on the same point
         tool_spawnpoints_list.Remove(tool_spawnpoints_list[index]);
       }
 
