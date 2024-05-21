@@ -9,12 +9,42 @@ public class TaskManager : MonoBehaviour
     private void Awake()
     {
         task_map = Create_Task_Map();
+    }
+    private void OnEnable()
+    {
+        EventsManager.instance.task_events.on_start_task += Start_Task;
+        EventsManager.instance.task_events.on_advance_task += Advance_Task;
+        EventsManager.instance.task_events.on_finish_task += Finish_Task;
+    }
 
-        Task task = Get_Task_By_Id("MoveBlock");
+    private void OnDisable()
+    {
+        EventsManager.instance.task_events.on_start_task -= Start_Task;
+        EventsManager.instance.task_events.on_advance_task -= Advance_Task;
+        EventsManager.instance.task_events.on_finish_task -= Finish_Task;
+    }
 
-        Debug.Log(task.info.display_name);
-        Debug.Log(task.state);
-        Debug.Log(task.Current_Step_Exists());
+    private void Start()
+    {
+        foreach (var task in task_map.Values)
+        {
+            EventsManager.instance.task_events.Task_State_Change(task);
+        }
+    }
+
+    private void Start_Task(string id)
+    {
+
+    }
+
+    private void Advance_Task(string id)
+    {
+
+    }
+
+    private void Finish_Task(string id)
+    {
+
     }
 
     private Dictionary<string, Task> Create_Task_Map()
