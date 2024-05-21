@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class MenuControlls : MonoBehaviour
 {
@@ -25,5 +26,11 @@ public class MenuControlls : MonoBehaviour
     {
         Application.Quit();
         // UnityEditor.EditorApplication.isPlaying = false;
+    }
+
+    // Starts the new scene
+    public void Start_Scene(string scene)
+    {
+        SceneManager.LoadScene(scene);
     }
 }
