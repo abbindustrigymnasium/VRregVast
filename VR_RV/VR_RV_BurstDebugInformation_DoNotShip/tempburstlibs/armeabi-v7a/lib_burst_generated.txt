@@ -18,6 +18,7 @@ Library: C:\programmering\Unity\VRregVast\VR_RV\Temp\BurstOutput\tempburstlibs\a
 --assembly-defines=Unity.VisualScripting.Flow;
 --assembly-defines=Unity.XR.OpenXR.Features.MockRuntime;
 --assembly-defines=Unity.XR.CoreUtils;
+--assembly-defines=Unity.XR.Interaction.Toolkit.Samples.DeviceSimulator;
 --assembly-defines=Unity.XR.OpenXR;
 --assembly-defines=Unity.XR.OpenXR.Features.MetaQuestSupport;
 --assembly-defines=Unity.RenderPipelines.Core.ShaderLibrary;
@@ -89,6 +90,7 @@ Library: C:\programmering\Unity\VRregVast\VR_RV\Temp\BurstOutput\tempburstlibs\a
 --assembly-defines=Unity.VisualScripting.Flow;
 --assembly-defines=Unity.XR.OpenXR.Features.MockRuntime;
 --assembly-defines=Unity.XR.CoreUtils;
+--assembly-defines=Unity.XR.Interaction.Toolkit.Samples.DeviceSimulator;
 --assembly-defines=Unity.XR.OpenXR;
 --assembly-defines=Unity.XR.OpenXR.Features.MetaQuestSupport;
 --assembly-defines=Unity.RenderPipelines.Core.ShaderLibrary;
