@@ -547,10 +547,10 @@
     "m_Guid": {
         "m_GuidSerialized": "9d58fc52-70b8-4be6-ba1a-69f3352a103c"
     },
-    "m_Name": "dirt_mask",
+    "m_Name": "layer_mask",
     "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "dirt_mask",
-    "m_DefaultReferenceName": "_dirt_mask",
+    "m_RefNameGeneratedByDisplayName": "layer_mask",
+    "m_DefaultReferenceName": "_layer_mask",
     "m_OverrideReferenceName": "",
     "m_GeneratePropertyBlock": true,
     "m_UseCustomSlotLabel": false,
@@ -1546,7 +1546,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
     "m_ObjectId": "bfc55887caaf4d8abf96ec14fb5c571a",
     "m_Id": 0,
-    "m_DisplayName": "dirt_mask",
+    "m_DisplayName": "layer_mask",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
