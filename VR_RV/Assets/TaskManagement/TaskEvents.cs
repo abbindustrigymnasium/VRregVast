@@ -38,14 +38,13 @@ public class TaskEvents
         }
     }
 
-    // Not implemented yet
 
-    // public event Action<string, int, TaskStepState> on_task_step_state_change;
-    // public void Task_Step_State_Change(string id, int step_index, TaskStepState task_step_state)
-    // {
-    //     if (on_task_step_state_change != null)
-    //     {
-    //         on_task_step_state_change(id, step_index, task_step_state);
-    //     }
-    // }
+    public event Action<string, int, TaskStepState> on_task_step_state_change;
+    public void Task_Step_State_Change(string id, int step_index, TaskStepState task_step_state)
+    {
+        if (on_task_step_state_change != null)
+        {
+            on_task_step_state_change(id, step_index, task_step_state);
+        }
+    }
 }

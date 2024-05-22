@@ -39,7 +39,6 @@ public class TaskManager : MonoBehaviour
         EventsManager.instance.task_events.Task_State_Change(task);
     }
 
-
     private bool Check_Requirements_Met(Task task)
     {
         bool meets_requirements = true;
@@ -77,6 +76,17 @@ public class TaskManager : MonoBehaviour
 
     private void Advance_Task(string id)
     {
+        Task task = Get_Task_By_Id(id);
+        task.Move_To_Next_Step();
+
+        if (task.Current_Step_Exists())
+        {
+            task.Instantiate_Current_Task_Step(this.transform);
+        }
+        else
+        {
+            Change_Task_State(task.info.id, TaskState.CAN_FINISH);
+        }
 
         Debug.Log("Task " + id + " has been advanced!");
 
@@ -84,9 +94,25 @@ public class TaskManager : MonoBehaviour
 
     private void Finish_Task(string id)
     {
+        Task task = Get_Task_By_Id(id);
+        Claim_Rewards(task);
+
+        Change_Task_State(task.info.id, TaskState.FINISHED);
 
         Debug.Log("Task " + id + " has been finished!");
 
+    }
+
+    private void Claim_Rewards(Task task)
+    {
+        // Connect with lvling system
+        Debug.Log("Player recieved " + task.info.exp_gain + " exp! (In theory)");
+    }
+
+    private void Task_Step_State_Change(string id, int stepIndex, TaskStepState task_step_state)
+    {
+        Task task = Get_Task_By_Id(id);
+        Change_Task_State(id, task.state);
     }
 
     private Dictionary<string, Task> Create_Task_Map()
@@ -109,11 +135,12 @@ public class TaskManager : MonoBehaviour
 
     private Task Get_Task_By_Id(string id)
     {
+        Debug.Log("Fetching task " + id);
         Task task = task_map[id];
 
         if (task == null)
         {
-            Debug.LogError("Id not found in task map");
+            Debug.LogError(id + " not found in task map");
         }
 
         return task;

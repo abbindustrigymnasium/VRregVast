@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Interactable
   - Vacuum
-  - Hand
   layers:
   - Default
   - TransparentFX

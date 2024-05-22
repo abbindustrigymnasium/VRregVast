@@ -16,5 +16,7 @@ MonoBehaviour:
   display_name: Move Block
   prerequisites: []
   task_step_prefabs:
-  - {fileID: 5092940970785487303, guid: df60eeaa437ae364ea09ffdf70df2ff8, type: 3}
+  - {fileID: 1732076502053842209, guid: 97372a403c22b804196d9e42c62cbdca, type: 3}
+  - {fileID: 1732076502053842209, guid: f356eff692e52554bad76499a68f8e99, type: 3}
+  - {fileID: 1732076502053842209, guid: 4247b253f0784834d9255b6041d433c2, type: 3}
   exp_gain: 121

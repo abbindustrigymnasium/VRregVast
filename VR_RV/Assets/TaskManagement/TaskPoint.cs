@@ -22,12 +22,12 @@ public class TaskPoint : MonoBehaviour
 
     private void OnEnable()
     {
-        EventsManager.instance.task_events.on_task_state_change += TaskStateChange;
+        EventsManager.instance.task_events.on_task_state_change += Task_State_Change;
     }
 
     private void onDisable()
     {
-        EventsManager.instance.task_events.on_task_state_change -= TaskStateChange;
+        EventsManager.instance.task_events.on_task_state_change -= Task_State_Change;
     }
 
     private void Met()
@@ -42,7 +42,7 @@ public class TaskPoint : MonoBehaviour
         }
     }
 
-    private void TaskStateChange(Task task)
+    private void Task_State_Change(Task task)
     {
         if (task.info.id.Equals(task_id))
         {
@@ -51,9 +51,10 @@ public class TaskPoint : MonoBehaviour
         }
     }
 
+    // Call when you need to trigger this task point
     public void Trigger()
     {
-        Debug.Log("Task Point Triggered");
+        Debug.Log(task_id + " Task Point Triggered");
         Met();
     }
 }
