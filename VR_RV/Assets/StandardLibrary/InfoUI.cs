@@ -1,10 +1,11 @@
 
-
+using System.Net.Mime;
 using System.Security.AccessControl;
 //using System.Diagnostics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using System.IO;
 using TMPro;
 
@@ -18,6 +19,9 @@ public class InfoUI : MonoBehaviour
 
     public TextMeshProUGUI title; 
     public TextMeshProUGUI text;
+    public TextMeshProUGUI usage;
+
+    public Image toolImage;
     public Transform camera;
     public Transform item;
     public bool isGrabbed = false;
@@ -59,7 +63,7 @@ public class InfoUI : MonoBehaviour
         public string usage;
         public string imageUrl;
 
-        public static ToolInfo getToolInfo(string s)
+        public static ToolInfo getToolInfo(string s) // Get the tool info from the JSON string
         {
             string[] tool = s.Split(",");
 
@@ -90,7 +94,7 @@ public class InfoUI : MonoBehaviour
 
 
 
-    public ToolInfo[] getJson(string toolInfoPath)
+    public ToolInfo[] getJson(string toolInfoPath) // Get the JSON data from the file
     {
 
 
@@ -118,6 +122,11 @@ public class InfoUI : MonoBehaviour
         // Use the jsonData dictionary as needed
     }
 
+    public void closePopup() // Close the popup
+    {
+            Destroy(gameObject);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -126,11 +135,30 @@ public class InfoUI : MonoBehaviour
         camera = Camera.main.transform; // get the camera transform
 
         transform.position = new Vector3(item.position.x + 1f, 2.0f, item.position.z);
+        // Get the name of the parent object
+        
+        string parentObjectName = transform.parent.gameObject.name; // Get the name of the parent object
 
-        title.text = "test title";
-        text.text = "test text"; 
+        foreach (ToolInfo toolInfo in toolInfoList) // Loop through the toolInfoList array to find the toolInfo with the matching title
+        {
+            if (parentObjectName == toolInfo.title)
+            {
+                title.text = toolInfo.title;
+                text.text = toolInfo.text;
+                toolImage.sprite = Resources.Load<Sprite>(toolInfo.imageUrl);
+                usage.text = toolInfo.usage;
+            }
+            else
+            {
+                title.text = "test title";
+                text.text = "test text";
+                usage.text = "test usage";
+                toolImage.sprite = Resources.Load<Sprite>("../Pictures/Bunke.jpg");
+            }
+        }
+       
     }
-
+    }
 
     // Update is called once per frame
     void Update()
