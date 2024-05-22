@@ -81,15 +81,18 @@ public class mesh_paint : MonoBehaviour
         int contact_points_amount = collision.contactCount;
         List<float> contact_points_in_pixels = new List<float>();
         ContactPoint[] used_points = new ContactPoint[contact_points_amount];
-        Debug.Log(collision.GetContact(0).point);
         
         // Set the values in the list
         for (int i = 0;  i < contact_points_amount * 2; i+=2)
         {
             ContactPoint current_contact = collision.GetContact(i/2);
+            if (Array_Contains(used_points, current_contact)) continue;
+            used_points[i/2] = current_contact;
+
             contact_points_in_pixels.Add((current_contact.point.x + transform.localScale.x / 2) * pixel_width);
             contact_points_in_pixels.Add((current_contact.point.y + transform.localScale.y / 2) * pixel_height);
         }
+        Debug.Log(contact_points_in_pixels.Count);
 
         // Create arrays of the x and y values in pixels
         float[] x_values_in_pixels = new float[contact_points_in_pixels.Count / 2];
@@ -155,11 +158,19 @@ public class mesh_paint : MonoBehaviour
             while (delta_theta < -Mathf.PI) delta_theta += Mathf.PI * 2;
             sum_of_angles += delta_theta;
         }
-        if (Mathf.Abs(sum_of_angles) == 0) return false;
-        return true;
-
-
-
+        if (Mathf.Abs(sum_of_angles) + 0.01f > Mathf.PI) return true;
+        return false;
         
+    }
+
+    bool Array_Contains(ContactPoint[] contact_array, ContactPoint compared_contact)
+    {
+        for(int i = 0; i < contact_array.Length; i++)
+        {
+            Vector3 current_contact_point = contact_array[i].point;
+            Vector3 compared_contact_point = compared_contact.point;
+            if (current_contact_point.x == compared_contact_point.x && current_contact_point.y == compared_contact_point.y) return true;
+        }
+        return false;
     }
 }
