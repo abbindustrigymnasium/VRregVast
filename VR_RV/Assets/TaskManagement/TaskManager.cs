@@ -32,8 +32,43 @@ public class TaskManager : MonoBehaviour
         }
     }
 
+    private void Change_Task_State(string id, TaskState state)
+    {
+        Task task = Get_Task_By_Id(id);
+        task.state = state;
+        EventsManager.instance.task_events.Task_State_Change(task);
+    }       
+
+
+    private bool Check_Requirements_Met(Task task) {
+        bool meetsRequirements = true;
+
+        foreach (TaskInfoSO prerequisiteTaskInfo in task.info.prerequisites) {
+            if (Get_Task_By_Id(prerequisiteTaskInfo.id).state != TaskState.FINISHED) {
+                meetsRequirements = false;
+            }
+        }
+
+        return meetsRequirements;
+    }
+
+    private void Update()
+    {
+        foreach (Task task in task_map.Values)
+        {
+            if (task.state == TaskState.REQUIREMENTS_NOT_MET && Check_Requirements_Met(task))
+            {
+                Change_Task_State(task.info.id, TaskState.CAN_START);
+            }
+        }
+    }
+
     private void Start_Task(string id)
     {
+
+        Task task =  Get_Task_By_Id(id);
+        task.Instantiate_Current_Task_Step(this.transform);
+        Change_Task_State(task.info.id, TaskState.IN_PROGRESS);
 
     }
 

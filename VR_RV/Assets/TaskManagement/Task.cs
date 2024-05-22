@@ -32,7 +32,13 @@ public class Task
 
         if (task_step_prefab != null)
         {
-            UnityEngine.Object.Instantiate<GameObject>(task_step_prefab, parent_transform);
+            TaskStep taskStep = UnityEngine.Object.Instantiate<GameObject>(task_step_prefab, parent_transform)
+            .GetComponent<TaskStep>();
+
+
+            // Continue from here 
+             
+            //  taskStep.Initialize_Quest_Step(info.id);
         }
     }
 
