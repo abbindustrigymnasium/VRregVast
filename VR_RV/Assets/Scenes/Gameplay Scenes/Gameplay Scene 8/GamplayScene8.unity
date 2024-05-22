@@ -7755,9 +7755,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 146e4ed7f91a88d4ab5e1d68465854f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Box1: {fileID: 1799597926}
-  Box2: {fileID: 190020486}
-  text_gameobject: {fileID: 479762748}
+  ParentOfItems: {fileID: 1799597926}
+  TextBox: {fileID: 479762748}
 --- !u!1001 &1954943233
 PrefabInstance:
   m_ObjectHideFlags: 0
