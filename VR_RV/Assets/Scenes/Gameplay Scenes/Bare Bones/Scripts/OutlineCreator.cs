@@ -1,4 +1,7 @@
 /*
+        //Temporary
+        if(execution_number == 0)
+            tool.AddComponent<Rigidbody>();
  * This script should be added to each hand that is going to interact with objects
  *
  * Written by Hampus Fridholm
