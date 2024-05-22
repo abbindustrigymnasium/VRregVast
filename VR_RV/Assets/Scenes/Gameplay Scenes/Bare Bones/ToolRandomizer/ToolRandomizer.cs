@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,9 +9,23 @@ public class ToolRandomizer : MonoBehaviour
 
     [SerializeField] private List<Vector3> tool_spawnpoints_list = new List<Vector3>();
 
-    void Start()
-    {
-      Randomize_Items("Tool");
+    [SerializeField] private Vector3[] saved_spawnpoints;
+
+    private float timer = 0f;
+
+    void Awake(){
+      saved_spawnpoints = tool_spawnpoints_list.ToArray();
+    }
+
+    void Update(){
+      if(timer >= 5.0f){
+        Randomize_Items("Tool");
+        timer = 0f;
+        tool_spawnpoints_list = saved_spawnpoints.ToList();
+      }
+      else{
+        timer += Time.deltaTime;
+      }
     }
 
     // Randomize spawn positions of items with tag
@@ -19,9 +34,6 @@ public class ToolRandomizer : MonoBehaviour
 
       foreach(GameObject tool in all_tools){
         int index = Random.Range(0, tool_spawnpoints_list.Count);
-
-        //Temporary
-        tool.AddComponent<Rigidbody>();
 
         // Set position to random position from list
         tool.transform.position = tool_spawnpoints_list[index];
