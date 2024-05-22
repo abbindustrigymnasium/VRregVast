@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10a27d5279e67da48851b4cbfad905a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layer_mask_default: {fileID: 2800000, guid: b79b67a731a507f42a54f85a9a2f41c4, type: 3}
+  layer_mask_default: {fileID: 2800000, guid: f3b9128e0849a9c4ea50c80c7c362dd5, type: 3}
 --- !u!1 &812603743
 GameObject:
   m_ObjectHideFlags: 0
