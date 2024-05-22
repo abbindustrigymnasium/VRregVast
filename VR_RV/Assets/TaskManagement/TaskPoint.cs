@@ -38,7 +38,7 @@ public class TaskPoint : MonoBehaviour
         if (task.info.id.Equals(task_id))
         {
             current_task_state = task.state;
-            Debug.Log("Task with id: " + "updated to state: " + current_task_state);
+            Debug.Log("Task with id: " + task_id + " updated to state: " + current_task_state);
         }
     }
 

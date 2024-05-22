@@ -12,11 +12,8 @@ public class TaskManager : MonoBehaviour
     }
     private void OnEnable()
     {
-        Debug.Log("Adding start task listener");
         EventsManager.instance.task_events.on_start_task += Start_Task;
-        Debug.Log("Adding advance task listener");
         EventsManager.instance.task_events.on_advance_task += Advance_Task;
-        Debug.Log("Adding finish task listener");
         EventsManager.instance.task_events.on_finish_task += Finish_Task;
     }
 
