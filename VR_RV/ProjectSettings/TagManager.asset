@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Disinfectable
   - Rag
+  - Interactable
+  - Vacuum
   layers:
   - Default
   - TransparentFX
@@ -13,8 +15,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Vacuum
+  - Sphere
   - 
   - 
   - 
