@@ -175,13 +175,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -354,13 +354,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -555,95 +555,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2e0a31572c0c44d90120e1655ce3b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &65801099
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 369569702}
-    m_Modifications:
-    - target: {fileID: 3007709095530452042, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_Name
-      value: Sphere Drop Zone (38)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.13947885
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.13947885
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.13947885
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.2152951
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.09096336
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.59816307
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2254d223d4395454c8dc822edbdda9d9, type: 3}
---- !u!4 &65801100 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-    type: 3}
-  m_PrefabInstance: {fileID: 65801099}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &66107211 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3539697883265276347, guid: 9a648ab39f339e149a9fd499a46c448e,
@@ -662,13 +573,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -1094,13 +1005,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -1329,13 +1240,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -1521,6 +1432,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere Drop Zone (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 975173510}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
+      objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1614,6 +1540,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sphere Drop Zone (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 975173510}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
       objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
@@ -1732,7 +1673,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: da21d762d6790e343a5746608a47e902,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.4144
+      value: -2.334
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: da21d762d6790e343a5746608a47e902,
         type: 3}
@@ -1836,13 +1777,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -2038,6 +1979,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere Drop Zone (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 975173510}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
+      objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -2191,6 +2147,31 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5477749408508380018, guid: 3071c6fc0e0618b40aff6a8a0571a883,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2759.7053
+      objectReference: {fileID: 0}
+    - target: {fileID: -5477749408508380018, guid: 3071c6fc0e0618b40aff6a8a0571a883,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2759.7053
+      objectReference: {fileID: 0}
+    - target: {fileID: -5477749408508380018, guid: 3071c6fc0e0618b40aff6a8a0571a883,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 68.947716
+      objectReference: {fileID: 0}
+    - target: {fileID: -5477749408508380018, guid: 3071c6fc0e0618b40aff6a8a0571a883,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.91888
+      objectReference: {fileID: 0}
+    - target: {fileID: -5477749408508380018, guid: 3071c6fc0e0618b40aff6a8a0571a883,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.049967
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3071c6fc0e0618b40aff6a8a0571a883,
         type: 3}
@@ -2459,32 +2440,32 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1264370c301f5fd4f941da0081e10bb6,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.2078445
+      value: 1.4385899
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1264370c301f5fd4f941da0081e10bb6,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.2078445
+      value: 1.4385899
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1264370c301f5fd4f941da0081e10bb6,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 3.2078445
+      value: 1.4385899
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1264370c301f5fd4f941da0081e10bb6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.000048846
+      value: -0.011
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1264370c301f5fd4f941da0081e10bb6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.073
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1264370c301f5fd4f941da0081e10bb6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.075638
+      value: -2.213
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1264370c301f5fd4f941da0081e10bb6,
         type: 3}
@@ -2605,13 +2586,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -3181,13 +3162,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -3356,6 +3337,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1155334211}
     m_Modifications:
+    - target: {fileID: -8980645240720526733, guid: e0d86b8e5b5877645979982cc55e0d6e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 107.07001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8980645240720526733, guid: e0d86b8e5b5877645979982cc55e0d6e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 107.07001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8980645240720526733, guid: e0d86b8e5b5877645979982cc55e0d6e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 107.07001
+      objectReference: {fileID: 0}
+    - target: {fileID: -8980645240720526733, guid: e0d86b8e5b5877645979982cc55e0d6e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.000053548
+      objectReference: {fileID: 0}
+    - target: {fileID: -8980645240720526733, guid: e0d86b8e5b5877645979982cc55e0d6e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0051605
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e0d86b8e5b5877645979982cc55e0d6e,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -3421,6 +3427,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6004141885604926660, guid: e0d86b8e5b5877645979982cc55e0d6e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5027262
+      objectReference: {fileID: 0}
+    - target: {fileID: -6004141885604926660, guid: e0d86b8e5b5877645979982cc55e0d6e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5027262
+      objectReference: {fileID: 0}
+    - target: {fileID: -6004141885604926660, guid: e0d86b8e5b5877645979982cc55e0d6e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5027261
+      objectReference: {fileID: 0}
+    - target: {fileID: -6004141885604926660, guid: e0d86b8e5b5877645979982cc55e0d6e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0028399
+      objectReference: {fileID: 0}
+    - target: {fileID: -6004141885604926660, guid: e0d86b8e5b5877645979982cc55e0d6e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.10513
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e0d86b8e5b5877645979982cc55e0d6e,
         type: 3}
       propertyPath: m_Name
@@ -3460,6 +3491,56 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5780982091463331153, guid: e0d86b8e5b5877645979982cc55e0d6e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5027262
+      objectReference: {fileID: 0}
+    - target: {fileID: 5780982091463331153, guid: e0d86b8e5b5877645979982cc55e0d6e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5027262
+      objectReference: {fileID: 0}
+    - target: {fileID: 5780982091463331153, guid: e0d86b8e5b5877645979982cc55e0d6e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5027261
+      objectReference: {fileID: 0}
+    - target: {fileID: 5780982091463331153, guid: e0d86b8e5b5877645979982cc55e0d6e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0015869
+      objectReference: {fileID: 0}
+    - target: {fileID: 5780982091463331153, guid: e0d86b8e5b5877645979982cc55e0d6e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.10513
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808606073531566849, guid: e0d86b8e5b5877645979982cc55e0d6e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2605193
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808606073531566849, guid: e0d86b8e5b5877645979982cc55e0d6e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2605193
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808606073531566849, guid: e0d86b8e5b5877645979982cc55e0d6e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.14869542
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808606073531566849, guid: e0d86b8e5b5877645979982cc55e0d6e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0019112
+      objectReference: {fileID: 0}
+    - target: {fileID: 5808606073531566849, guid: e0d86b8e5b5877645979982cc55e0d6e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.092501
       objectReference: {fileID: 0}
     - target: {fileID: 6988914276660283828, guid: e0d86b8e5b5877645979982cc55e0d6e,
         type: 3}
@@ -4095,13 +4176,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -4344,14 +4425,6 @@ Transform:
   - {fileID: 647751044}
   - {fileID: 907119309}
   - {fileID: 1147439681}
-  - {fileID: 1256902219}
-  - {fileID: 1006994431}
-  - {fileID: 700147616}
-  - {fileID: 1256758555}
-  - {fileID: 1640168312}
-  - {fileID: 1820273309}
-  - {fileID: 65801100}
-  - {fileID: 1800932143}
   - {fileID: 676637833}
   - {fileID: 1154839848}
   - {fileID: 1293203728}
@@ -4378,22 +4451,22 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ef7e4ceacf2a67649ac3df77313d6bee,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: -0.35228014
+      value: -7.7886186
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ef7e4ceacf2a67649ac3df77313d6bee,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: -1.0215175
+      value: -22.584898
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ef7e4ceacf2a67649ac3df77313d6bee,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: -0.105081
+      value: -2.323253
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ef7e4ceacf2a67649ac3df77313d6bee,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.063393
+      value: 0.061922
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ef7e4ceacf2a67649ac3df77313d6bee,
         type: 3}
@@ -4403,7 +4476,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ef7e4ceacf2a67649ac3df77313d6bee,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.1234
+      value: -2.1212
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ef7e4ceacf2a67649ac3df77313d6bee,
         type: 3}
@@ -4720,6 +4793,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere Drop Zone (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 975173510}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
+      objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -4813,13 +4901,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -5093,6 +5181,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4292154010595695564, guid: 234d25a6e07b33645a953874c96c847c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 119.675804
+      objectReference: {fileID: 0}
+    - target: {fileID: -4292154010595695564, guid: 234d25a6e07b33645a953874c96c847c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 119.675804
+      objectReference: {fileID: 0}
+    - target: {fileID: -4292154010595695564, guid: 234d25a6e07b33645a953874c96c847c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 119.675804
+      objectReference: {fileID: 0}
+    - target: {fileID: -4292154010595695564, guid: 234d25a6e07b33645a953874c96c847c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.030868
+      objectReference: {fileID: 0}
+    - target: {fileID: -4292154010595695564, guid: 234d25a6e07b33645a953874c96c847c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.020071
+      objectReference: {fileID: 0}
+    - target: {fileID: -4292154010595695564, guid: 234d25a6e07b33645a953874c96c847c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.6815
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 234d25a6e07b33645a953874c96c847c,
         type: 3}
       propertyPath: m_Name
@@ -5362,6 +5480,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere Drop Zone (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 975173510}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
+      objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -5582,13 +5715,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -5796,6 +5929,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere Drop Zone (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 975173510}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
+      objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -5889,6 +6037,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sphere Drop Zone (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 975173510}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
       objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
@@ -6128,13 +6291,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -6308,6 +6471,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere Drop Zone (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 975173510}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
+      objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -6400,32 +6578,32 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 57005fd1209929e4da9a1700914fff5d,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.48231497
+      value: 0.29473785
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 57005fd1209929e4da9a1700914fff5d,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.48231497
+      value: 0.29473785
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 57005fd1209929e4da9a1700914fff5d,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.48231497
+      value: 0.29473785
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 57005fd1209929e4da9a1700914fff5d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.060541
+      value: -0.025
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 57005fd1209929e4da9a1700914fff5d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.981
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 57005fd1209929e4da9a1700914fff5d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.3419
+      value: -2.3276
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 57005fd1209929e4da9a1700914fff5d,
         type: 3}
@@ -6524,13 +6702,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -6892,13 +7070,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -7071,13 +7249,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -7272,95 +7450,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 2534964839176971238, guid: c683a5473206a9149968f6f2a5d12815, type: 3}
---- !u!1001 &700147615
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 369569702}
-    m_Modifications:
-    - target: {fileID: 3007709095530452042, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_Name
-      value: Sphere Drop Zone (34)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.13947885
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.13947885
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.13947885
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.2152951
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.09096336
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.3111631
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2254d223d4395454c8dc822edbdda9d9, type: 3}
---- !u!4 &700147616 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-    type: 3}
-  m_PrefabInstance: {fileID: 700147615}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &715315020
 GameObject:
   m_ObjectHideFlags: 0
@@ -7978,13 +8067,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -8157,13 +8246,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -8370,6 +8459,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sphere Drop Zone (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1608863232}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
       objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
@@ -9136,6 +9240,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere Drop Zone (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 975173510}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
+      objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -9343,6 +9462,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere Drop Zone (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
+      objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -9437,6 +9566,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere Drop Zone (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
+      objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -9518,6 +9657,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 975173508}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &975173510 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8435795873513085810, guid: 2254d223d4395454c8dc822edbdda9d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 975173508}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a005087a4a41a38488f0d4433f559d94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1006791702
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9529,32 +9680,32 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: bb30e0bce10efe449b09334b1f4d2cf0,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.0851462
+      value: 0.7139332
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb30e0bce10efe449b09334b1f4d2cf0,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.0851462
+      value: 0.7139332
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb30e0bce10efe449b09334b1f4d2cf0,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.0851462
+      value: 0.7139332
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb30e0bce10efe449b09334b1f4d2cf0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.00026898
+      value: 0.1853
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb30e0bce10efe449b09334b1f4d2cf0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00037345
+      value: 1.2077
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb30e0bce10efe449b09334b1f4d2cf0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.0097539
+      value: -2.284
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: bb30e0bce10efe449b09334b1f4d2cf0,
         type: 3}
@@ -9641,13 +9792,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -9842,95 +9993,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2e0a31572c0c44d90120e1655ce3b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1006994430
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 369569702}
-    m_Modifications:
-    - target: {fileID: 3007709095530452042, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_Name
-      value: Sphere Drop Zone (33)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.13947885
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.13947885
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.13947885
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.2152951
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.09096336
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.486163
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2254d223d4395454c8dc822edbdda9d9, type: 3}
---- !u!4 &1006994431 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1006994430}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1011276063
 GameObject:
   m_ObjectHideFlags: 0
@@ -10027,6 +10089,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere Drop Zone (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 975173510}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
+      objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -10120,6 +10197,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sphere Drop Zone (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 975173510}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
       objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
@@ -10248,13 +10340,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -10426,32 +10518,32 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 6b47821f27ff33a4d84239e842f531c3,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 6.778417
+      value: 3.3753128
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b47821f27ff33a4d84239e842f531c3,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 6.778417
+      value: 3.3753128
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b47821f27ff33a4d84239e842f531c3,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 6.778417
+      value: 3.3753128
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b47821f27ff33a4d84239e842f531c3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.26045
+      value: 0.24562
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b47821f27ff33a4d84239e842f531c3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0014446
+      value: 1.0109
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b47821f27ff33a4d84239e842f531c3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.36585
+      value: -1.9625
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 6b47821f27ff33a4d84239e842f531c3,
         type: 3}
@@ -10594,13 +10686,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -10773,13 +10865,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -10987,6 +11079,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere Drop Zone (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 975173510}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
+      objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -11080,6 +11187,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sphere Drop Zone (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 975173510}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
       objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
@@ -11236,32 +11358,32 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c9ef61c278b23ec4682605015ab9bd70,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.7562091
+      value: 0.8072661
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c9ef61c278b23ec4682605015ab9bd70,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.7562091
+      value: 0.8072661
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c9ef61c278b23ec4682605015ab9bd70,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.7562091
+      value: 0.8072661
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c9ef61c278b23ec4682605015ab9bd70,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0038761
+      value: 0.177
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c9ef61c278b23ec4682605015ab9bd70,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00048667
+      value: 1.1146
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c9ef61c278b23ec4682605015ab9bd70,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.033255
+      value: -2.25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c9ef61c278b23ec4682605015ab9bd70,
         type: 3}
@@ -11382,13 +11504,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -11561,6 +11683,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sphere Drop Zone (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 975173510}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
       objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
@@ -11766,13 +11903,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -11980,6 +12117,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere Drop Zone (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 975173510}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
+      objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -12108,6 +12260,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere Drop Zone (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
+      objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -12189,184 +12351,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1238917546}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1256758554
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 369569702}
-    m_Modifications:
-    - target: {fileID: 3007709095530452042, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_Name
-      value: Sphere Drop Zone (35)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.13947885
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.13947885
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.13947885
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.2152951
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.09096336
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.1401631
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2254d223d4395454c8dc822edbdda9d9, type: 3}
---- !u!4 &1256758555 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1256758554}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1256902218
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 369569702}
-    m_Modifications:
-    - target: {fileID: 3007709095530452042, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_Name
-      value: Sphere Drop Zone (32)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.13947885
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.13947885
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.13947885
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.2152951
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.09096336
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.655163
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2254d223d4395454c8dc822edbdda9d9, type: 3}
---- !u!4 &1256902219 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1256902218}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1277545948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12379,6 +12363,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sphere Drop Zone (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 975173510}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
       objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
@@ -12474,6 +12473,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere Drop Zone (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 975173510}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
+      objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -12568,6 +12582,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere Drop Zone (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
+      objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -12660,32 +12684,32 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 78ca871033734ba4f934b46d7eec5aaf,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3607659
+      value: 0.24341957
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78ca871033734ba4f934b46d7eec5aaf,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.37089816
+      value: 0.25025612
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78ca871033734ba4f934b46d7eec5aaf,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3607659
+      value: 0.24341957
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78ca871033734ba4f934b46d7eec5aaf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.092823
+      value: 0.044
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78ca871033734ba4f934b46d7eec5aaf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.00042304
+      value: 1.0623
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78ca871033734ba4f934b46d7eec5aaf,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.12721
+      value: -2.256
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78ca871033734ba4f934b46d7eec5aaf,
         type: 3}
@@ -12806,13 +12830,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -13180,13 +13204,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -13371,13 +13395,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -13551,6 +13575,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere Drop Zone
       objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -13621,11 +13650,106 @@ PrefabInstance:
       propertyPath: correct_item
       value: 
       objectReference: {fileID: 1959725780}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3007709095530452042, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1463802221}
   m_SourcePrefab: {fileID: 100100000, guid: 2254d223d4395454c8dc822edbdda9d9, type: 3}
+--- !u!1 &1463802220 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3007709095530452042, guid: 2254d223d4395454c8dc822edbdda9d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1463802219}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1463802221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1463802220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InteractionManager: {fileID: 0}
+  m_InteractionLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_InteractionLayers:
+    m_Bits: 4294967295
+  m_AttachTransform: {fileID: 0}
+  m_KeepSelectedTargetValid: 1
+  m_DisableVisualsWhenBlockedInGroup: 1
+  m_StartingSelectedInteractable: {fileID: 0}
+  m_StartingTargetFilter: {fileID: 0}
+  m_HoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_HoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectEntered:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1544873983}
+        m_TargetAssemblyTypeName: SnapZoneCheckItemName, Assembly-CSharp
+        m_MethodName: On_Select_Entered_Snap
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_SelectExited:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1463802220}
+        m_TargetAssemblyTypeName: SnapZoneCheckItemName, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_StartingHoverFilters: []
+  m_StartingSelectFilters: []
+  m_OnHoverEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnHoverExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  m_OnSelectExited:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ShowInteractableHoverMeshes: 1
+  m_InteractableHoverMeshMaterial: {fileID: 0}
+  m_InteractableCantHoverMeshMaterial: {fileID: 0}
+  m_SocketActive: 1
+  m_InteractableHoverScale: 1
+  m_RecycleDelayTime: 1
+  m_HoverSocketSnapping: 0
+  m_SocketSnappingRadius: 0.1
+  m_SocketScaleMode: 0
+  m_FixedScale: {x: 1, y: 1, z: 1}
+  m_TargetBoundsSize: {x: 1, y: 1, z: 1}
 --- !u!1 &1464231805 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3539697883265276347, guid: 63295564cb5357043abca1ad3d75111f,
@@ -13662,13 +13786,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -13863,13 +13987,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -14261,13 +14385,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -14440,13 +14564,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -14654,6 +14778,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere Drop Zone (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 975173510}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
+      objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -14748,6 +14887,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere Drop Zone (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
+      objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -14829,6 +14978,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1544873981}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1544873983 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8435795873513085810, guid: 2254d223d4395454c8dc822edbdda9d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1544873981}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a005087a4a41a38488f0d4433f559d94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1545390950
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14841,6 +15002,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sphere Drop Zone (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 975173510}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
       objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
@@ -15763,13 +15939,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -15976,13 +16152,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -16155,13 +16331,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -16345,22 +16521,22 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b793abff38e8f0e46885fe76cb9868e4,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.70885175
+      value: 149.42604
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b793abff38e8f0e46885fe76cb9868e4,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1488589
+      value: 31.379478
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b793abff38e8f0e46885fe76cb9868e4,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.34024885
+      value: 71.7245
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b793abff38e8f0e46885fe76cb9868e4,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.01859
+      value: 0.020253
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b793abff38e8f0e46885fe76cb9868e4,
         type: 3}
@@ -16370,7 +16546,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: b793abff38e8f0e46885fe76cb9868e4,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.0662
+      value: -1.9293
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b793abff38e8f0e46885fe76cb9868e4,
         type: 3}
@@ -16681,6 +16857,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere Drop Zone (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
+      objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -16762,6 +16948,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1608863230}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1608863232 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8435795873513085810, guid: 2254d223d4395454c8dc822edbdda9d9,
+    type: 3}
+  m_PrefabInstance: {fileID: 1608863230}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a005087a4a41a38488f0d4433f559d94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1611844121
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16774,6 +16972,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sphere Drop Zone (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 975173510}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
       objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
@@ -16869,6 +17082,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere Drop Zone (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 975173510}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
+      objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -16949,95 +17177,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
     type: 3}
   m_PrefabInstance: {fileID: 1614084722}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1640168311
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 369569702}
-    m_Modifications:
-    - target: {fileID: 3007709095530452042, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_Name
-      value: Sphere Drop Zone (36)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.13947885
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.13947885
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.13947885
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.2152951
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.09096336
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.96116304
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2254d223d4395454c8dc822edbdda9d9, type: 3}
---- !u!4 &1640168312 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1640168311}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1646492006
 PrefabInstance:
@@ -17184,13 +17323,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -17842,6 +17981,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere Drop Zone (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 975173510}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
+      objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -18009,95 +18163,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1791443844}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1800932142
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 369569702}
-    m_Modifications:
-    - target: {fileID: 3007709095530452042, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_Name
-      value: Sphere Drop Zone (39)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.13947885
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.13947885
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.13947885
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.2152951
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.09096336
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.42116308
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2254d223d4395454c8dc822edbdda9d9, type: 3}
---- !u!4 &1800932143 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1800932142}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1802131439
 GameObject:
   m_ObjectHideFlags: 0
@@ -18129,95 +18194,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 932742557}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1820273308
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 369569702}
-    m_Modifications:
-    - target: {fileID: 3007709095530452042, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_Name
-      value: Sphere Drop Zone (37)
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.13947885
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.13947885
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.13947885
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.2152951
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.09096336
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.78516304
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2254d223d4395454c8dc822edbdda9d9, type: 3}
---- !u!4 &1820273309 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
-    type: 3}
-  m_PrefabInstance: {fileID: 1820273308}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1822452849
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18229,32 +18205,32 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 9dfeac173014c8944ab61304fd14def7,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.353189
+      value: 42.770897
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9dfeac173014c8944ab61304fd14def7,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.134947
+      value: 20.628477
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9dfeac173014c8944ab61304fd14def7,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 2.353189
+      value: 42.770897
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9dfeac173014c8944ab61304fd14def7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.31337038
+      value: 0.28843
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9dfeac173014c8944ab61304fd14def7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.96772254
+      value: 0.96607
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9dfeac173014c8944ab61304fd14def7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.1759217
+      value: -2.1745
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9dfeac173014c8944ab61304fd14def7,
         type: 3}
@@ -18789,13 +18765,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -18968,6 +18944,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sphere Drop Zone (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1608863232}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
       objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
@@ -19229,13 +19220,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -19408,13 +19399,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -19687,6 +19678,36 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7665023018881890517, guid: b9a95307865e83d4895b3d1e5f20fb11,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1798.8802
+      objectReference: {fileID: 0}
+    - target: {fileID: -7665023018881890517, guid: b9a95307865e83d4895b3d1e5f20fb11,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1798.8802
+      objectReference: {fileID: 0}
+    - target: {fileID: -7665023018881890517, guid: b9a95307865e83d4895b3d1e5f20fb11,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1798.8802
+      objectReference: {fileID: 0}
+    - target: {fileID: -7665023018881890517, guid: b9a95307865e83d4895b3d1e5f20fb11,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.032718
+      objectReference: {fileID: 0}
+    - target: {fileID: -7665023018881890517, guid: b9a95307865e83d4895b3d1e5f20fb11,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.012589
+      objectReference: {fileID: 0}
+    - target: {fileID: -7665023018881890517, guid: b9a95307865e83d4895b3d1e5f20fb11,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.02337
+      objectReference: {fileID: 0}
     - target: {fileID: -3362828288616444440, guid: b9a95307865e83d4895b3d1e5f20fb11,
         type: 3}
       propertyPath: m_Convex
@@ -19696,6 +19717,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3317913015794219707, guid: b9a95307865e83d4895b3d1e5f20fb11,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1798.8802
+      objectReference: {fileID: 0}
+    - target: {fileID: -3317913015794219707, guid: b9a95307865e83d4895b3d1e5f20fb11,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1798.8802
+      objectReference: {fileID: 0}
+    - target: {fileID: -3317913015794219707, guid: b9a95307865e83d4895b3d1e5f20fb11,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1798.8802
+      objectReference: {fileID: 0}
+    - target: {fileID: -3317913015794219707, guid: b9a95307865e83d4895b3d1e5f20fb11,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.036569
+      objectReference: {fileID: 0}
+    - target: {fileID: -3317913015794219707, guid: b9a95307865e83d4895b3d1e5f20fb11,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.014072
+      objectReference: {fileID: 0}
+    - target: {fileID: -3317913015794219707, guid: b9a95307865e83d4895b3d1e5f20fb11,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.02337
       objectReference: {fileID: 0}
     - target: {fileID: -641265805402451953, guid: b9a95307865e83d4895b3d1e5f20fb11,
         type: 3}
@@ -20738,32 +20789,32 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 7ce3b78a094d6ab48b5acbcdf3f02856,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.4250379
+      value: 0.7398369
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ce3b78a094d6ab48b5acbcdf3f02856,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.4250379
+      value: 0.7398369
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ce3b78a094d6ab48b5acbcdf3f02856,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.4250379
+      value: 0.7398369
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ce3b78a094d6ab48b5acbcdf3f02856,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0000058115
+      value: 0.071
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ce3b78a094d6ab48b5acbcdf3f02856,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.00018218
+      value: 1.135
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ce3b78a094d6ab48b5acbcdf3f02856,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.035429
+      value: -2.2143
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ce3b78a094d6ab48b5acbcdf3f02856,
         type: 3}
@@ -20862,13 +20913,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -21062,32 +21113,32 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c6e78958db27f54469469d47f7ac952c,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 3.1518986
+      value: 1.9260937
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c6e78958db27f54469469d47f7ac952c,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 3.1518986
+      value: 1.9260937
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c6e78958db27f54469469d47f7ac952c,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 3.1518986
+      value: 1.9260937
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c6e78958db27f54469469d47f7ac952c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.000019774
+      value: -0.04201
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c6e78958db27f54469469d47f7ac952c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.000049055
+      value: 0.97602
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c6e78958db27f54469469d47f7ac952c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.078562
+      value: -2.2546
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c6e78958db27f54469469d47f7ac952c,
         type: 3}
@@ -21186,13 +21237,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -21372,7 +21423,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8450940414208984670, guid: c6e78958db27f54469469d47f7ac952c, type: 3}
 --- !u!1001 &2092044056
@@ -21554,13 +21605,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -21733,13 +21784,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
+  m_InteractionManager: {fileID: 932742556}
   m_Colliders: []
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 2
   m_DistanceCalculationMode: 1
   m_SelectMode: 0
   m_FocusMode: 1
@@ -22013,7 +22064,11 @@ PrefabInstance:
       value: New_Operation_Room
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3858060822470699052, guid: 7182f8686b521d045891129bfb2209cd, type: 3}
+    - {fileID: 541434417608817617, guid: 7182f8686b521d045891129bfb2209cd, type: 3}
+    - {fileID: -8098742775703906683, guid: 7182f8686b521d045891129bfb2209cd, type: 3}
+    - {fileID: 1287785252996309952, guid: 7182f8686b521d045891129bfb2209cd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7182f8686b521d045891129bfb2209cd,
@@ -22061,6 +22116,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sphere Drop Zone (31)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_InteractionManager
+      value: 
+      objectReference: {fileID: 932742556}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 975173510}
+    - target: {fileID: 6830064337558155069, guid: 2254d223d4395454c8dc822edbdda9d9,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: On_Select_Entered_Snap
       objectReference: {fileID: 0}
     - target: {fileID: 7813298132893914108, guid: 2254d223d4395454c8dc822edbdda9d9,
         type: 3}
