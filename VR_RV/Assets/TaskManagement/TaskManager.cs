@@ -68,20 +68,24 @@ public class TaskManager : MonoBehaviour
 
     private void Start_Task(string id)
     {
-
         Task task = Get_Task_By_Id(id);
         task.Instantiate_Current_Task_Step(this.transform);
         Change_Task_State(task.info.id, TaskState.IN_PROGRESS);
 
+        Debug.Log("Task " + id + " has been started!");
     }
 
     private void Advance_Task(string id)
     {
 
+        Debug.Log("Task " + id + " has been advanced!");
+
     }
 
     private void Finish_Task(string id)
     {
+
+        Debug.Log("Task " + id + " has been finished!");
 
     }
 

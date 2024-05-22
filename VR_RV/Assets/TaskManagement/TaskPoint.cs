@@ -11,6 +11,10 @@ public class TaskPoint : MonoBehaviour
     private string task_id;
     private TaskState current_task_state;
 
+    [Header("Config")]
+    [SerializeField] private bool start_point = false;
+    [SerializeField] private bool end_point = false;
+
     private void Awake()
     {
         task_id = task_info_for_point.id;
@@ -28,9 +32,14 @@ public class TaskPoint : MonoBehaviour
 
     private void Met()
     {
-        EventsManager.instance.task_events.Start_Task(task_id);
-        EventsManager.instance.task_events.Advance_Task(task_id);
-        EventsManager.instance.task_events.Finish_Task(task_id);
+        if (current_task_state.Equals(TaskState.CAN_START) && start_point)
+        {
+            EventsManager.instance.task_events.Start_Task(task_id);
+        }
+        else if (current_task_state.Equals(TaskState.CAN_FINISH) && end_point)
+        {
+            EventsManager.instance.task_events.Finish_Task(task_id);
+        }
     }
 
     private void TaskStateChange(Task task)
@@ -42,12 +51,9 @@ public class TaskPoint : MonoBehaviour
         }
     }
 
-    private void onTriggerEnter(Collider other)
+    public void Trigger()
     {
-        if (other.CompareTag("Hand"))
-        {
-            Debug.Log("Hand felt");
-            Met();
-        }
+        Debug.Log("Task Point Triggered");
+        Met();
     }
 }
