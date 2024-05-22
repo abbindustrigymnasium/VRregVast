@@ -9,7 +9,7 @@ public class ToolRandomizer : MonoBehaviour
 
     [SerializeField] private List<Vector3> tool_spawnpoints_list = new List<Vector3>();
 
-    [SerializeField] private Vector3[] saved_spawnpoints;
+    private Vector3[] saved_spawnpoints;
 
     private float timer = 0f;
 
