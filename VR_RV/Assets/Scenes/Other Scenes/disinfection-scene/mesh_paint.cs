@@ -56,8 +56,8 @@ public class mesh_paint : MonoBehaviour
         float y_axis_scale = collision.transform.localScale.y / transform.localScale.y;
 
         // Calculate the width and height of the rag in pixles
-        int pixel_width = (int)(x_axis_scale * layer_mask_default.width);
-        int pixel_height = (int)(y_axis_scale * layer_mask_default.height);
+        float pixel_width = (x_axis_scale * layer_mask_default.width);
+        float pixel_height = (y_axis_scale * layer_mask_default.height);
 
         // Calculate the relative position of the rag to the disinfectable object
         Vector3 relative_position = collision.transform.position - transform.position;
