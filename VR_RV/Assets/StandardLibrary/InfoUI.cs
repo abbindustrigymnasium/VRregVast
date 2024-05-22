@@ -79,8 +79,8 @@ public class InfoUI : MonoBehaviour
                 ToolInfo toolInfo = new ToolInfo();
                 toolInfo.title = tool[0];
                 toolInfo.text = tool[1];
-                toolInfo.usage = tool[2];
-                toolInfo.imageUrl = tool[3];
+                toolInfo.usage = tool[3];
+                toolInfo.imageUrl = tool[2];
                 Debug.Log(tool[0]);
                 return toolInfo;
             }
@@ -155,14 +155,14 @@ public class InfoUI : MonoBehaviour
                 title.text = "test title";
                 text.text = "test text";
                 usage.text = "test usage";
-                toolImage.sprite = Resources.Load<Sprite>("../Pictures/Bunke.jpg");
+                toolImage.sprite = Resources.Load<Sprite>("Assets/Pictures/Bunke.jpg");
             }
          } catch (System.Exception e) {
              Debug.Log(e);
               title.text = "test title";
                 text.text = "test text";
                 usage.text = "test usage";
-                toolImage.sprite = Resources.Load<Sprite>("../Pictures/Bunke.jpg");
+                toolImage.sprite = Resources.Load<Sprite>("Assets/Pictures/Bunke.jpg");
             
         }
        
@@ -172,7 +172,7 @@ public class InfoUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isGrabbed)
+        if (!isGrabbed && item != null)
         {
             
             Vector3 direction = camera.position - transform.position;
