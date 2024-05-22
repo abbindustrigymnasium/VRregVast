@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -65,39 +66,67 @@ public class mesh_paint : MonoBehaviour
     {
         if(!collision.gameObject.CompareTag("Rag")) return;
 
-        // Calculate the relative size of the rag compared to the disinfectable area
+        // Calculate the relative size of 1 lenght unit compared to the disinfectable area
         float x_axis_scale = collision.transform.localScale.x / transform.localScale.x;
         float y_axis_scale = collision.transform.localScale.y / transform.localScale.y;
 
-        // Calculate the width and height of the rag in pixles
+        // Calculate the width and height of 1 unit in pixles
         float pixel_width = (x_axis_scale * layer_mask_default.width);
         float pixel_height = (y_axis_scale * layer_mask_default.height);
 
         // Calculate the relative position of the rag to the disinfectable object
         Vector3 relative_position = collision.transform.position - transform.position;
+                
+        // Create a new array based on the amount of contacts
+        int contact_points_amount = collision.contactCount;
+        List<float> contact_points_in_pixels = new List<float>();
+        ContactPoint[] used_points = new ContactPoint[contact_points_amount];
+        Debug.Log(collision.GetContact(0).point);
+        
+        // Set the values in the list
+        for (int i = 0;  i < contact_points_amount * 2; i+=2)
+        {
+            ContactPoint current_contact = collision.GetContact(i/2);
+            contact_points_in_pixels.Add((current_contact.point.x + transform.localScale.x / 2) * pixel_width);
+            contact_points_in_pixels.Add((current_contact.point.y + transform.localScale.y / 2) * pixel_height);
+        }
 
-        // Calculate the start position to color on the layer mask in pixels
-        int[] pixel_start = new int[2];
-        pixel_start[0] = (int) ((relative_position.x + transform.localScale.x / 2) * pixel_width - collision.transform.localScale.x * pixel_width / 2);
-        pixel_start[1] = (int) ((relative_position.y + transform.localScale.y / 2) * pixel_height - collision.transform.localScale.y * pixel_height / 2);
+        // Create arrays of the x and y values in pixels
+        float[] x_values_in_pixels = new float[contact_points_in_pixels.Count / 2];
+        float[] y_values_in_pixels = new float[contact_points_in_pixels.Count / 2];
+        for(int i = 0; i < contact_points_in_pixels.Count; i+=2) { 
+            x_values_in_pixels[i / 2] = contact_points_in_pixels[i];
+            y_values_in_pixels[i / 2] = contact_points_in_pixels[i + 1];
+        }
+
+
+        // Calculate starting point and max width and height
+        int x_starting_value = (int)x_values_in_pixels.Min();
+        int y_starting_value = (int)y_values_in_pixels.Min();
+        //Debug.Log(y_values_in_pixels[0] + ", " + y_values_in_pixels[1] + ", " + y_values_in_pixels[2]);//+ ", " + y_values_in_pixels[3] + ", " + y_values_in_pixels[4] + ", " + y_values_in_pixels[5]);
+        int x_width_in_pixels = (int)x_values_in_pixels.Max() - x_starting_value;
+        int y_height_in_pixels = (int)y_values_in_pixels.Max() - y_starting_value;
+        //Debug.Log(x_width_in_pixels+ " " + y_height_in_pixels);
 
         // Set all the pixles within the width of the rag to black, starting in the bottom left
-        for (int i = 0; i < pixel_width; i++)
+        for (int i = 0; i < x_width_in_pixels; i++)
         {
             // Calculate the x-axis position of the pixel to paint
-            int x_pixel_position = pixel_start[0] + i;
+            int x_pixel_position = x_starting_value + i;
             if (x_pixel_position < 0) x_pixel_position = 0;
             if (x_pixel_position >= layer_mask_default.width) x_pixel_position = layer_mask_default.width - 1;
 
 
-            for (int j = 0; j < pixel_height; j++)
+            for (int j = 0; j < y_height_in_pixels; j++)
             {
                 // Calculate the y-axis position of the pixel to paint
-                int y_pixel_position = pixel_start[1] + j;
+                int y_pixel_position = y_starting_value + j;
                 if (y_pixel_position < 0) y_pixel_position = 0;
                 if (y_pixel_position >= layer_mask_default.height) y_pixel_position = layer_mask_default.height - 1;
-
-                editable_layer_mask.SetPixel(x_pixel_position, y_pixel_position, Color.black); 
+                
+                if (Inside_Polygon(x_pixel_position, y_pixel_position, contact_points_in_pixels)) {
+                    editable_layer_mask.SetPixel(x_pixel_position, y_pixel_position, Color.black); 
+                }
             }
         }
 
@@ -106,16 +135,16 @@ public class mesh_paint : MonoBehaviour
         
     }
     
-    bool Inside_Polygon(int x_value, int y_value, int[] points)
+    bool Inside_Polygon(float x_value, float y_value, List<float> points)
     {
         float sum_of_angles = 0f;
 
-        for (int i = 0; i < points.Length; i+=2)
+        for (int i = 0; i < points.Count; i+=2)
         {
-            float delta_x_1 = points[i + 2 < points.Length ? i + 2 : 0] - x_value;
+            float delta_x_1 = points[i + 2 < points.Count ? i + 2 : 0] - x_value;
             float delta_x_2 = points[i] - x_value;
 
-            float delta_y_1 = points[i + 1 + 2 < points.Length ? i + 1 + 2 : 1] - y_value;
+            float delta_y_1 = points[i + 1 + 2 < points.Count ? i + 1 + 2 : 1] - y_value;
             float delta_y_2 = points[i + 1] - y_value;
 
             float theta_1 = Mathf.Atan2(delta_y_1, delta_x_1);
