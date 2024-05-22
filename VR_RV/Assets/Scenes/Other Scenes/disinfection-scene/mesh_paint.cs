@@ -6,6 +6,8 @@ using UnityEngine.UIElements;
 
 public class mesh_paint : MonoBehaviour
 {
+    //[SerializeField] private string front_facing_axis;
+    private int front_facing_index;
 
     [SerializeField] private Texture2D layer_mask_default;
     private Texture2D editable_layer_mask;
@@ -14,20 +16,32 @@ public class mesh_paint : MonoBehaviour
 
     void Start()
     {
+        // Set the axis based on input
+        /*switch (front_facing_axis) {
+            case "x":
+                front_facing_index = 0; break;
+            case "y":
+                front_facing_index = 1; break;
+            case "z":
+                front_facing_index = 2; break;
+            default:
+                front_facing_index = 2; break;
+        }*/
 
+        // Get the material used on the quad
         Material disinfectable_area_material = GetComponent<Renderer>().material;
 
+        // Create a new texture and apply the default texture to it
         editable_layer_mask = new Texture2D(layer_mask_default.width, layer_mask_default.height);
-
         default_state_pixel_array = layer_mask_default.GetPixels32();
         editable_layer_mask.SetPixels32(default_state_pixel_array);
         editable_layer_mask.Apply();
 
+        // Set the input texture of the shader to the newly created texture
         disinfectable_area_material.SetTexture("_layer_mask", editable_layer_mask);
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -92,5 +106,31 @@ public class mesh_paint : MonoBehaviour
         
     }
     
-    
+    bool Inside_Polygon(int x_value, int y_value, int[] points)
+    {
+        float sum_of_angles = 0f;
+
+        for (int i = 0; i < points.Length; i+=2)
+        {
+            float delta_x_1 = points[i + 2 < points.Length ? i + 2 : 0] - x_value;
+            float delta_x_2 = points[i] - x_value;
+
+            float delta_y_1 = points[i + 1 + 2 < points.Length ? i + 1 + 2 : 1] - y_value;
+            float delta_y_2 = points[i + 1] - y_value;
+
+            float theta_1 = Mathf.Atan2(delta_y_1, delta_x_1);
+            float theta_2 = Mathf.Atan2(delta_y_2, delta_x_2);
+
+            float delta_theta = theta_2 - theta_1;
+            while (delta_theta > Mathf.PI) delta_theta -= Mathf.PI * 2;
+            while (delta_theta < -Mathf.PI) delta_theta += Mathf.PI * 2;
+            sum_of_angles += delta_theta;
+        }
+        if (Mathf.Abs(sum_of_angles) == 0) return false;
+        return true;
+
+
+
+        
+    }
 }
