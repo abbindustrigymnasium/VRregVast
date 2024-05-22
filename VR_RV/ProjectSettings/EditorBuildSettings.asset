@@ -23,7 +23,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Gameplay Scenes/Bare Bones/OutlineShader.unity
     guid: 8baceead1b0653f4ba07ebd6b4289ffb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Gameplay Scenes/Bare Bones/StarterScene.unity
     guid: 923efce5c547e6a45b4d4496a463f475
   - enabled: 0

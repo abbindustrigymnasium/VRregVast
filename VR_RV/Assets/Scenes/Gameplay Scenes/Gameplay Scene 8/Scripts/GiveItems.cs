@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
+using TMPro;
 
 public class GiveItems : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class GiveItems : MonoBehaviour
     public GameObject Box2;
     private int Request = 0;
     private GameObject child;
+    public TMP_Text text_gameobject;
 
     void Start()
     {
@@ -36,7 +38,8 @@ public class GiveItems : MonoBehaviour
 
     public void ChildUpdate()
     {
-        child = Box1.GetChild(Request).gameObject;
+        child = Box1.GetChild(0).gameObject;
+        text_gameobject.text = "Give me " + Box1.GetChild(0).gameObject.name;
     }
 
     public void On_Select_Entered_Snap(SelectEnterEventArgs args)
