@@ -8,7 +8,7 @@ public class UIPopup : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        OpenPopup();
     }
 
     public void OpenPopup()
