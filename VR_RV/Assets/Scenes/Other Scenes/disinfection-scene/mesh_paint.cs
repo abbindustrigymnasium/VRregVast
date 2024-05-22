@@ -7,8 +7,8 @@ using UnityEngine.UIElements;
 public class mesh_paint : MonoBehaviour
 {
 
-    [SerializeField] private Texture2D dirt_mask_base;
-    private Texture2D dirt_mask;
+    [SerializeField] private Texture2D layer_mask_default;
+    private Texture2D editable_layer_mask;
     private GameObject disinfectable_area;
     private Material disinfectable_area_material;
     private Color[] default_state_pixel_array;
@@ -19,12 +19,12 @@ public class mesh_paint : MonoBehaviour
         disinfectable_area = GameObject.FindGameObjectWithTag("Disinfectable");
         disinfectable_area_material = disinfectable_area.GetComponent<Renderer>().material;
 
-        default_state_pixel_array = dirt_mask_base.GetPixels();
+        default_state_pixel_array = layer_mask_default.GetPixels();
 
-        dirt_mask = new Texture2D(dirt_mask_base.width, dirt_mask_base.height);
-        dirt_mask.SetPixels(dirt_mask_base.GetPixels());
-        dirt_mask.Apply();
-        disinfectable_area_material.SetTexture("_dirt_mask", dirt_mask);
+        editable_layer_mask = new Texture2D(layer_mask_default.width, layer_mask_default.height);
+        editable_layer_mask.SetPixels(layer_mask_default.GetPixels());
+        editable_layer_mask.Apply();
+        disinfectable_area_material.SetTexture("_layer_mask", editable_layer_mask);
 
     }
 
@@ -34,7 +34,7 @@ public class mesh_paint : MonoBehaviour
         int colored_pixles = 0;
         
         // Get the color of each pixel of the edited layer mask 
-        Color[] comparable_pixel_array = dirt_mask.GetPixels();
+        Color[] comparable_pixel_array = editable_layer_mask.GetPixels();
      
         // Compare the colors of the unedited and edited layer masks
         for (int i = 0; i < default_state_pixel_array.Length; i++)
@@ -57,8 +57,8 @@ public class mesh_paint : MonoBehaviour
         float y_axis_scale = transform.localScale.y / collision.transform.localScale.y;
 
         // Calculate the width and height of the rag in pixles
-        int pixel_width = (int)(x_axis_scale * dirt_mask_base.width);
-        int pixel_height = (int)(y_axis_scale * dirt_mask_base.height);
+        int pixel_width = (int)(x_axis_scale * layer_mask_default.width);
+        int pixel_height = (int)(y_axis_scale * layer_mask_default.height);
 
         // Calculate the relative position of the rag to the disinfectable object
         Vector3 relative_position = transform.position - collision.gameObject.transform.position;
@@ -73,12 +73,12 @@ public class mesh_paint : MonoBehaviour
         {
             for(int j = 0; j < pixel_height; j++)
             {
-                dirt_mask.SetPixel(pixel_start[0] + i,pixel_start[1] + j,Color.black); 
+                editable_layer_mask.SetPixel(pixel_start[0] + i,pixel_start[1] + j,Color.black); 
             }
         }
 
         // Apply the changes
-        dirt_mask.Apply();
+        editable_layer_mask.Apply();
         
     }
     
