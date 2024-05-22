@@ -567,7 +567,7 @@ GameObject:
   - component: {fileID: 630115948}
   m_Layer: 0
   m_Name: Left Controller
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -971,7 +971,7 @@ GameObject:
   - component: {fileID: 631155786}
   m_Layer: 0
   m_Name: Right Controller
-  m_TagString: Untagged
+  m_TagString: Hand
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2615,7 +2615,7 @@ GameObject:
   - component: {fileID: 1930801917}
   - component: {fileID: 1930801916}
   - component: {fileID: 1930801915}
-  - component: {fileID: 1930801914}
+  - component: {fileID: 1930801919}
   m_Layer: 0
   m_Name: BLOCK
   m_TagString: Untagged
@@ -2623,18 +2623,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1930801914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1930801913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f871a49687df7864f8fc09806dd873f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1930801915
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2721,6 +2709,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1930801919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1930801913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d924c6e294d0b54f942aeaa72e74840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  task_info_for_point: {fileID: 11400000, guid: 00d03ceb6cb7e494a98b875c4f511159,
+    type: 2}
 --- !u!1 &1954011230
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,11 +6,11 @@ public abstract class TaskStep : MonoBehaviour
 {
     private bool is_finished = false;
 
-    private string quest_id;
+    private string task_id;
 
-    public void Initialize_Quest_Id(string quest_id)
+    public void Initialize_Task_Id(string task_id)
     {
-        this.quest_id = quest_id;
+        this.task_id = task_id;
     }
 
     protected void Finish_Step()
@@ -18,7 +18,7 @@ public abstract class TaskStep : MonoBehaviour
         if (!is_finished)
         {
             is_finished = true;
-            EventsManager.instance.task_events.Advance_Task(quest_id);
+            EventsManager.instance.task_events.Advance_Task(task_id);
             Destroy(this.gameObject);
         }
 

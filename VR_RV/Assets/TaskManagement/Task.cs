@@ -37,8 +37,8 @@ public class Task
 
 
             // Continue from here 
-             
-            //  taskStep.Initialize_Quest_Step(info.id);
+
+            //  taskStep.Initialize_Task_Step(info.id);
         }
     }
 

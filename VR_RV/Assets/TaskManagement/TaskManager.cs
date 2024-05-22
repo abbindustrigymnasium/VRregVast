@@ -12,8 +12,11 @@ public class TaskManager : MonoBehaviour
     }
     private void OnEnable()
     {
+        Debug.Log("Adding start task listener");
         EventsManager.instance.task_events.on_start_task += Start_Task;
+        Debug.Log("Adding advance task listener");
         EventsManager.instance.task_events.on_advance_task += Advance_Task;
+        Debug.Log("Adding finish task listener");
         EventsManager.instance.task_events.on_finish_task += Finish_Task;
     }
 
@@ -37,19 +40,22 @@ public class TaskManager : MonoBehaviour
         Task task = Get_Task_By_Id(id);
         task.state = state;
         EventsManager.instance.task_events.Task_State_Change(task);
-    }       
+    }
 
 
-    private bool Check_Requirements_Met(Task task) {
-        bool meetsRequirements = true;
+    private bool Check_Requirements_Met(Task task)
+    {
+        bool meets_requirements = true;
 
-        foreach (TaskInfoSO prerequisiteTaskInfo in task.info.prerequisites) {
-            if (Get_Task_By_Id(prerequisiteTaskInfo.id).state != TaskState.FINISHED) {
-                meetsRequirements = false;
+        foreach (TaskInfoSO prereq_info in task.info.prerequisites)
+        {
+            if (Get_Task_By_Id(prereq_info.id).state != TaskState.FINISHED)
+            {
+                meets_requirements = false;
             }
         }
 
-        return meetsRequirements;
+        return meets_requirements;
     }
 
     private void Update()
@@ -66,7 +72,7 @@ public class TaskManager : MonoBehaviour
     private void Start_Task(string id)
     {
 
-        Task task =  Get_Task_By_Id(id);
+        Task task = Get_Task_By_Id(id);
         task.Instantiate_Current_Task_Step(this.transform);
         Change_Task_State(task.info.id, TaskState.IN_PROGRESS);
 
