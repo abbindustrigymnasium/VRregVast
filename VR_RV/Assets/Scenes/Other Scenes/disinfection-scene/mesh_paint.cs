@@ -7,27 +7,16 @@ using UnityEngine.UIElements;
 
 public class mesh_paint : MonoBehaviour
 {
-    //[SerializeField] private string front_facing_axis;
-    private int front_facing_index;
-
     [SerializeField] private Texture2D layer_mask_default;
     private Texture2D editable_layer_mask;
     private Color32[] default_state_pixel_array;
     private float percentage_colored;
 
+    private float pixel_height;
+    private float pixel_width;
+
     void Start()
     {
-        // Set the axis based on input
-        /*switch (front_facing_axis) {
-            case "x":
-                front_facing_index = 0; break;
-            case "y":
-                front_facing_index = 1; break;
-            case "z":
-                front_facing_index = 2; break;
-            default:
-                front_facing_index = 2; break;
-        }*/
 
         // Get the material used on the quad
         Material disinfectable_area_material = GetComponent<Renderer>().material;
@@ -41,12 +30,19 @@ public class mesh_paint : MonoBehaviour
         // Set the input texture of the shader to the newly created texture
         disinfectable_area_material.SetTexture("_layer_mask", editable_layer_mask);
 
+        // Calculate the relative size of 1 lenght unit compared to the disinfectable area
+        float x_axis_scale = 1 / transform.localScale.x;
+        float y_axis_scale = 1 / transform.localScale.y;
+
+        // Calculate the width and height of 1 unit in pixels
+        pixel_width = (x_axis_scale * layer_mask_default.width);
+        pixel_height = (y_axis_scale * layer_mask_default.height);
     }
 
     void Update()
     {
         
-        int colored_pixles = 0;
+        int colored_pixels = 0;
         
         // Get the color of each pixel of the edited layer mask 
         Color32[] comparable_pixel_array = editable_layer_mask.GetPixels32();
@@ -55,28 +51,17 @@ public class mesh_paint : MonoBehaviour
         for (int i = 0; i < default_state_pixel_array.Length; i++)
         {
             // Increase the colored_pixels variables if the colors isn't the same
-            if (comparable_pixel_array[i].g != default_state_pixel_array[i].g) colored_pixles++;
+            if (comparable_pixel_array[i].g != default_state_pixel_array[i].g) colored_pixels++;
         }
         
-        // Calculate the percentage of colored pixles
-        percentage_colored = (colored_pixles * 100 / default_state_pixel_array.Length);
+        // Calculate the percentage of colored pixels
+        percentage_colored = (colored_pixels * 100 / default_state_pixel_array.Length);
     }
 
     private void OnCollisionStay(Collision collision)
     {
         if(!collision.gameObject.CompareTag("Rag")) return;
 
-        // Calculate the relative size of 1 lenght unit compared to the disinfectable area
-        float x_axis_scale = collision.transform.localScale.x / transform.localScale.x;
-        float y_axis_scale = collision.transform.localScale.y / transform.localScale.y;
-
-        // Calculate the width and height of 1 unit in pixles
-        float pixel_width = (x_axis_scale * layer_mask_default.width);
-        float pixel_height = (y_axis_scale * layer_mask_default.height);
-
-        // Calculate the relative position of the rag to the disinfectable object
-        Vector3 relative_position = collision.transform.position - transform.position;
-                
         // Create a new array based on the amount of contacts
         int contact_points_amount = collision.contactCount;
         List<float> contact_points_in_pixels = new List<float>();
@@ -85,10 +70,12 @@ public class mesh_paint : MonoBehaviour
         // Set the values in the list
         for (int i = 0;  i < contact_points_amount * 2; i+=2)
         {
+            // Get the current point of the itterable and skip using it if another point has the same coordinates
             ContactPoint current_contact = collision.GetContact(i/2);
             if (Array_Contains(used_points, current_contact)) continue;
             used_points[i/2] = current_contact;
 
+            // Add the x and y position in pixels 
             contact_points_in_pixels.Add((current_contact.point.x + transform.localScale.x / 2) * pixel_width);
             contact_points_in_pixels.Add((current_contact.point.y + transform.localScale.y / 2) * pixel_height);
         }
@@ -103,16 +90,26 @@ public class mesh_paint : MonoBehaviour
         }
 
 
+        
+
         // Calculate starting point and max width and height
         int x_starting_value = (int)x_values_in_pixels.Min();
         int y_starting_value = (int)y_values_in_pixels.Min();
-        //Debug.Log(y_values_in_pixels[0] + ", " + y_values_in_pixels[1] + ", " + y_values_in_pixels[2]);//+ ", " + y_values_in_pixels[3] + ", " + y_values_in_pixels[4] + ", " + y_values_in_pixels[5]);
-        int x_width_in_pixels = (int)x_values_in_pixels.Max() - x_starting_value;
-        int y_height_in_pixels = (int)y_values_in_pixels.Max() - y_starting_value;
-        //Debug.Log(x_width_in_pixels+ " " + y_height_in_pixels);
+        
+        int max_width_in_pixels = (int)x_values_in_pixels.Max() - x_starting_value;
+        int max_height_in_pixels = (int)y_values_in_pixels.Max() - y_starting_value;
+        
+        /*string x_ps = "X: ";
+        string y_ps = "Y: ";
+        for (int i = 0; i < x_values_in_pixels.Length; i++) 
+        {
+            x_ps = x_ps + "[" + x_values_in_pixels[i] + "], ";
+            y_ps = y_ps + "[" + y_values_in_pixels[i] + "], ";
+        }
+        Debug.Log(x_ps + "\n" + y_ps);*/
 
-        // Set all the pixles within the width of the rag to black, starting in the bottom left
-        for (int i = 0; i < x_width_in_pixels; i++)
+        // Set all the pixels within the width of the rag to black, starting in the bottom left
+        for (int i = 0; i < max_width_in_pixels; i++)
         {
             // Calculate the x-axis position of the pixel to paint
             int x_pixel_position = x_starting_value + i;
@@ -120,7 +117,7 @@ public class mesh_paint : MonoBehaviour
             if (x_pixel_position >= layer_mask_default.width) x_pixel_position = layer_mask_default.width - 1;
 
 
-            for (int j = 0; j < y_height_in_pixels; j++)
+            for (int j = 0; j < max_height_in_pixels; j++)
             {
                 // Calculate the y-axis position of the pixel to paint
                 int y_pixel_position = y_starting_value + j;
