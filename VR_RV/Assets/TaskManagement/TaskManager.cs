@@ -135,7 +135,6 @@ public class TaskManager : MonoBehaviour
 
     private Task Get_Task_By_Id(string id)
     {
-        Debug.Log("Fetching task " + id);
         Task task = task_map[id];
 
         if (task == null)

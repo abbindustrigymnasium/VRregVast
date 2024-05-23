@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveBlockTaskStepPickup : TaskStep
+public class MoveBlockTaskStep : TaskStep
 {
+    public string id;
     // No applicable event is currently implemented, 
     // so a public method is used to determine that the step is completed
     public void Trigger()

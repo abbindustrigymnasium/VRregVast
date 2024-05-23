@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5293433271187711291}
-  - component: {fileID: 133581148279766893}
+  - component: {fileID: 4578709180776566121}
   m_Layer: 0
   m_Name: MoveBlockStepDrop
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &133581148279766893
+--- !u!114 &4578709180776566121
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,6 +41,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1732076502053842209}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e940e7155299dc46a7c4a1876e50366, type: 3}
+  m_Script: {fileID: 11500000, guid: dbdf57d9352cab642be90fe5d61ae970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  id: drop

@@ -4,21 +4,26 @@ using UnityEngine;
 
 public class BlockHelper : MonoBehaviour
 {
+    private GameObject task_manager;
+    private void Start()
+    {
+        task_manager = GameObject.Find("Task Manager");
+    }
     public void PickedUp()
     {
-        GameObject step_go = GameObject.Find("MoveBlockTaskStepPickup(clone)");
-        if (step_go != null)
+        MoveBlockTaskStep step = task_manager.GetComponentInChildren<MoveBlockTaskStep>();
+        if (step.id == "pickup")
         {
-            step_go.GetComponent<MoveBlockTaskStepPickup>().Trigger();
+            step.Trigger();
         }
     }
 
     public void Dropped()
     {
-        GameObject step_go = GameObject.Find("MoveBlockTaskStepDrop(clone)");
-        if (step_go != null)
+        MoveBlockTaskStep step = task_manager.GetComponentInChildren<MoveBlockTaskStep>();
+        if (step.id == "drop")
         {
-            step_go.GetComponent<MoveBlockTaskStepDrop>().Trigger();
+            step.Trigger();
         }
     }
 }
