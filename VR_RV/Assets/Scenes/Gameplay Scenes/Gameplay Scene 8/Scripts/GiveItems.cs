@@ -42,8 +42,15 @@ public class GiveItems : MonoBehaviour
     // Updates to next child from the parent object and changes text to ask for that item
     public void ChildUpdate()
     {
-        Child = ParentOfItems.GetChild(0).gameObject;
-        TextBox.text = "Give me " + Child.name;
+        if (ParentOfItems.childCount == 0)
+        {
+            TextBox.text = "You did it";
+        }
+        else
+        {
+            Child = ParentOfItems.GetChild(0).gameObject;
+            TextBox.text = "Give me " + Child.name;
+        }
     }
 
     // Checks if its the right item and either removes it if its correct and asks for next item or says that its the wrong item
