@@ -155,14 +155,14 @@ public class InfoUI : MonoBehaviour
                 title.text = "test title";
                 text.text = "test text";
                 usage.text = "test usage";
-                toolImage.sprite = Resources.Load<Sprite>("Assets/Pictures/Bunke.jpg");
+                toolImage.sprite = Resources.Load<Sprite>("Pictures/Bunke");
             }
          } catch (System.Exception e) {
              Debug.Log(e);
               title.text = "test title";
                 text.text = "test text";
                 usage.text = "test usage";
-                toolImage.sprite = Resources.Load<Sprite>("Assets/Pictures/Bunke.jpg");
+                toolImage.sprite = Resources.Load<Sprite>("Pictures/Bunke");
             
         }
        
