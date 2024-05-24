@@ -1,8 +1,6 @@
 
-//using System.Diagnostics;
 using System.Net.Mime;
 using System.Security.AccessControl;
-//using System.Diagnostics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -67,21 +65,18 @@ public class InfoUI : MonoBehaviour
 
         public static ToolInfo getToolInfo(string s) // Get the tool info from the JSON string
         {
-            string[] tool = s.Split(",");
+            
+            string[] tool = s.Replace("\"", "").Replace("[", "").Replace("]", "").Split(","); // Remove the quotes and brackets from the string
+
 
             if (tool.Length > 3)
             {
-                for (int i = 0; i < 3; i++)
-                {
-                    tool[i] = s.Split(',')[i].Replace("\"", "");
-
-                }
                 ToolInfo toolInfo = new ToolInfo();
                 toolInfo.title = tool[0];
                 toolInfo.text = tool[1];
                 toolInfo.usage = tool[3];
                 toolInfo.imageUrl = tool[2];
-                Debug.Log(tool[0]);
+                //Debug.Log(tool[0]);
                 return toolInfo;
             }
             else
@@ -107,7 +102,6 @@ public class InfoUI : MonoBehaviour
         foreach (string s in splitStrings)
         {
             i++;
-
             /*Debug.Log(s); */
             ToolInfo toolInfo = ToolInfo.getToolInfo(s);
             if (toolInfo != null)
@@ -150,6 +144,7 @@ public class InfoUI : MonoBehaviour
                 text.text = toolInfo.text;
                 toolImage.sprite = Resources.Load<Sprite>(toolInfo.imageUrl);
                 usage.text = toolInfo.usage;
+                break;
             }
             else {
                 title.text = "test title";
