@@ -64,7 +64,7 @@ public class mesh_paint : MonoBehaviour
         }
         
         // Calculate the percentage of colored pixels
-        percentage_colored = (colored_pixels * 100 / default_state_pixel_array.Length);
+        percentage_colored = (colored_pixels * 100.0f / default_state_pixel_array.Length);
     }
 
     private void OnCollisionStay(Collision collision)
@@ -73,7 +73,7 @@ public class mesh_paint : MonoBehaviour
 
         // Create a new array based on the amount of contacts
         int contact_points_amount = collision.contactCount;
-        List<float> contact_points_in_pixels = new List<float>();
+        List<float> contact_points_in_pixels = new();
         ContactPoint[] used_points = new ContactPoint[contact_points_amount];
         
         // Set the values in the list
@@ -100,9 +100,9 @@ public class mesh_paint : MonoBehaviour
         // Calculate starting point and max width and height
         int x_starting_value = (int)x_values_in_pixels.Min();
         int y_starting_value = (int)y_values_in_pixels.Min();
-        
         int max_width_in_pixels = (int)x_values_in_pixels.Max() - x_starting_value;
         int max_height_in_pixels = (int)y_values_in_pixels.Max() - y_starting_value;
+        
         
         // Printing x and y coodrinates
         /*string x_ps = "X: ";
@@ -113,6 +113,7 @@ public class mesh_paint : MonoBehaviour
             y_ps = y_ps + "[" + y_values_in_pixels[i] + "], ";
         }
         Debug.Log(x_ps + "\n" + y_ps);*/
+
 
         // Set all the pixels within the width of the rag to black, starting in the bottom left
         for (int i = 0; i < max_width_in_pixels; i++)
@@ -130,6 +131,7 @@ public class mesh_paint : MonoBehaviour
                 if (y_pixel_position < 0) y_pixel_position = 0;
                 if (y_pixel_position >= layer_mask_default.height) y_pixel_position = layer_mask_default.height - 1;
                 
+                // Paint the pixel if it is between the collision points
                 if (Inside_Polygon(x_pixel_position, y_pixel_position, contact_points_in_pixels)) {
                     editable_layer_mask.SetPixel(x_pixel_position, y_pixel_position, Color.black); 
                 }
@@ -144,23 +146,33 @@ public class mesh_paint : MonoBehaviour
     bool Inside_Polygon(float x_value, float y_value, List<float> points)
     {
         float sum_of_angles = 0f;
-
+        
         for (int i = 0; i < points.Count; i+=2)
         {
+            // Calculates the difference in the x-axis for both points 
             float delta_x_1 = points[i + 2 < points.Count ? i + 2 : 0] - x_value;
             float delta_x_2 = points[i] - x_value;
 
+            // Calculates the difference in the y-axis for both points 
             float delta_y_1 = points[i + 1 + 2 < points.Count ? i + 1 + 2 : 1] - y_value;
             float delta_y_2 = points[i + 1] - y_value;
 
+            // Calculates the angle from 0 to both points
             float theta_1 = Mathf.Atan2(delta_y_1, delta_x_1);
             float theta_2 = Mathf.Atan2(delta_y_2, delta_x_2);
 
+            // Calculates the angle between the points
             float delta_theta = theta_2 - theta_1;
+            
+            // Adjusts the angle to be in the interval (-PI < v < PI)
             while (delta_theta > Mathf.PI) delta_theta -= Mathf.PI * 2;
             while (delta_theta < -Mathf.PI) delta_theta += Mathf.PI * 2;
+            
+            // Adds the new angle to the sum of angles
             sum_of_angles += delta_theta;
         }
+
+        // If the sum of angles are PI (with a margin of 0.01), return true
         if (Mathf.Abs(sum_of_angles) + 0.01f > Mathf.PI) return true;
         return false;
         
@@ -168,8 +180,10 @@ public class mesh_paint : MonoBehaviour
 
     bool Array_Contains(ContactPoint[] contact_array, ContactPoint compared_contact)
     {
+        // Loops through all the collision vertecies
         for(int i = 0; i < contact_array.Length; i++)
         {
+            // If the points x and y value match, return true
             Vector3 current_contact_point = contact_array[i].point;
             Vector3 compared_contact_point = compared_contact.point;
             if (current_contact_point.x == compared_contact_point.x && current_contact_point.y == compared_contact_point.y) return true;
