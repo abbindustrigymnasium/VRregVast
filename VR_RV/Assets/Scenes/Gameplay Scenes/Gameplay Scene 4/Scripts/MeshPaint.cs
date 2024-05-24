@@ -177,7 +177,7 @@ public class MeshPaint : MonoBehaviour
 
     bool Array_Contains(ContactPoint[] contact_array, ContactPoint compared_contact)
     {
-        // Loops through all the collision vertecies
+        // Loops through all the collision vertices
         for(int i = 0; i < contact_array.Length; i++)
         {
             // If the points x and y value match, return true
