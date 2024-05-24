@@ -7,7 +7,12 @@ using UnityEngine.UIElements;
 
 public class mesh_paint : MonoBehaviour
 {
+    // Take in the different texures and the layer mask
     [SerializeField] private Texture2D layer_mask_default;
+    [SerializeField] protected Texture2D texture_before;
+    [SerializeField] protected Texture2D texture_after;
+
+    // Variables for editing the layer mask
     private Texture2D editable_layer_mask;
     private Color32[] default_state_pixel_array;
     private float percentage_colored;
@@ -29,6 +34,10 @@ public class mesh_paint : MonoBehaviour
 
         // Set the input texture of the shader to the newly created texture
         disinfectable_area_material.SetTexture("_layer_mask", editable_layer_mask);
+
+        // Set the before and after textures to their variables in the shader
+        disinfectable_area_material.SetTexture("_texture_before", texture_before);
+        disinfectable_area_material.SetTexture("_texture_after", texture_after);
 
         // Calculate the relative size of 1 lenght unit compared to the disinfectable area
         float x_axis_scale = 1 / transform.localScale.x;
@@ -79,7 +88,6 @@ public class mesh_paint : MonoBehaviour
             contact_points_in_pixels.Add((current_contact.point.x + transform.localScale.x / 2) * pixel_width);
             contact_points_in_pixels.Add((current_contact.point.y + transform.localScale.y / 2) * pixel_height);
         }
-        Debug.Log(contact_points_in_pixels.Count);
 
         // Create arrays of the x and y values in pixels
         float[] x_values_in_pixels = new float[contact_points_in_pixels.Count / 2];
@@ -89,9 +97,6 @@ public class mesh_paint : MonoBehaviour
             y_values_in_pixels[i / 2] = contact_points_in_pixels[i + 1];
         }
 
-
-        
-
         // Calculate starting point and max width and height
         int x_starting_value = (int)x_values_in_pixels.Min();
         int y_starting_value = (int)y_values_in_pixels.Min();
@@ -99,6 +104,7 @@ public class mesh_paint : MonoBehaviour
         int max_width_in_pixels = (int)x_values_in_pixels.Max() - x_starting_value;
         int max_height_in_pixels = (int)y_values_in_pixels.Max() - y_starting_value;
         
+        // Printing x and y coodrinates
         /*string x_ps = "X: ";
         string y_ps = "Y: ";
         for (int i = 0; i < x_values_in_pixels.Length; i++) 
