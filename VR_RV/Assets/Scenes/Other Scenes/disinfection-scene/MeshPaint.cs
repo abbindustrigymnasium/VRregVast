@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class mesh_paint : MonoBehaviour
+public class MeshPaint : MonoBehaviour
 {
     // Take in the different texures and the layer mask
     [SerializeField] private Texture2D layer_mask_default;
