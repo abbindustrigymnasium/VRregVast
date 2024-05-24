@@ -3165,11 +3165,11 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 2
   m_AntialiasingQuality: 2
   m_StopNaN: 0
-  m_Dithering: 0
+  m_Dithering: 1
   m_ClearDepth: 1
   m_AllowXRRendering: 1
   m_AllowHDROutput: 1
@@ -5406,6 +5406,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Operation_Room
       objectReference: {fileID: 0}
+    - target: {fileID: 2961168339259564878, guid: 9af1edd1081d9004eba82290eaeace20,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6305,3 +6310,4 @@ SceneRoots:
   - {fileID: 1853023664}
   - {fileID: 468573606}
   - {fileID: 6152275814266628967}
+  - {fileID: 1985211868}
