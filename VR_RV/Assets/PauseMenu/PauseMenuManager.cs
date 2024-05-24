@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PauseMenuManager : MonoBehaviour
 {
@@ -47,5 +48,12 @@ public class PauseMenuManager : MonoBehaviour
         menu.transform.LookAt(new Vector3(head.position.x, menu.transform.position.y, head.position.z));
         // Fixes the menu so it won't be mirored.
         menu.transform.forward *= -1;
+    }
+
+    // Starts the new scene
+    public void Start_Scene(string scene)
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(scene);
     }
 }
