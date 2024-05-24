@@ -18,6 +18,7 @@ Library: C:\Programmering\Projects\RVVR\VRregVast\VR_RV\Temp\BurstOutput\tempbur
 --assembly-defines=Unity.VisualScripting.Flow;
 --assembly-defines=Unity.XR.OpenXR.Features.MockRuntime;
 --assembly-defines=Unity.XR.Interaction.Toolkit.Samples.DeviceSimulator;
+--assembly-defines=Unity.XR.Interaction.Toolkit.Samples.DeviceSimulator;
 --assembly-defines=Unity.XR.CoreUtils;
 --assembly-defines=Unity.XR.OpenXR;
 --assembly-defines=Unity.XR.OpenXR.Features.MetaQuestSupport;
@@ -89,6 +90,7 @@ Library: C:\Programmering\Projects\RVVR\VRregVast\VR_RV\Temp\BurstOutput\tempbur
 --assembly-defines=Unity.RenderPipelines.Universal.Config.Runtime;
 --assembly-defines=Unity.VisualScripting.Flow;
 --assembly-defines=Unity.XR.OpenXR.Features.MockRuntime;
+--assembly-defines=Unity.XR.Interaction.Toolkit.Samples.DeviceSimulator;
 --assembly-defines=Unity.XR.Interaction.Toolkit.Samples.DeviceSimulator;
 --assembly-defines=Unity.XR.CoreUtils;
 --assembly-defines=Unity.XR.OpenXR;
