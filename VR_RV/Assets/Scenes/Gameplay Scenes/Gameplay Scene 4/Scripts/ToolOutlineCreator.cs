@@ -16,7 +16,8 @@ using UnityEngine;
 public class ToolOutlineCreator : MonoBehaviour
 {
    // This is the type of outline you want to give all nerby objects
-  [SerializeField] private Material outline_material;
+  [SerializeField]
+  private Material outline_material;
 
   private ToolInteractor     tool_interactor;
   private XRGrabInteractable grab_interactable;

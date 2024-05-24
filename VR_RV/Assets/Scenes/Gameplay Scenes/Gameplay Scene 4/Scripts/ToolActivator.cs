@@ -17,7 +17,8 @@ using UnityEngine.InputSystem;
 public class ToolActivator : MonoBehaviour
 {
   // Action Value from hand trigger reference
-  [SerializeField] private InputActionReference trigger_reference;
+  [SerializeField]
+  private InputActionReference trigger_reference;
 
   private XRDirectInteractor direct_interactor;
 

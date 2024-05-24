@@ -11,29 +11,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
+[System.Serializable]
+public class ToolInteractorEvent : UnityEvent<GameObject>
+{
+  
+}
 
 public class ToolInteractor : MonoBehaviour
 {
   // The position and rotation of the attachment point for picked up objects
-  [SerializeField] private Transform collision_transform;
+  [SerializeField]
+  public Transform collision_transform;
 
   // The range from the attachment point to be able to pick up objects
-  [SerializeField] private float     collision_radius = 1;
+  [SerializeField]
+  private float collision_radius = 1;
 
   // The specific layer to interact with
-  [SerializeField] private LayerMask collision_layer;
+  [SerializeField]
+  private LayerMask collision_layer;
 
   // The activation threshold for picking up objects
-  [SerializeField] private float select_activation = 0.5f;
+  [SerializeField]
+  private float select_activation = 0.5f;
 
   public GameObject select_object;
   public GameObject target_object;
 
+  public ToolInteractorEvent selectEntered = new ToolInteractorEvent();
+  public ToolInteractorEvent selectExited  = new ToolInteractorEvent();
+
+  // select_ability is a resetable check if an object can be picked up
   private bool select_ability = false;
 
   private ToolActivation tool_activation;
-
-  private Rigidbody tool_rigidbody;
+  private Rigidbody      tool_rigidbody;
 
   /*
    * On initialization, get the tool activation and rigidbody components
@@ -43,6 +57,36 @@ public class ToolInteractor : MonoBehaviour
     tool_activation = GetComponent<ToolActivation>();
 
     tool_rigidbody  = GetComponent<Rigidbody>();
+
+    selectEntered.AddListener(On_Select_Entered);
+
+    selectExited.AddListener(On_Select_Exited);
+  }
+
+  /*
+   *
+   */
+  void onDestroy()
+  {
+    selectEntered.RemoveListener(On_Select_Entered);
+
+    selectExited.RemoveListener(On_Select_Exited);
+  }
+
+  /*
+   *
+   */
+  private void On_Select_Entered(GameObject new_object)
+  {
+    select_object = new_object;
+  }
+
+  /*
+   *
+   */
+  private void On_Select_Exited(GameObject old_object)
+  {
+    select_object = null;
   }
 
   /*
@@ -60,13 +104,20 @@ public class ToolInteractor : MonoBehaviour
     
     foreach(Collider collider in colliders)
     {
-      Vector3 current_position = collider.gameObject.transform.position;
+      GameObject current_object = collider.gameObject;
+
+      // If the object does not have the component ToolInteractable,
+      // it can not be picked up
+      if(!current_object.GetComponent<ToolInteractable>()) continue;
+
+
+      Vector3 current_position = current_object.transform.position;
 
       float current_distance = Vector3.Distance(current_position, collision_transform.position);
 
       if(closest_distance == -1 || current_distance < closest_distance)
       {
-        closest_object   = collider.gameObject;
+        closest_object   = current_object;
         closest_distance = current_distance;
       }
     }
@@ -86,36 +137,18 @@ public class ToolInteractor : MonoBehaviour
   {
     if(tool_activation.activation >= select_activation)
     {
-      if(select_ability && select_object == null)
+      if(select_ability && !select_object)
       {
-        select_object = closest_object;
+        closest_object?.GetComponent<ToolInteractable>()?.selectEntered.Invoke(this.gameObject);
 
         select_ability = false;
       }
     }
     else
     {
-      select_object = null;
+      select_object?.GetComponent<ToolInteractable>()?.selectExited.Invoke(this.gameObject);
 
       select_ability = true;
-    }
-  }
-
-  /*
-   * Update the grabbed object's positiion and rotation
-   * to match that of the attachment point of the tool
-   */
-  private void Update_Selected_Object_Transform()
-  {
-    select_object.transform.position = collision_transform.position;
-
-    select_object.transform.rotation = collision_transform.rotation;
-
-    Rigidbody rigidbody = select_object?.GetComponent<Rigidbody>();
-
-    if(rigidbody && tool_rigidbody)
-    {
-      // rigidbody.velocity = tool_rigidbody.velocity;
     }
   }
 
@@ -130,12 +163,6 @@ public class ToolInteractor : MonoBehaviour
 
     Update_Selected_Object(closest_object);
 
-    if(select_object)
-    {
-      target_object = null;
-
-      Update_Selected_Object_Transform();
-    }
-    else target_object = closest_object;
+    target_object = (select_object) ? null : closest_object;
   }
 }
