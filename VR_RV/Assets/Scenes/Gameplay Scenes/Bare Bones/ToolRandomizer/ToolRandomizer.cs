@@ -28,17 +28,17 @@ public class ToolRandomizer : MonoBehaviour
       }
     }
 
-    // Randomize spawn positions of items with tag
+    // Randomize spawn positions of items with specific tag
     void Randomize_Items(string tag){
       all_tools = GameObject.FindGameObjectsWithTag(tag);
 
       foreach(GameObject tool in all_tools){
         int index = Random.Range(0, tool_spawnpoints_list.Count);
 
-        // Set position to random position from list
+        // Set tool position to random position from list
         tool.transform.position = tool_spawnpoints_list[index];
 
-        // Remove position from list to avoid spawning on the same point
+        // Remove position from list to avoid tools spawning on the same point
         tool_spawnpoints_list.Remove(tool_spawnpoints_list[index]);
       }
 
