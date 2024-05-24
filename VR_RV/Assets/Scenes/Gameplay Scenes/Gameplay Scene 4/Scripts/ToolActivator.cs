@@ -1,9 +1,11 @@
 /*
  * This script should be added to the hands that will pick up and use tools
  *
+ * This script links the trigger on a controller to the activation of a tool
+ *
  * Written by Hampus Fridholm
  *
- * 2024-05-22
+ * 2024-05-24
  */
 
 using System.Collections;
@@ -14,6 +16,7 @@ using UnityEngine.InputSystem;
 
 public class ToolActivator : MonoBehaviour
 {
+  // Action Value from hand trigger reference
   [SerializeField] private InputActionReference trigger_reference;
 
   private XRDirectInteractor direct_interactor;
@@ -27,9 +30,12 @@ public class ToolActivator : MonoBehaviour
   {
     direct_interactor = GetComponent<XRDirectInteractor>();
 
-    direct_interactor.selectEntered.AddListener(On_Select_Enter);
+    if(direct_interactor)
+    {
+      direct_interactor.selectEntered.AddListener(On_Select_Enter);
 
-    direct_interactor.selectExited.AddListener(On_Select_Exit);
+      direct_interactor.selectExited.AddListener(On_Select_Exit);
+    }
   }
 
   /*
@@ -37,9 +43,12 @@ public class ToolActivator : MonoBehaviour
    */
   void onDestroy()
   {
-    direct_interactor.selectEntered.RemoveListener(On_Select_Enter);
+    if(direct_interactor)
+    {
+      direct_interactor.selectEntered.RemoveListener(On_Select_Enter);
 
-    direct_interactor.selectExited.RemoveListener(On_Select_Exit);
+      direct_interactor.selectExited.RemoveListener(On_Select_Exit);
+    }
   }
 
   /*
@@ -62,21 +71,24 @@ public class ToolActivator : MonoBehaviour
   {
     ToolActivation tool_activation = selected_tool?.GetComponent<ToolActivation>();
 
-    if(tool_activation)
-    {
-      tool_activation.activation = 0.0f;
-    }
+    if(tool_activation) tool_activation.activation = 0.0f;
 
     selected_tool = null;
   }
 
+  /*
+   * Each frame, if the user is holding a tool,
+   * update the tools activaiton based on how much the trigger is pushed in
+   */
   void Update()
   {
     if(selected_tool && trigger_reference)
     {
       float trigger_value = trigger_reference.action.ReadValue<float>();
 
-      selected_tool.GetComponent<ToolActivation>().activation = trigger_value;
+      ToolActivation tool_activation = selected_tool?.GetComponent<ToolActivation>();
+
+      if(tool_activation) tool_activation.activation = trigger_value;
     }
   }
 }

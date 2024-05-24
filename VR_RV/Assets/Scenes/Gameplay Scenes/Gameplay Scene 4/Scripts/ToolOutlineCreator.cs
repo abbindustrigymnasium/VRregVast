@@ -1,9 +1,11 @@
 /*
  * This script should be added to each tool that should be able to pick up objects
  *
+ * This script is like OutlineCreator for hands, but is ment for tools
+ *
  * Written by Hampus Fridholm
  *
- * 2024-05-22
+ * 2024-05-24
  */
 
 using System.Collections;
@@ -41,7 +43,7 @@ public class ToolOutlineCreator : MonoBehaviour
   }
 
   /*
-   *
+   * When the script is unloaded, remove the event listeners
    */
   void onDestroy()
   {
@@ -54,7 +56,7 @@ public class ToolOutlineCreator : MonoBehaviour
   }
 
   /*
-   *
+   * When the user picks up the tool, set tool_selected to true
    */
   private void On_Select_Enter(SelectEnterEventArgs args)
   {
@@ -62,7 +64,7 @@ public class ToolOutlineCreator : MonoBehaviour
   }
 
   /*
-   *
+   * When the user drops the tool, set tool_selected to false
    */
   private void On_Select_Exit(SelectExitEventArgs args)
   {
@@ -90,7 +92,7 @@ public class ToolOutlineCreator : MonoBehaviour
    */
   private GameObject Get_Target_Outline_Object()
   {
-    GameObject target_object = tool_interactor.target_object;
+    GameObject target_object = tool_interactor?.target_object;
 
     return target_object?.transform.Find("Outline")?.gameObject;
   }
