@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MeshPaint : MonoBehaviour
 {
-    // Take in the different texures and the layer mask
+    // Take in the different textures and the layer mask
     [SerializeField] private Texture2D layer_mask_default;
     [SerializeField] protected Texture2D texture_before;
     [SerializeField] protected Texture2D texture_after;
