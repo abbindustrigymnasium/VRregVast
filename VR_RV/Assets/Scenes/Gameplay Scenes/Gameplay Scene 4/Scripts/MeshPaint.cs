@@ -169,7 +169,7 @@ public class MeshPaint : MonoBehaviour
             sum_of_angles += delta_theta;
         }
 
-        // If the sum of angles are PI (with a margin of 0.01), return true
+        // If the sum of angles is PI (with a margin of 0.01), return true
         if (Mathf.Abs(sum_of_angles) + 0.01f > Mathf.PI) return true;
         return false;
         
