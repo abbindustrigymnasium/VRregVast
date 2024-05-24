@@ -101,7 +101,7 @@ public class MeshPaint : MonoBehaviour
         int max_height_in_pixels = (int)y_values_in_pixels.Max() - y_starting_value;
         
         
-        // Printing x and y coodrinates
+        // Printing x and y coordinates
         /*string x_ps = "X: ";
         string y_ps = "Y: ";
         for (int i = 0; i < x_values_in_pixels.Length; i++) 
