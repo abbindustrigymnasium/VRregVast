@@ -27,7 +27,7 @@ public class ToolInteractor : MonoBehaviour
 
   // The range from the attachment point to be able to pick up objects
   [SerializeField]
-  private float collision_radius = 1;
+  private float collision_radius = 0.05f;
 
   // The specific layer to interact with
   [SerializeField]
