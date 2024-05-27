@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TaskManager : MonoBehaviour
 {
@@ -117,7 +118,7 @@ public class TaskManager : MonoBehaviour
 
     private Dictionary<string, Task> Create_Task_Map()
     {
-        TaskInfoSO[] all_tasks = Resources.LoadAll<TaskInfoSO>("Tasks");
+        TaskInfoSO[] all_tasks = Resources.LoadAll<TaskInfoSO>("Tasks/" + SceneManager.GetActiveScene().name);
 
         Dictionary<string, Task> id_to_task_map = new Dictionary<string, Task>();
 

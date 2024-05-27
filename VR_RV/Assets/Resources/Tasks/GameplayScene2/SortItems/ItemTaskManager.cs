@@ -18,7 +18,7 @@ public class ItemTaskManager : MonoBehaviour
 
         if (correct_items == items)
         {
-            // send event
+            GameObject.Find("Task Manager").GetComponentInChildren<SortItemsStep>().All_Sorted();
         }
     }
 }
