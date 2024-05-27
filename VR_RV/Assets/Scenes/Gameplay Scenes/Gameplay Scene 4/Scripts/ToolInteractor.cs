@@ -47,7 +47,6 @@ public class ToolInteractor : MonoBehaviour
   private bool select_ability = false;
 
   private ToolActivation tool_activation;
-  private Rigidbody      tool_rigidbody;
 
   /*
    * On initialization, get the tool activation and rigidbody components
@@ -55,8 +54,6 @@ public class ToolInteractor : MonoBehaviour
   void Awake()
   {
     tool_activation = GetComponent<ToolActivation>();
-
-    tool_rigidbody  = GetComponent<Rigidbody>();
 
     selectEntered.AddListener(On_Select_Entered);
 

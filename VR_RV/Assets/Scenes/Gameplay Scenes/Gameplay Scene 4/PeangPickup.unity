@@ -483,6 +483,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb01e2a644ff35448baa660aa0bb284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  max_linear_velocity: 5
+  max_angular_velocity: 5
   selectEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -519,6 +521,74 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1639567044}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &309856514
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 309856517}
+  - component: {fileID: 309856516}
+  - component: {fileID: 309856515}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &309856515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309856514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &309856516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309856514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &309856517
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309856514}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &318307239
 GameObject:
@@ -679,6 +749,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb01e2a644ff35448baa660aa0bb284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  max_linear_velocity: 5
+  max_angular_velocity: 5
   selectEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -844,6 +916,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb01e2a644ff35448baa660aa0bb284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  max_linear_velocity: 5
+  max_angular_velocity: 5
   selectEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -1009,6 +1083,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb01e2a644ff35448baa660aa0bb284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  max_linear_velocity: 5
+  max_angular_velocity: 5
   selectEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -1940,6 +2016,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb01e2a644ff35448baa660aa0bb284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  max_linear_velocity: 5
+  max_angular_velocity: 5
   selectEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -1955,6 +2033,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1270152093}
+  - component: {fileID: 1270152094}
   m_Layer: 0
   m_Name: Pickup Transform
   m_TagString: Untagged
@@ -1977,6 +2056,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1639567044}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1270152094
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270152092}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1318916116
 GameObject:
   m_ObjectHideFlags: 0
@@ -2306,6 +2412,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb01e2a644ff35448baa660aa0bb284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  max_linear_velocity: 5
+  max_angular_velocity: 5
   selectEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -2471,6 +2579,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb01e2a644ff35448baa660aa0bb284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  max_linear_velocity: 5
+  max_angular_velocity: 5
   selectEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -3291,6 +3401,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1893255815}
+  - component: {fileID: 1893255816}
   m_Layer: 0
   m_Name: Pickup Transform
   m_TagString: Untagged
@@ -3313,6 +3424,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1100061235}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1893255816
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893255814}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1988846224
 GameObject:
   m_ObjectHideFlags: 0
@@ -3472,6 +3610,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb01e2a644ff35448baa660aa0bb284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  max_linear_velocity: 5
+  max_angular_velocity: 5
   selectEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -3637,6 +3777,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bb01e2a644ff35448baa660aa0bb284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  max_linear_velocity: 5
+  max_angular_velocity: 5
   selectEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -4080,3 +4222,4 @@ SceneRoots:
   - {fileID: 1318916120}
   - {fileID: 1100061235}
   - {fileID: 1639567044}
+  - {fileID: 309856517}
