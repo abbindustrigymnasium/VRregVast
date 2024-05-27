@@ -150,3 +150,4 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  audio_mixer_group: {fileID: 24300002, guid: 57d59eecf7eeb4f0cacbaa8aea15c304, type: 2}

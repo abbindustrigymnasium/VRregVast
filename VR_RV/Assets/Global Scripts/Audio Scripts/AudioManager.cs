@@ -9,6 +9,7 @@ public class Audio : MonoBehaviour
 {
 
     public Sound[] sounds;
+    public AudioMixerGroup audio_mixer_group;
 
 
     //When starting it creates sound sources for each sound in the sounds array.
@@ -19,7 +20,7 @@ public class Audio : MonoBehaviour
 
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
-
+            s.source.outputAudioMixerGroup = audio_mixer_group;
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
