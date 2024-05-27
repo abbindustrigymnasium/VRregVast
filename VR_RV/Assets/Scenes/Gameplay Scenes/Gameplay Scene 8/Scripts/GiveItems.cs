@@ -50,7 +50,7 @@ public class GiveItems : MonoBehaviour
     {
         if (ParentOfItems.childCount == 0)
         {
-            TextBox.text = "You did it";
+            TextBox.text = "Quickly! Vacuum the Blood";
             truth = true;
             GameObject.Find("Task Manager").GetComponentInChildren<FinishedGivingObjectsScript>().Done();
         }
