@@ -1,6 +1,7 @@
 using UnityEngine.Audio;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 //This code was programed by Simon Meier, and is a part of the Audio functions.
 //Note: Volume of clips cannot be changed when the simulation is running, only before in the editor.
@@ -10,6 +11,10 @@ public class Audio : MonoBehaviour
 
     public Sound[] sounds;
     public AudioMixerGroup audio_mixer_group;
+    public AudioMixer audio_mixer;
+
+    [SerializeField] private Slider volume_slider;
+
 
 
     //When starting it creates sound sources for each sound in the sounds array.
@@ -29,6 +34,17 @@ public class Audio : MonoBehaviour
 
     }
 
+    private void Start()
+
+    {
+
+        volume_slider.onValueChanged.AddListener(Set_Level);
+
+        if (PlayerPrefs.HasKey("music_volume"))
+        {
+            volume_slider.value = (float)Math.Pow(10, PlayerPrefs.GetFloat("music_volume") / 20);
+        }
+    }
     //Here we go through each sound in the array and check if we should play it.
     void Update()
     {
@@ -69,4 +85,11 @@ public class Audio : MonoBehaviour
             Debug.LogWarning("Sound: " + soundName + " not found");
         }
     }
+
+    public void Set_Level(float slider_value)
+    {
+        audio_mixer.SetFloat("music_volume", Mathf.Log10(slider_value) * 20);
+        PlayerPrefs.SetFloat("music_volume", Mathf.Log10(slider_value) * 20);
+    }
+
 }
