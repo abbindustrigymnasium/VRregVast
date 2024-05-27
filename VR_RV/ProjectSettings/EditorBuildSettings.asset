@@ -35,16 +35,16 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Gameplay Scenes/Bare Bones/SnapZone.unity
     guid: 6b62c3dd91463874a8ee8c7b9c47c1f6
-  - enabled: 1
+  - enabled: 0
     path: Assets/PauseMenu/PauseMenuTest.unity
     guid: 97fdeee2ba8f67843a0782cb11d71c68
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Gameplay Scenes/Bare Bones/TaskManager.unity
     guid: bd177bbc466fa5b4497f974c0b6ecb44
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Gameplay Scenes/Bare Bones/SnapZone.unity
     guid: 6b62c3dd91463874a8ee8c7b9c47c1f6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Gameplay Scenes/Bare Bones/StarterScene.unity
     guid: 923efce5c547e6a45b4d4496a463f475
   - enabled: 1
