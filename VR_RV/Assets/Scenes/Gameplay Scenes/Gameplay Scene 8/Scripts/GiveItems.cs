@@ -17,6 +17,8 @@ public class GiveItems : MonoBehaviour
     // The textbox that displays what the doctor wants
     public TMP_Text TextBox;
 
+    private bool truth = false;
+
 
 
     // Updates child at the start and checks if and how many children ParentOfItems has
@@ -49,6 +51,7 @@ public class GiveItems : MonoBehaviour
         if (ParentOfItems.childCount == 0)
         {
             TextBox.text = "You did it";
+            truth = true;
             GameObject.Find("Task Manager").GetComponentInChildren<FinishedGivingObjectsScript>().Done();
         }
         else
@@ -65,11 +68,14 @@ public class GiveItems : MonoBehaviour
         {
             //GetComponent<MeshRenderer>().material.color = Color.green;
             // TODO: update the score here;
-            Child.SetActive(false);
+            if (truth == false)
+            {
+                Child.SetActive(false);
 
-            //Wait for 5 seconds.
-            StartCoroutine(DelayedAction(3));
-            // Request++;
+                //Wait for 5 seconds.
+                StartCoroutine(DelayedAction(3));
+                // Request++;
+            }
 
 
         }

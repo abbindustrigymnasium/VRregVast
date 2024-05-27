@@ -16,5 +16,5 @@ MonoBehaviour:
   display_name: Finished-Giving-Objects
   prerequisites: []
   task_step_prefabs:
-  - {fileID: 0}
+  - {fileID: 2526504986107335452, guid: 77061ca059da7f245a4a3ca3cc9d9932, type: 3}
   exp_gain: 0
