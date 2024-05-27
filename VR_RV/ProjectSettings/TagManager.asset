@@ -4,6 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Disinfectable
+  - Rag
   - Interactable
   - Vacuum
   layers:
