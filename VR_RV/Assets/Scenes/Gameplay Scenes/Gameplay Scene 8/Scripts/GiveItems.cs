@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using TMPro;
 
+//This code was writen by Olle Östman and Simon Meier
+
 public class GiveItems : MonoBehaviour
 {
     // The parent that contains all the Items the doctor will be asking for
@@ -14,6 +16,8 @@ public class GiveItems : MonoBehaviour
     private GameObject Child;
     // The textbox that displays what the doctor wants
     public TMP_Text TextBox;
+
+
 
     // Updates child at the start and checks if and how many children ParentOfItems has
     void Start()
@@ -45,6 +49,7 @@ public class GiveItems : MonoBehaviour
         if (ParentOfItems.childCount == 0)
         {
             TextBox.text = "You did it";
+            GameObject.Find("Task Manager").GetComponentInChildren<FinishedGivingObjectsScript>().Done();
         }
         else
         {
@@ -61,8 +66,12 @@ public class GiveItems : MonoBehaviour
             //GetComponent<MeshRenderer>().material.color = Color.green;
             // TODO: update the score here;
             Child.SetActive(false);
+
+            //Wait for 5 seconds.
+            StartCoroutine(DelayedAction(3));
             // Request++;
-            ChildUpdate();
+
+
         }
         else
         {
@@ -75,5 +84,15 @@ public class GiveItems : MonoBehaviour
     public void On_Select_Exited_Snap(SelectExitEventArgs args)
     {
         // GetComponent<MeshRenderer>().material.color = Color.white;
+    }
+
+    IEnumerator DelayedAction(float delay)
+    {
+        Debug.Log("Action started");
+        yield return new WaitForSeconds(delay);
+        Debug.Log(delay + " seconds passed");
+
+        Child.SetActive(true);
+        ChildUpdate();
     }
 }
