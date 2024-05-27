@@ -62,6 +62,13 @@ public class TaskManager : MonoBehaviour
             if (task.state == TaskState.REQUIREMENTS_NOT_MET && Check_Requirements_Met(task))
             {
                 Change_Task_State(task.info.id, TaskState.CAN_START);
+                Start_Task(task.info.id);
+            }
+
+            if (task.state == TaskState.CAN_FINISH)
+            {
+                Change_Task_State(task.info.id, TaskState.FINISHED);
+                Finish_Task(task.info.id);
             }
         }
     }

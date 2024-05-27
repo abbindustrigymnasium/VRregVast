@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class ItemTaskManager : MonoBehaviour
 {
-    private int items;
-    private int correct_items;
+    [SerializeField] private int items;
+    [SerializeField] private int correct_items;
 
     public void Add_Item()
     {
