@@ -4,6 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Disinfectable
+  - Rag
   - Interactable
   - Vacuum
   - Tool
@@ -17,8 +19,8 @@ TagManager:
   - UI
   - Vacuum
   - Sphere
-  - 
-  - 
+  - Drill1
+  - Drill2
   - 
   - 
   - 
