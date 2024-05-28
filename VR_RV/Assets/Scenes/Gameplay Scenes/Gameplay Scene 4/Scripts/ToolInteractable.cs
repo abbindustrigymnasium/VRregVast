@@ -19,6 +19,7 @@ public class ToolInteractableEvent : UnityEvent<GameObject>
   
 }
 
+[RequireComponent(typeof(Rigidbody))]
 public class ToolInteractable : MonoBehaviour
 {
   [SerializeField]
@@ -77,12 +78,9 @@ public class ToolInteractable : MonoBehaviour
     //
     this_rigidbody.useGravity = false;
 
-    if(this_rigidbody)
-    {
-      this_rigidbody.velocity = Vector3.zero;
-      
-      this_rigidbody.angularVelocity = Vector3.zero;
-    }
+    this_rigidbody.velocity = Vector3.zero;
+    
+    this_rigidbody.angularVelocity = Vector3.zero;
 
     // 3. Update the tool to be the new tool
     tool_object = new_object;
@@ -99,12 +97,9 @@ public class ToolInteractable : MonoBehaviour
     // 2. Give object the same exiting velocity as the tool attach point
     this_rigidbody.useGravity = true;
 
-    if(this_rigidbody)
-    {
-      this_rigidbody.velocity = Vector3.ClampMagnitude(linear_velocity, max_linear_velocity);
-      
-      this_rigidbody.angularVelocity = Vector3.ClampMagnitude(angular_velocity, max_angular_velocity);
-    }
+    this_rigidbody.velocity = Vector3.ClampMagnitude(linear_velocity, max_linear_velocity);
+    
+    this_rigidbody.angularVelocity = Vector3.ClampMagnitude(angular_velocity, max_angular_velocity);
 
     // 3. Set the tool to be null
     tool_object = null;

@@ -19,6 +19,7 @@ public class ToolInteractorEvent : UnityEvent<GameObject>
   
 }
 
+[RequireComponent(typeof(ToolActivation))]
 public class ToolInteractor : MonoBehaviour
 {
   // The position and rotation of the attachment point for picked up objects

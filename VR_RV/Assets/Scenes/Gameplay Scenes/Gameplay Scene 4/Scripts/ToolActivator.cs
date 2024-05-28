@@ -14,6 +14,7 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(XRDirectInteractor))]
 public class ToolActivator : MonoBehaviour
 {
   // Action Value from hand trigger reference
@@ -31,12 +32,9 @@ public class ToolActivator : MonoBehaviour
   {
     direct_interactor = GetComponent<XRDirectInteractor>();
 
-    if(direct_interactor)
-    {
-      direct_interactor.selectEntered.AddListener(On_Select_Enter);
+    direct_interactor.selectEntered.AddListener(On_Select_Enter);
 
-      direct_interactor.selectExited.AddListener(On_Select_Exit);
-    }
+    direct_interactor.selectExited.AddListener(On_Select_Exit);
   }
 
   /*
@@ -44,12 +42,9 @@ public class ToolActivator : MonoBehaviour
    */
   void onDestroy()
   {
-    if(direct_interactor)
-    {
-      direct_interactor.selectEntered.RemoveListener(On_Select_Enter);
+    direct_interactor.selectEntered.RemoveListener(On_Select_Enter);
 
-      direct_interactor.selectExited.RemoveListener(On_Select_Exit);
-    }
+    direct_interactor.selectExited.RemoveListener(On_Select_Exit);
   }
 
   /*

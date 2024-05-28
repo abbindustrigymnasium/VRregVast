@@ -3,7 +3,7 @@
  *
  * Written by Hampus Fridholm
  *
- * 2024-04-23
+ * 2024-05-28
  */
 
 using System.Collections;
@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+[RequireComponent(typeof(MeshFilter))]
 public class OutlineReceiver : MonoBehaviour
 {
   private GameObject outline_object;
@@ -34,13 +35,5 @@ public class OutlineReceiver : MonoBehaviour
 
     // Initially disable the outline object
     outline_object.SetActive(false);
-  }
-
-  /*
-   * Destroy the created outline object
-   */
-  void onDestroy()
-  {
-    // Add code here if you want :D
   }
 }

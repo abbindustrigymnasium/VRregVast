@@ -1,33 +1,56 @@
 /*
  * This script should be added to each tool that can be activated
  *
- * Note: This script will be replaced by Noah's script with actual animations
- *
  * Written by Hampus Fridholm
  *
- * 2024-05-22
+ * 2024-05-28
  */
 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class ToolActivation : MonoBehaviour
 {
+  [SerializeField]
+  private GameObject main_object;
+
+  [SerializeField]
+  private GameObject move_object;
+
+  [SerializeField]
+  private Transform pivot_transform;
+
+  [SerializeField]
+  private float max_angle = 20;
+
   public float activation;
 
-  private MeshRenderer mesh_renderer;
+  private ParentConstraint constraint;
 
   void Awake()
   {
-    mesh_renderer = GetComponent<MeshRenderer>();
+    constraint = move_object.AddComponent<ParentConstraint>();
+
+    Vector3 position_offset = pivot_transform.position - move_object.transform.position;
+
+    ConstraintSource constraint_source = new ConstraintSource();
+
+    constraint_source.weight = 1;
+    constraint_source.sourceTransform = pivot_transform;
+
+    constraint.AddSource(constraint_source);
+
+    constraint.SetTranslationOffset(0, position_offset);
+
+    constraint.constraintActive = true;
   }
 
   void Update()
   {
-    if(mesh_renderer?.material)
-    {
-      mesh_renderer.material.color = Color.Lerp(Color.green, Color.red, activation);
-    }
+    float angle = Mathf.Lerp(0, max_angle, activation);
+
+    constraint.SetRotationOffset(0, new Vector3(0, -angle, 0));
   }
 }
