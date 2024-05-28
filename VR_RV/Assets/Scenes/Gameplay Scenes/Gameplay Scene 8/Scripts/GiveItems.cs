@@ -19,6 +19,8 @@ public class GiveItems : MonoBehaviour
 
     private bool truth = false;
 
+    public GameObject Socket;
+
 
 
     // Updates child at the start and checks if and how many children ParentOfItems has
@@ -71,6 +73,7 @@ public class GiveItems : MonoBehaviour
             if (truth == false)
             {
                 Child.SetActive(false);
+                Socket.GetComponent<XRSocketInteractor>().socketActive = false;
 
                 //Wait for 5 seconds.
                 StartCoroutine(DelayedAction(3));
@@ -98,6 +101,7 @@ public class GiveItems : MonoBehaviour
         yield return new WaitForSeconds(delay);
         Debug.Log(delay + " seconds passed");
 
+        Socket.GetComponent<XRSocketInteractor>().socketActive = true;
         Child.SetActive(true);
         ChildUpdate();
     }
