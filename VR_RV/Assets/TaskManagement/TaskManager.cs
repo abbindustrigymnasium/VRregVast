@@ -130,6 +130,7 @@ public class TaskManager : MonoBehaviour
         yield return new WaitForSeconds(5);
 
         Debug.Log("Switching scene! (in theory...)");
+        VRregVast.StandardLibrary.SceneManagement.New_Scene();
     }
 
     private void Claim_Rewards(Task task)
