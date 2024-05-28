@@ -45,6 +45,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Gameplay Scenes/Bare Bones/SnapZone.unity
     guid: 6b62c3dd91463874a8ee8c7b9c47c1f6
   - enabled: 1
+    path: Assets/Scenes/Gameplay Scenes/Gameplay Scene 4/PeangPickup.unity
+    guid: 4d9fe3416a6113549ad61eb3390efd39
+- enabled: 1
     path: Assets/Scenes/Gameplay Scenes/Bare Bones/StarterScene.unity
     guid: 923efce5c547e6a45b4d4496a463f475
   - enabled: 1

@@ -2,10 +2,14 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+using System.Collections;
 
 public class TaskManager : MonoBehaviour
 {
     private Dictionary<string, Task> task_map;
+    private int total_tasks = 0;
+    private TMP_Text task_display;
 
     private void Awake()
     {
@@ -27,6 +31,8 @@ public class TaskManager : MonoBehaviour
 
     private void Start()
     {
+        task_display = GameObject.FindWithTag("Task Display").GetComponent<TMP_Text>();
+
         foreach (var task in task_map.Values)
         {
             EventsManager.instance.task_events.Task_State_Change(task);
@@ -79,7 +85,7 @@ public class TaskManager : MonoBehaviour
         task.Instantiate_Current_Task_Step(this.transform);
         Change_Task_State(task.info.id, TaskState.IN_PROGRESS);
 
-        Debug.Log("Task " + id + " has been started!");
+        Display(task.info);
     }
 
     private void Advance_Task(string id)
@@ -96,8 +102,7 @@ public class TaskManager : MonoBehaviour
             Change_Task_State(task.info.id, TaskState.CAN_FINISH);
         }
 
-        Debug.Log("Task " + id + " has been advanced!");
-
+        Display(task.info);
     }
 
     private void Finish_Task(string id)
@@ -107,8 +112,24 @@ public class TaskManager : MonoBehaviour
 
         Change_Task_State(task.info.id, TaskState.FINISHED);
 
-        Debug.Log("Task " + id + " has been finished!");
+        total_tasks -= 1;
 
+        if (total_tasks == 0)
+        {
+            StartCoroutine(EndScene());
+            Display(null, true, true);
+        }
+        else
+        {
+            Display(null, true);
+        }
+    }
+
+    IEnumerator EndScene()
+    {
+        yield return new WaitForSeconds(5);
+
+        Debug.Log("Switching scene! (in theory...)");
     }
 
     private void Claim_Rewards(Task task)
@@ -126,6 +147,8 @@ public class TaskManager : MonoBehaviour
     private Dictionary<string, Task> Create_Task_Map()
     {
         TaskInfoSO[] all_tasks = Resources.LoadAll<TaskInfoSO>("Tasks/" + SceneManager.GetActiveScene().name);
+
+        total_tasks = all_tasks.Length;
 
         Dictionary<string, Task> id_to_task_map = new Dictionary<string, Task>();
 
@@ -151,5 +174,25 @@ public class TaskManager : MonoBehaviour
         }
 
         return task;
+    }
+
+    private void Display(TaskInfoSO info, bool completed = false, bool all_completed = false)
+    {
+        if (completed)
+        {
+            task_display.text = "Alla uppgifter i denna scen är färdiga!\nDu skickas till nästa scen om 10 sekunder";
+        }
+        else
+        {
+            if (completed)
+            {
+                task_display.text = "";
+            }
+            else
+            {
+                task_display.text = "Uppgift:\n" + info.display_name + "\nSteg:\n" + info.task_step_prefabs[0].name;
+
+            }
+        }
     }
 }
