@@ -20,7 +20,8 @@ public class PlayAudioExample : MonoBehaviour
         if (audioManager != null)
         {
             //In "Monkey" you write the name the sound was given in the AudioManager array
-            audioManager.TriggerSound("Monkey");
+            audioManager.TriggerSound("Bakgrund");
+            audioManager.TriggerSound("BakgrundSug");
         }
         ///
 
