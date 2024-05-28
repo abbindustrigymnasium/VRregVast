@@ -25646,7 +25646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ParentOfItems: {fileID: 1460550347}
   TextBox: {fileID: 479762748}
-  Socket: {fileID: 0}
+  Socket: {fileID: 1870056288}
 --- !u!1001 &1875931991
 PrefabInstance:
   m_ObjectHideFlags: 0
