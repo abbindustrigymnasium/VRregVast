@@ -154,6 +154,7 @@ public class TaskManager : MonoBehaviour
 
         foreach (TaskInfoSO task_info in all_tasks)
         {
+            Debug.Log("Task: " + task_info.display_name);
             if (id_to_task_map.ContainsKey(task_info.id))
             {
                 Debug.LogWarning("Duplicate id found when creating task map");

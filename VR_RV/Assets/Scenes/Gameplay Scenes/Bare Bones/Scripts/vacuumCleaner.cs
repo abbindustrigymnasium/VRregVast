@@ -14,6 +14,7 @@ public class vacuumCleaner : MonoBehaviour
     public float AttractionMaxSpeed;
     public AnimationCurve VelocityCurve;
     public float AccelerationSpeed;
+    public CountBlood CountBlood;
 
     float s;
     float varSpeed;
@@ -23,6 +24,11 @@ public class vacuumCleaner : MonoBehaviour
     void Start()
     {
         RB = GetComponent<Rigidbody>();
+
+        if (CountBlood == null)
+        {
+            CountBlood = FindObjectOfType<CountBlood>();
+        }
 
     }
 
@@ -57,6 +63,7 @@ public class vacuumCleaner : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Vacuum"))
         {
+            CountBlood.AddScore();
             Destroy(gameObject);
         }
     }
