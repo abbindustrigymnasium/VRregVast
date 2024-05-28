@@ -1,4 +1,4 @@
-Library: C:\Programmering\Projects\RVVR\VRregVast\VR_RV\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
+Library: C:\Users\22simmei\Documents\GitHub\VRregVast\VR_RV\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
 --platform=Android
 --backend=burst-llvm-16
 --target=ARMV7A_NEON32
@@ -17,7 +17,6 @@ Library: C:\Programmering\Projects\RVVR\VRregVast\VR_RV\Temp\BurstOutput\tempbur
 --assembly-defines=Unity.RenderPipelines.Universal.Config.Runtime;
 --assembly-defines=Unity.VisualScripting.Flow;
 --assembly-defines=Unity.XR.OpenXR.Features.MockRuntime;
---assembly-defines=Unity.XR.Interaction.Toolkit.Samples.DeviceSimulator;
 --assembly-defines=Unity.XR.Interaction.Toolkit.Samples.DeviceSimulator;
 --assembly-defines=Unity.XR.CoreUtils;
 --assembly-defines=Unity.XR.OpenXR;
@@ -65,11 +64,11 @@ Library: C:\Programmering\Projects\RVVR\VRregVast\VR_RV\Temp\BurstOutput\tempbur
 --assembly-defines=System;
 --assembly-defines=mscorlib;
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=C:\Programmering\Projects\RVVR\VRregVast\VR_RV\Temp\Burst
+--temp-folder=C:\Users\22simmei\Documents\GitHub\VRregVast\VR_RV\Temp\Burst
 --debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/AndroidPlayer
---decode-folder=C:\Programmering\Projects\RVVR\VRregVast\VR_RV\Library\Burst
---output=C:\Programmering\Projects\RVVR\VRregVast\VR_RV\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
+--decode-folder=C:\Users\22simmei\Documents\GitHub\VRregVast\VR_RV\Library\Burst
+--output=C:\Users\22simmei\Documents\GitHub\VRregVast\VR_RV\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Jobs.IJobForExtensions+ForJobStruct`1[[UnityEngine.Rendering.Universal.ZBinningJob, Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(UnityEngine.Rendering.Universal.ZBinningJob&, Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--77fc393cb521ac129b1392d4eb94d29a
@@ -91,7 +90,6 @@ Library: C:\Programmering\Projects\RVVR\VRregVast\VR_RV\Temp\BurstOutput\tempbur
 --assembly-defines=Unity.VisualScripting.Flow;
 --assembly-defines=Unity.XR.OpenXR.Features.MockRuntime;
 --assembly-defines=Unity.XR.Interaction.Toolkit.Samples.DeviceSimulator;
---assembly-defines=Unity.XR.Interaction.Toolkit.Samples.DeviceSimulator;
 --assembly-defines=Unity.XR.CoreUtils;
 --assembly-defines=Unity.XR.OpenXR;
 --assembly-defines=Unity.XR.OpenXR.Features.MetaQuestSupport;
@@ -138,11 +136,11 @@ Library: C:\Programmering\Projects\RVVR\VRregVast\VR_RV\Temp\BurstOutput\tempbur
 --assembly-defines=System;
 --assembly-defines=mscorlib;
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=C:\Programmering\Projects\RVVR\VRregVast\VR_RV\Temp\Burst
+--temp-folder=C:\Users\22simmei\Documents\GitHub\VRregVast\VR_RV\Temp\Burst
 --debug=Full
 --key-folder=C:/Program Files/Unity/Hub/Editor/2022.3.23f1/Editor/Data/PlaybackEngines/AndroidPlayer
---decode-folder=C:\Programmering\Projects\RVVR\VRregVast\VR_RV\Library\Burst
---output=C:\Programmering\Projects\RVVR\VRregVast\VR_RV\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
+--decode-folder=C:\Users\22simmei\Documents\GitHub\VRregVast\VR_RV\Library\Burst
+--output=C:\Users\22simmei\Documents\GitHub\VRregVast\VR_RV\Temp\BurstOutput\tempburstlibs\armeabi-v7a\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=UnityEngine.XR.Interaction.Toolkit.Utilities.BurstMathUtility, Unity.XR.Interaction.Toolkit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::ProjectOnPlane(Unity.Mathematics.float3&, Unity.Mathematics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|Unity.Mathematics.float3&, Unity.Mathematics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null|Unity.Mathematics.float3&, Unity.Mathematics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null)--1819bc9925667b008fd6c3e6019ccf71
