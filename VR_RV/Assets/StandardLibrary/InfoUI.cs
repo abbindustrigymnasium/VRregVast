@@ -1,4 +1,5 @@
 
+
 using System.Net.Mime;
 using System.Security.AccessControl;
 using System.Collections;
@@ -16,6 +17,8 @@ public class InfoUI : MonoBehaviour
         transform.position = new Vector3(0, 5, 0);
     }
 
+    
+    public Sprite bunke;
     public TextMeshProUGUI title; 
     public TextMeshProUGUI text;
     public TextMeshProUGUI usage;
@@ -58,16 +61,28 @@ public class InfoUI : MonoBehaviour
 
     public class ToolInfo
     {
-        public string title;
+        public string title = "test";
         public string text;
         public string usage;
         public string imageUrl;
 
-        public static ToolInfo getToolInfo(string s) // Get the tool info from the JSON string
-        {
-            
-            string[] tool = s.Replace("\"", "").Replace("[", "").Replace("]", "").Split(","); // Remove the quotes and brackets from the string
+       
+    }
 
+     public ToolInfo getToolInfo(string s) // Get the tool info from the JSON string
+        {
+            Debug.Log(s);
+            string[] tool = s.Replace("\"", "").Replace("[", "").Replace("]", "").Split(","); // Remove the quotes and brackets from the string
+            if (tool.Length > 3)
+            {
+                ToolInfo toolInfo = new ToolInfo();
+                toolInfo.title = tool[0].TrimStart(); // Remove leading spaces from title
+                toolInfo.text = tool[1].TrimStart();
+                toolInfo.usage = tool[3].TrimStart();
+                toolInfo.imageUrl = tool[2].TrimStart();
+                Debug.Log(toolInfo.imageUrl);
+                return toolInfo;
+            }
 
             if (tool.Length > 3)
             {
@@ -76,7 +91,7 @@ public class InfoUI : MonoBehaviour
                 toolInfo.text = tool[1];
                 toolInfo.usage = tool[3];
                 toolInfo.imageUrl = tool[2];
-                //Debug.Log(tool[0]);
+                Debug.Log(toolInfo.imageUrl);
                 return toolInfo;
             }
             else
@@ -87,7 +102,6 @@ public class InfoUI : MonoBehaviour
 
 
         }
-    }
 
     public ToolInfo[] getJson(string toolInfoPath) // Get the JSON data from the file
     {
@@ -101,12 +115,15 @@ public class InfoUI : MonoBehaviour
         int i = 0;
         foreach (string s in splitStrings)
         {
-            i++;
+            
             /*Debug.Log(s); */
-            ToolInfo toolInfo = ToolInfo.getToolInfo(s);
+            ToolInfo toolInfo = getToolInfo(s);
+            
             if (toolInfo != null)
             {
-                toolInfoList[i - 1] = toolInfo; // Add the toolInfo to the toolInfoList array
+                
+                toolInfoList[i] = toolInfo; // Add the toolInfo to the toolInfoList array
+                i++;
             }
         }
 
@@ -127,7 +144,7 @@ public class InfoUI : MonoBehaviour
         ToolInfo[] toolInfoList = getJson(toolInfoPath);
         item = transform.parent.gameObject.transform; // get the parent transform of the UI element
         camera = Camera.main.transform; // get the camera transform
-
+        
         transform.position = new Vector3(item.position.x + 1f, 2.0f, item.position.z);
         // Get the name of the parent object
         
@@ -136,28 +153,33 @@ public class InfoUI : MonoBehaviour
 
         foreach (ToolInfo toolInfo in toolInfoList) // Loop through the toolInfoList array to find the toolInfo with the matching title
         {
-        
+            //Debug.Log(toolInfo.title);
          try {
             if (toolInfo.title != null && parentObjectName == toolInfo.title)
             {
                 title.text = toolInfo.title;
                 text.text = toolInfo.text;
-                toolImage.sprite = Resources.Load<Sprite>(toolInfo.imageUrl);
+                Debug.Log(toolInfo.imageUrl);
+                bunke = Resources.Load<Sprite>(toolInfo.imageUrl);
+                toolImage.sprite = bunke;
                 usage.text = toolInfo.usage;
                 break;
             }
             else {
-                title.text = "test title";
-                text.text = "test text";
-                usage.text = "test usage";
-                toolImage.sprite = Resources.Load<Sprite>("Pictures/Bunke");
+                title.text = "test titleuhuhuh";
+                text.text = "test textuhuhuh";
+                usage.text = "test usageuhuhuh";
+                bunke = Resources.Load<Sprite>("Sprites/Bunke"); // Load the sprite from the Resources folder 
+                toolImage.sprite = bunke ; 
             }
          } catch (System.Exception e) {
              Debug.Log(e);
               title.text = "test title";
                 text.text = "test text";
                 usage.text = "test usage";
-                toolImage.sprite = Resources.Load<Sprite>("Pictures/Bunke");
+                toolImage.sprite = Resources.Load<Sprite>("Sprites/Bunke");
+
+               
             
         }
        
@@ -169,12 +191,13 @@ public class InfoUI : MonoBehaviour
     {
         if (!isGrabbed && item != null)
         {
-            
-            Vector3 direction = camera.position - transform.position;
-            Quaternion rotation = Quaternion.LookRotation(direction);
-            canvas.rotation = rotation;
-            transform.position = new Vector3(item.position.x, 3, item.position.z);
-        
+       
+        Vector3 cameraPosition = camera.position;
+        float radius = 1.5f;
+        float speed = 0f;
+
+        transform.position = new Vector3(cameraPosition.x + radius * Mathf.Sin(Time.time * speed), transform.position.y, cameraPosition.z + radius * Mathf.Cos(Time.time * speed));
+        transform.LookAt(transform.position + transform.position - cameraPosition);
         }
     }
 
