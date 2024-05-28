@@ -190,7 +190,7 @@ public class TaskManager : MonoBehaviour
             }
             else
             {
-                task_display.text = "Uppgift: " + info.display_name + "\nSteg: " + info.task_step_prefabs[0].name;
+                task_display.text = "Uppgift:\n" + info.display_name + "\nSteg:\n" + info.task_step_prefabs[0].name;
 
             }
         }
