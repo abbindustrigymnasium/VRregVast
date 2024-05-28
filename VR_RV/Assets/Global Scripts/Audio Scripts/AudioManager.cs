@@ -38,12 +38,17 @@ public class Audio : MonoBehaviour
 
     {
 
-        volume_slider.onValueChanged.AddListener(Set_Level);
-
-        if (PlayerPrefs.HasKey("music_volume"))
+        if (volume_slider)
         {
-            volume_slider.value = (float)Math.Pow(10, PlayerPrefs.GetFloat("music_volume") / 20);
+            volume_slider.onValueChanged.AddListener(Set_Level);
+
+            if (PlayerPrefs.HasKey("music_volume"))
+            {
+                volume_slider.value = (float)Math.Pow(10, PlayerPrefs.GetFloat("music_volume") / 20);
+            }
         }
+
+
     }
     //Here we go through each sound in the array and check if we should play it.
     void Update()
@@ -85,6 +90,20 @@ public class Audio : MonoBehaviour
             Debug.LogWarning("Sound: " + soundName + " not found");
         }
     }
+    public void EndSound(string soundName)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == soundName);
+        if (s != null)
+        {
+            s.source.Stop();
+            s.play_sound = false;
+        }
+        else
+        {
+            Debug.LogWarning("Sound: " + soundName + " not found");
+        }
+    }
+
 
     public void Set_Level(float slider_value)
     {
