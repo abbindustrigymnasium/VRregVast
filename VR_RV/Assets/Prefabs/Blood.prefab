@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7700984993948082868}
   - component: {fileID: 131131486866251275}
   - component: {fileID: 7849461558926969496}
-  - component: {fileID: 1605775428873482426}
+  - component: {fileID: 4275512642305730648}
   m_Layer: 7
   m_Name: Blood
   m_TagString: Untagged
@@ -30,9 +30,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 828630099179770728}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.8027818, y: 1.87, z: -4.45}
-  m_LocalScale: {x: 0.73837, y: 0.73837, z: 0.73837}
+  m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 4910cd334fab36e479c8c561d8a28156, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92e7f6e7d706d1e46bb5c303ed229299, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttractionRange: 3
+  AttractionRange: 0.2
   AttractionStrength: 5
   AttractedTo:
     serializedVersion: 2
@@ -179,7 +179,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!135 &1605775428873482426
+--- !u!135 &4275512642305730648
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,4 +199,4 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.5
-  m_Center: {x: 0, y: 0.00000023841858, z: 0}
+  m_Center: {x: 0, y: 0, z: 0}
