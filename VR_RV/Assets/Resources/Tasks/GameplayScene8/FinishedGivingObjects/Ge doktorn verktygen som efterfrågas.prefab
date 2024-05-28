@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 179553288976110973}
   - component: {fileID: 1613995617929470146}
   m_Layer: 0
-  m_Name: FinishedGivingObj_Step
+  m_Name: "Ge doktorn verktygen som efterfr\xE5gas"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
