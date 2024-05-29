@@ -20290,7 +20290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   items: 0
-  correct_items: 0
+  correct_items: 30
 --- !u!4 &1894193031
 Transform:
   m_ObjectHideFlags: 0

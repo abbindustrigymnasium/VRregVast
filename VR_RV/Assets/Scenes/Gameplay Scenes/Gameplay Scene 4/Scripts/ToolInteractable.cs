@@ -12,6 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.XR.Interaction.Toolkit;
 
 [System.Serializable]
 public class ToolInteractableEvent : UnityEvent<GameObject>
@@ -19,6 +20,7 @@ public class ToolInteractableEvent : UnityEvent<GameObject>
   
 }
 
+[RequireComponent(typeof(Rigidbody))]
 public class ToolInteractable : MonoBehaviour
 {
   [SerializeField]
@@ -40,6 +42,8 @@ public class ToolInteractable : MonoBehaviour
   private Vector3 linear_velocity;
   private Vector3 angular_velocity;
 
+  private XRGrabInteractable grab_interactable;
+
   void Awake()
   {
     this_rigidbody = GetComponent<Rigidbody>();
@@ -47,6 +51,14 @@ public class ToolInteractable : MonoBehaviour
     selectEntered.AddListener(On_Select_Entered);
 
     selectExited.AddListener(On_Select_Exited);
+
+
+    grab_interactable = GetComponent<XRGrabInteractable>();
+
+    if(grab_interactable)
+    {
+      // grab_interactable.selectEntered.AddListener(On_Grab_Select_Exited);
+    }
   }
 
   void Start()
@@ -75,17 +87,30 @@ public class ToolInteractable : MonoBehaviour
     tool_object?.GetComponent<ToolInteractor>()?.selectExited.Invoke(this.gameObject);
 
     //
-    this_rigidbody.useGravity = false;
+    // this_rigidbody.useGravity = false;
 
-    if(this_rigidbody)
-    {
-      this_rigidbody.velocity = Vector3.zero;
-      
-      this_rigidbody.angularVelocity = Vector3.zero;
-    }
+    this_rigidbody.velocity = Vector3.zero;
+    
+    this_rigidbody.angularVelocity = Vector3.zero;
 
     // 3. Update the tool to be the new tool
     tool_object = new_object;
+  }
+
+  /*
+   *
+   */
+  private void On_Grab_Select_Exited(SelectEnterEventArgs args)
+  {
+    // 2. Give object the same exiting velocity as the tool attach point
+    // this_rigidbody.useGravity = true;
+
+    this_rigidbody.velocity = Vector3.ClampMagnitude(linear_velocity, max_linear_velocity);
+    
+    this_rigidbody.angularVelocity = Vector3.ClampMagnitude(angular_velocity, max_angular_velocity);
+
+    // 3. Set the tool to be null
+    tool_object = null;
   }
 
   /*
@@ -97,14 +122,11 @@ public class ToolInteractable : MonoBehaviour
     tool_object?.GetComponent<ToolInteractor>()?.selectExited.Invoke(this.gameObject);
 
     // 2. Give object the same exiting velocity as the tool attach point
-    this_rigidbody.useGravity = true;
+    // this_rigidbody.useGravity = true;
 
-    if(this_rigidbody)
-    {
-      this_rigidbody.velocity = Vector3.ClampMagnitude(linear_velocity, max_linear_velocity);
-      
-      this_rigidbody.angularVelocity = Vector3.ClampMagnitude(angular_velocity, max_angular_velocity);
-    }
+    this_rigidbody.velocity = Vector3.ClampMagnitude(linear_velocity, max_linear_velocity);
+    
+    this_rigidbody.angularVelocity = Vector3.ClampMagnitude(angular_velocity, max_angular_velocity);
 
     // 3. Set the tool to be null
     tool_object = null;
