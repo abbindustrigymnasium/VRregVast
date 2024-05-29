@@ -53,14 +53,14 @@ public class GiveItems : MonoBehaviour
     {
         if (ParentOfItems.childCount == 0)
         {
-            TextBox.text = "Quickly! Vacuum the Blood";
+            TextBox.text = "Använd dammsugaren för att suga upp blodet!";
             truth = true;
             GameObject.Find("Task Manager").GetComponentInChildren<FinishedGivingObjectsScript>().Done();
         }
         else
         {
             Child = ParentOfItems.GetChild(0).gameObject;
-            TextBox.text = "Give me " + Child.name;
+            TextBox.text = "Ge mig " + Child.name;
             audioManager = FindObjectOfType<Audio>();
             if (audioManager != null)
             {
