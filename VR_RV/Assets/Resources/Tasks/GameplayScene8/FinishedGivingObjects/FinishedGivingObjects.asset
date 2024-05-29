@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FinishedGivingObjects
   m_EditorClassIdentifier: 
   <id>k__BackingField: FinishedGivingObjects
-  display_name: Ge verktyg till doktorn
+  display_name: "F\xF6lj doktorns instruktioner"
   prerequisites: []
   task_step_prefabs:
   - {fileID: 2526504986107335452, guid: 77061ca059da7f245a4a3ca3cc9d9932, type: 3}

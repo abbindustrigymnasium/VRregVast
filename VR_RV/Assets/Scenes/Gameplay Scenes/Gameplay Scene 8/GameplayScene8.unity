@@ -1317,12 +1317,12 @@ PrefabInstance:
     - target: {fileID: 4331443978362466514, guid: acdc5f182ce14a5479272329a84f259e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 4331443978362466514, guid: acdc5f182ce14a5479272329a84f259e,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4331443978362466514, guid: acdc5f182ce14a5479272329a84f259e,
         type: 3}
@@ -1332,7 +1332,7 @@ PrefabInstance:
     - target: {fileID: 4331443978362466514, guid: acdc5f182ce14a5479272329a84f259e,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4331443978362466514, guid: acdc5f182ce14a5479272329a84f259e,
         type: 3}
@@ -1342,12 +1342,12 @@ PrefabInstance:
     - target: {fileID: 4331443978362466514, guid: acdc5f182ce14a5479272329a84f259e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 4331443978362466514, guid: acdc5f182ce14a5479272329a84f259e,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1.209
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 4331443978362466514, guid: acdc5f182ce14a5479272329a84f259e,
         type: 3}
@@ -1357,7 +1357,7 @@ PrefabInstance:
     - target: {fileID: 4331443978362466514, guid: acdc5f182ce14a5479272329a84f259e,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 4331443978362466514, guid: acdc5f182ce14a5479272329a84f259e,
         type: 3}
@@ -1368,6 +1368,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Task Display Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925549171579827906, guid: acdc5f182ce14a5479272329a84f259e,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925549171579827906, guid: acdc5f182ce14a5479272329a84f259e,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 72
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
