@@ -13,6 +13,8 @@ using System.Collections.Generic;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine;
 
+[RequireComponent(typeof(XRGrabInteractable))]
+[RequireComponent(typeof(ToolInteractor))]
 public class ToolOutlineCreator : MonoBehaviour
 {
    // This is the type of outline you want to give all nerby objects
@@ -35,12 +37,9 @@ public class ToolOutlineCreator : MonoBehaviour
 
     grab_interactable = GetComponent<XRGrabInteractable>();
 
-    if(grab_interactable)
-    {
-      grab_interactable.selectEntered.AddListener(On_Select_Enter);
+    grab_interactable.selectEntered.AddListener(On_Select_Enter);
 
-      grab_interactable.selectExited.AddListener(On_Select_Exit);
-    }
+    grab_interactable.selectExited.AddListener(On_Select_Exit);
   }
 
   /*
@@ -48,12 +47,9 @@ public class ToolOutlineCreator : MonoBehaviour
    */
   void onDestroy()
   {
-    if(grab_interactable)
-    {
-      grab_interactable.selectEntered.RemoveListener(On_Select_Enter);
+    grab_interactable.selectEntered.RemoveListener(On_Select_Enter);
 
-      grab_interactable.selectExited.RemoveListener(On_Select_Exit);
-    }
+    grab_interactable.selectExited.RemoveListener(On_Select_Exit);
   }
 
   /*
