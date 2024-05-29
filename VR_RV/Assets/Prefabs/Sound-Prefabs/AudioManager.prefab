@@ -131,10 +131,10 @@ MonoBehaviour:
     source: {fileID: 0}
   - play_sound: 0
     name: Sug(30s)
-    clip: {fileID: 8300000, guid: 1a75ad64c6699c54c82bb5489d6b43ad, type: 3}
+    clip: {fileID: 8300000, guid: 8ce350b4d9bb65047b4fedee769f37a9, type: 3}
     volume: 2
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
   - play_sound: 0
     name: BlotBomull
@@ -146,6 +146,76 @@ MonoBehaviour:
   - play_sound: 0
     name: "T\xE5ng(st\xE4nga)"
     clip: {fileID: 8300000, guid: 20f67c5657b7a4443a8558385557354b, type: 3}
+    volume: 2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - play_sound: 0
+    name: DissektorDubbelFin
+    clip: {fileID: 8300000, guid: b05fe5e863e400d43bf2ac3d52aa9588, type: 3}
+    volume: 2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - play_sound: 0
+    name: DissektorDubbelGrov
+    clip: {fileID: 8300000, guid: 655d9681bb6867042aa3745a3729edf9, type: 3}
+    volume: 2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - play_sound: 0
+    name: Elevatorium
+    clip: {fileID: 8300000, guid: 9d8b7b0428957d043a22d98d7cc4db7f, type: 3}
+    volume: 2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - play_sound: 0
+    name: HakeNerv
+    clip: {fileID: 8300000, guid: 10e24406f9b7b11488212938657c7396, type: 3}
+    volume: 2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - play_sound: 0
+    name: HakeVolkmannSkarp4Kloig
+    clip: {fileID: 8300000, guid: 165e263158a901d488b80a7db940f07f, type: 3}
+    volume: 2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - play_sound: 0
+    name: pincett_anatomisk_mcindoe
+    clip: {fileID: 8300000, guid: b87a7af93bf27ba4b990dad15da73f3f, type: 3}
+    volume: 2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - play_sound: 0
+    name: PincettDuraOlivercrona15cm
+    clip: {fileID: 8300000, guid: 6e263e6c89864f7489f154925f485c27, type: 3}
+    volume: 2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - play_sound: 0
+    name: PincettDuraOlivercrona20cm
+    clip: {fileID: 8300000, guid: b9c3b9fe1c56f904c976746806f34025, type: 3}
+    volume: 2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - play_sound: 0
+    name: RaspatoriumOlivercronaBojd
+    clip: {fileID: 8300000, guid: c8da953227b07fa4583f2ad8d291e8a9, type: 3}
+    volume: 2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - play_sound: 0
+    name: Sond
+    clip: {fileID: 8300000, guid: 919c7c1dfd16e9845afb211d3963fd89, type: 3}
     volume: 2
     pitch: 1
     loop: 0
