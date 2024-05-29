@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be1109711b9cb5641b3df1264324017d, type: 3}
-  m_Name: FinishedGivingObjects
+  m_Name: MoveBlock
   m_EditorClassIdentifier: 
-  <id>k__BackingField: FinishedGivingObjects
-  display_name: Finished-Giving-Objects
+  <id>k__BackingField: MoveBlock
+  display_name: "Flytta r\xE4tblocket"
   prerequisites: []
   task_step_prefabs:
-  - {fileID: 2526504986107335452, guid: 77061ca059da7f245a4a3ca3cc9d9932, type: 3}
-  exp_gain: 0
+  - {fileID: 1732076502053842209, guid: 97372a403c22b804196d9e42c62cbdca, type: 3}
+  - {fileID: 1732076502053842209, guid: f356eff692e52554bad76499a68f8e99, type: 3}
+  - {fileID: 1732076502053842209, guid: 4247b253f0784834d9255b6041d433c2, type: 3}
+  exp_gain: 121

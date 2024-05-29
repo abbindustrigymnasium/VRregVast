@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SortItems
   m_EditorClassIdentifier: 
   <id>k__BackingField: SortItems
-  display_name: Sort Items
+  display_name: Sortera verktyg
   prerequisites: []
   task_step_prefabs:
   - {fileID: 3440139976266170352, guid: 4b7fbf993c6959d479e40a4bf2bb0ce7, type: 3}

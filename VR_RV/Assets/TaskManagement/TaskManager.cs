@@ -85,7 +85,7 @@ public class TaskManager : MonoBehaviour
         task.Instantiate_Current_Task_Step(this.transform);
         Change_Task_State(task.info.id, TaskState.IN_PROGRESS);
 
-        Display(task.info);
+        StartCoroutine(Display(task.info));
     }
 
     private void Advance_Task(string id)
@@ -102,7 +102,7 @@ public class TaskManager : MonoBehaviour
             Change_Task_State(task.info.id, TaskState.CAN_FINISH);
         }
 
-        Display(task.info);
+        StartCoroutine(Display(task.info));
     }
 
     private void Finish_Task(string id)
@@ -117,19 +117,20 @@ public class TaskManager : MonoBehaviour
         if (total_tasks == 0)
         {
             StartCoroutine(EndScene());
-            Display(null, true, true);
+            StartCoroutine(Display(null, true, true));
         }
         else
         {
-            Display(null, true);
+            StartCoroutine(Display(null, true));
         }
     }
 
     IEnumerator EndScene()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(10);
 
         Debug.Log("Switching scene! (in theory...)");
+        VRregVast.StandardLibrary.SceneManagement.New_Scene();
     }
 
     private void Claim_Rewards(Task task)
@@ -177,8 +178,10 @@ public class TaskManager : MonoBehaviour
         return task;
     }
 
-    private void Display(TaskInfoSO info, bool completed = false, bool all_completed = false)
+    IEnumerator Display(TaskInfoSO info, bool completed = false, bool all_completed = false)
     {
+        yield return new WaitForSeconds(0.1f);
+
         if (completed)
         {
             task_display.text = "Alla uppgifter i denna scen är färdiga!\nDu skickas till nästa scen om 10 sekunder";
@@ -191,9 +194,19 @@ public class TaskManager : MonoBehaviour
             }
             else
             {
-                task_display.text = "Uppgift:\n" + info.display_name + "\nSteg:\n" + info.task_step_prefabs[0].name;
+                task_display.text = "Uppgift:\n" + info.display_name + "\n\nSteg:\n" + Get_Active_Step_Name();
 
             }
         }
+    }
+
+    private string Get_Active_Step_Name()
+    {
+        foreach (Transform child in gameObject.transform)
+        {
+            return child.name.Substring(0, child.name.Length - 7);
+        }
+
+        return "Inga steg kvar!";
     }
 }
