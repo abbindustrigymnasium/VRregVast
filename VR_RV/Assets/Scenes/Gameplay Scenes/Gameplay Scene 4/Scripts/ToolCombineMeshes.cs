@@ -37,6 +37,8 @@ public class ToolCombineMeshes : MonoBehaviour
 
     mesh_collider = GetComponent<MeshCollider>();
 
+    UpdateMesh();
+
     StartCoroutine(ExampleCoroutine());
   }
 
@@ -51,10 +53,12 @@ public class ToolCombineMeshes : MonoBehaviour
   {
     List<MeshFilter> mesh_filters = new List<MeshFilter>();
 
-    mesh_filters.AddRange(tool_activation.main_object.GetComponentsInChildren<MeshFilter>());
+    if(tool_activation?.main_object && tool_activation?.move_object)
+    {
+      mesh_filters.AddRange(tool_activation.main_object.GetComponentsInChildren<MeshFilter>());
 
-    mesh_filters.AddRange(tool_activation.move_object.GetComponentsInChildren<MeshFilter>());
-
+      mesh_filters.AddRange(tool_activation.move_object.GetComponentsInChildren<MeshFilter>());
+    }
     
     List<CombineInstance> combine_list = new List<CombineInstance>();
 

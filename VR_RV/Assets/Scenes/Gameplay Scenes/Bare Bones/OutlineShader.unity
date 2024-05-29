@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 914178}
   - component: {fileID: 914177}
   - component: {fileID: 914180}
+  - component: {fileID: 914181}
   m_Layer: 0
   m_Name: Left Controller
   m_TagString: Untagged
@@ -526,6 +527,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outline_material: {fileID: 2100000, guid: 8eb237b7d95b33b458e3d31c0eb9b01b, type: 2}
+--- !u!114 &914181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba40ef00806f55d4ebdc84827be5de81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger_reference: {fileID: -4289430672226363583, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
 --- !u!1 &148634438
 GameObject:
   m_ObjectHideFlags: 0
@@ -858,13 +873,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 834891112}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20, y: 0, z: 725}
+  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
+  m_LocalPosition: {x: 19.99988, y: 0, z: 725.00006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2023503554}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
 --- !u!1 &913343527
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,6 +978,7 @@ GameObject:
   - component: {fileID: 916680817}
   - component: {fileID: 916680816}
   - component: {fileID: 916680822}
+  - component: {fileID: 916680823}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -1171,7 +1187,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -1248,6 +1264,26 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &916680823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916680814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bb01e2a644ff35448baa660aa0bb284, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  max_linear_velocity: 5
+  max_angular_velocity: 5
+  selectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  selectExited:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1066389514
 GameObject:
   m_ObjectHideFlags: 0
@@ -1292,6 +1328,7 @@ GameObject:
   - component: {fileID: 1192694554}
   - component: {fileID: 1192694553}
   - component: {fileID: 1192694556}
+  - component: {fileID: 1192694557}
   m_Layer: 0
   m_Name: Right Controller
   m_TagString: Untagged
@@ -1682,6 +1719,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   outline_material: {fileID: 2100000, guid: 8eb237b7d95b33b458e3d31c0eb9b01b, type: 2}
+--- !u!114 &1192694557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1192694551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba40ef00806f55d4ebdc84827be5de81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trigger_reference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f,
+    type: 3}
 --- !u!1 &1207048707
 GameObject:
   m_ObjectHideFlags: 0
@@ -1877,7 +1928,8 @@ GameObject:
   - component: {fileID: 1465836520}
   - component: {fileID: 1465836519}
   - component: {fileID: 1465836524}
-  m_Layer: 0
+  - component: {fileID: 1465836525}
+  m_Layer: 8
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2161,6 +2213,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e2e0a31572c0c44d90120e1655ce3b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1465836525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1465836517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bb01e2a644ff35448baa660aa0bb284, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  max_linear_velocity: 5
+  max_angular_velocity: 5
+  selectEntered:
+    m_PersistentCalls:
+      m_Calls: []
+  selectExited:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1660570922
 GameObject:
   m_ObjectHideFlags: 0
@@ -3095,7 +3167,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1

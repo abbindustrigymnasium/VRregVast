@@ -83,10 +83,7 @@ public class ToolActivation : MonoBehaviour
 
     ToolCombineMeshes tool_combine_meshes = GetComponent<ToolCombineMeshes>();
 
-    if(tool_combine_meshes)
-    {
-      tool_combine_meshes.UpdateMesh();
-    }
+    if(tool_combine_meshes) tool_combine_meshes.UpdateMesh();
   }
 
   void Update()
