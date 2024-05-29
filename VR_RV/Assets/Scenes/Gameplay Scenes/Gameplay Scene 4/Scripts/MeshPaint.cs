@@ -66,6 +66,7 @@ public class MeshPaint : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
+        Debug.Log("COLLIDED");
         if(!collision.gameObject.CompareTag("Rag")) return;
 
         // Create a new array based on the amount of contacts
@@ -82,8 +83,8 @@ public class MeshPaint : MonoBehaviour
             used_points[i/2] = current_contact;
 
             // Add the x and y position in pixels 
-            contact_points_in_pixels.Add((current_contact.point.x + transform.localScale.x / 2) * pixel_width);
-            contact_points_in_pixels.Add((current_contact.point.y + transform.localScale.y / 2) * pixel_height);
+            contact_points_in_pixels.Add((current_contact.point.x - transform.localPosition.x + transform.localScale.x / 2) * pixel_width);
+            contact_points_in_pixels.Add((current_contact.point.y - transform.localPosition.y + transform.localScale.y / 2) * pixel_height);
         }
 
         // Create arrays of the x and y values in pixels
@@ -99,18 +100,6 @@ public class MeshPaint : MonoBehaviour
         int y_starting_value = (int)y_values_in_pixels.Min();
         int max_width_in_pixels = (int)x_values_in_pixels.Max() - x_starting_value;
         int max_height_in_pixels = (int)y_values_in_pixels.Max() - y_starting_value;
-        
-        
-        // Printing x and y coordinates
-        /*string x_ps = "X: ";
-        string y_ps = "Y: ";
-        for (int i = 0; i < x_values_in_pixels.Length; i++) 
-        {
-            x_ps = x_ps + "[" + x_values_in_pixels[i] + "], ";
-            y_ps = y_ps + "[" + y_values_in_pixels[i] + "], ";
-        }
-        Debug.Log(x_ps + "\n" + y_ps);*/
-
 
         // Set all the pixels within the width of the rag to black, starting in the bottom left
         for (int i = 0; i < max_width_in_pixels; i++)

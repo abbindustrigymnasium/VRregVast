@@ -2,10 +2,14 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+using System.Collections;
 
 public class TaskManager : MonoBehaviour
 {
     private Dictionary<string, Task> task_map;
+    private int total_tasks = 0;
+    private TMP_Text task_display;
 
     private void Awake()
     {
@@ -27,6 +31,8 @@ public class TaskManager : MonoBehaviour
 
     private void Start()
     {
+        task_display = GameObject.FindWithTag("Task Display").GetComponent<TMP_Text>();
+
         foreach (var task in task_map.Values)
         {
             EventsManager.instance.task_events.Task_State_Change(task);
@@ -79,7 +85,7 @@ public class TaskManager : MonoBehaviour
         task.Instantiate_Current_Task_Step(this.transform);
         Change_Task_State(task.info.id, TaskState.IN_PROGRESS);
 
-        Debug.Log("Task " + id + " has been started!");
+        StartCoroutine(Display(task.info));
     }
 
     private void Advance_Task(string id)
@@ -96,8 +102,7 @@ public class TaskManager : MonoBehaviour
             Change_Task_State(task.info.id, TaskState.CAN_FINISH);
         }
 
-        Debug.Log("Task " + id + " has been advanced!");
-
+        StartCoroutine(Display(task.info));
     }
 
     private void Finish_Task(string id)
@@ -107,8 +112,25 @@ public class TaskManager : MonoBehaviour
 
         Change_Task_State(task.info.id, TaskState.FINISHED);
 
-        Debug.Log("Task " + id + " has been finished!");
+        total_tasks -= 1;
 
+        if (total_tasks == 0)
+        {
+            StartCoroutine(EndScene());
+            StartCoroutine(Display(null, true, true));
+        }
+        else
+        {
+            StartCoroutine(Display(null, true));
+        }
+    }
+
+    IEnumerator EndScene()
+    {
+        yield return new WaitForSeconds(10);
+
+        Debug.Log("Switching scene! (in theory...)");
+        VRregVast.StandardLibrary.SceneManagement.New_Scene();
     }
 
     private void Claim_Rewards(Task task)
@@ -127,10 +149,13 @@ public class TaskManager : MonoBehaviour
     {
         TaskInfoSO[] all_tasks = Resources.LoadAll<TaskInfoSO>("Tasks/" + SceneManager.GetActiveScene().name);
 
+        total_tasks = all_tasks.Length;
+
         Dictionary<string, Task> id_to_task_map = new Dictionary<string, Task>();
 
         foreach (TaskInfoSO task_info in all_tasks)
         {
+            Debug.Log("Task: " + task_info.display_name);
             if (id_to_task_map.ContainsKey(task_info.id))
             {
                 Debug.LogWarning("Duplicate id found when creating task map");
@@ -151,5 +176,37 @@ public class TaskManager : MonoBehaviour
         }
 
         return task;
+    }
+
+    IEnumerator Display(TaskInfoSO info, bool completed = false, bool all_completed = false)
+    {
+        yield return new WaitForSeconds(0.1f);
+
+        if (completed)
+        {
+            task_display.text = "Alla uppgifter i denna scen är färdiga!\nDu skickas till nästa scen om 10 sekunder";
+        }
+        else
+        {
+            if (completed)
+            {
+                task_display.text = "";
+            }
+            else
+            {
+                task_display.text = "Uppgift:\n" + info.display_name + "\n\nSteg:\n" + Get_Active_Step_Name();
+
+            }
+        }
+    }
+
+    private string Get_Active_Step_Name()
+    {
+        foreach (Transform child in gameObject.transform)
+        {
+            return child.name.Substring(0, child.name.Length - 7);
+        }
+
+        return "Inga steg kvar!";
     }
 }

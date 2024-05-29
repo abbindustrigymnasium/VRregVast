@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Other Scenes/Menu Scene/MenuScene.unity
     guid: eff0d6b258b9d1847a67dcfa626ad67b
   - enabled: 0
-    path: Assets/Scenes/Gameplay Scenes/Gameplay Scene 1/GamplayScene1.unity
+    path: Assets/Scenes/Gameplay Scenes/Gameplay Scene 1/GameplayScene1.unity
     guid: 6970da3b2b39f4643a409c5bfae14af2
   - enabled: 0
     path: Assets/Scenes/Gameplay Scenes/Bare Bones/Grabbing.unity
