@@ -5,7 +5,9 @@ using UnityEngine;
 public class ItemTaskManager : MonoBehaviour
 {
     [SerializeField] private int items;
-    [SerializeField] private int correct_items;
+
+    // Temp val for demo
+    [SerializeField] private int correct_items = 30;
 
     public void Add_Item()
     {
