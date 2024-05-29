@@ -19,6 +19,7 @@ public class ToolInteractorEvent : UnityEvent<GameObject>
   
 }
 
+[RequireComponent(typeof(ToolActivation))]
 public class ToolInteractor : MonoBehaviour
 {
   // The position and rotation of the attachment point for picked up objects
@@ -136,14 +137,23 @@ public class ToolInteractor : MonoBehaviour
     {
       if(select_ability && !select_object)
       {
-        closest_object?.GetComponent<ToolInteractable>()?.selectEntered.Invoke(this.gameObject);
+        if(closest_object)
+        {
+          ToolInteractable interactable = closest_object.GetComponent<ToolInteractable>();
+
+          if(interactable) interactable.selectEntered.Invoke(this.gameObject);
+        }
 
         select_ability = false;
       }
     }
     else
     {
-      select_object?.GetComponent<ToolInteractable>()?.selectExited.Invoke(this.gameObject);
+      if(select_object)
+      {
+        ToolInteractable interactable = select_object.GetComponent<ToolInteractable>();
+        if(interactable) interactable.selectExited.Invoke(this.gameObject);
+      }
 
       select_ability = true;
     }

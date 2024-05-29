@@ -6,9 +6,6 @@ public class FinishedGivingObjectsScript : TaskStep
 {
     public void Done()
     {
-        Finish_Step();
-
-
         Transform headTransform = GameObject.Find("Room/Patient/Head")?.transform;
 
         if (headTransform != null)
@@ -21,6 +18,7 @@ public class FinishedGivingObjectsScript : TaskStep
             Debug.LogError("Head GameObject not found.");
         }
 
+        Finish_Step();
     }
 
     protected override void Set_Task_Step_State(string state)

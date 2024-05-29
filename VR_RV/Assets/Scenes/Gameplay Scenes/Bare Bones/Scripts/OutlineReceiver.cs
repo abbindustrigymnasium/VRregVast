@@ -3,7 +3,7 @@
  *
  * Written by Hampus Fridholm
  *
- * 2024-04-23
+ * 2024-05-28
  */
 
 using System.Collections;
@@ -11,9 +11,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
+[RequireComponent(typeof(MeshFilter))]
 public class OutlineReceiver : MonoBehaviour
 {
   private GameObject outline_object;
+
+  private MeshFilter mesh_filter;
 
   /*
    * Create an outline object for the hands to add outlines to
@@ -25,8 +28,7 @@ public class OutlineReceiver : MonoBehaviour
     outline_object.transform.SetParent(transform, false);
 
     // Copy the MeshFilter from the original object
-    MeshFilter mesh_filter = outline_object.AddComponent<MeshFilter>();
-    mesh_filter.sharedMesh = GetComponent<MeshFilter>().sharedMesh;
+    mesh_filter = outline_object.AddComponent<MeshFilter>();
 
     // Add a MeshRenderer and apply the outline material
     MeshRenderer outline_renderer = outline_object.AddComponent<MeshRenderer>();
@@ -36,11 +38,8 @@ public class OutlineReceiver : MonoBehaviour
     outline_object.SetActive(false);
   }
 
-  /*
-   * Destroy the created outline object
-   */
-  void onDestroy()
+  void Update()
   {
-    // Add code here if you want :D
+    mesh_filter.sharedMesh = GetComponent<MeshFilter>().sharedMesh;
   }
 }

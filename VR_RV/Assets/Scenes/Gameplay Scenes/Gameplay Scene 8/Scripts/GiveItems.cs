@@ -8,6 +8,7 @@ using TMPro;
 
 public class GiveItems : MonoBehaviour
 {
+    private Audio audioManager;
     // The parent that contains all the Items the doctor will be asking for
     public Transform ParentOfItems;
     // Used to change to the next item
@@ -52,14 +53,20 @@ public class GiveItems : MonoBehaviour
     {
         if (ParentOfItems.childCount == 0)
         {
-            TextBox.text = "Quickly! Vacuum the Blood";
+            TextBox.text = "Använd dammsugaren för att suga upp blodet!";
             truth = true;
             GameObject.Find("Task Manager").GetComponentInChildren<FinishedGivingObjectsScript>().Done();
         }
         else
         {
             Child = ParentOfItems.GetChild(0).gameObject;
-            TextBox.text = "Give me " + Child.name;
+            TextBox.text = "Ge mig " + Child.name;
+            audioManager = FindObjectOfType<Audio>();
+            if (audioManager != null)
+            {
+                //In "Monkey" you write the name the sound was given in the AudioManager array
+                audioManager.TriggerSound(Child.name);
+            }
         }
     }
 

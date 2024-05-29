@@ -78,6 +78,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c430e907a2c0ee4d932f62ebd3dc861, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activation: 0
+  lerpTypeTime: 1
   cycleTime: 0.15
   reset: 1
   HasBaseChild: 0
