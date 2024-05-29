@@ -1804,10 +1804,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 8886661471057714921}
   m_HandleRect: {fileID: 6850799031818418864}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 0.0001
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

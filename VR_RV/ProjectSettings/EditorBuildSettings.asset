@@ -47,13 +47,13 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Gameplay Scenes/Gameplay Scene 4/PeangPickup.unity
     guid: 4d9fe3416a6113549ad61eb3390efd39
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Gameplay Scenes/Gameplay Scene 4/GameplayScene4.unity
     guid: f51dfa85e1e75f642afcdac643398b76
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Gameplay Scenes/Gameplay Scene 8/GameplayScene8.unity
     guid: 6996cd1ea7411ef40ad43bf20915b3f6
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Gameplay Scenes/Bare Bones/StarterScene.unity
     guid: 923efce5c547e6a45b4d4496a463f475
   - enabled: 1
