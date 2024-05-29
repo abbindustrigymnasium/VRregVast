@@ -17,4 +17,5 @@ MonoBehaviour:
   prerequisites: []
   task_step_prefabs:
   - {fileID: 2526504986107335452, guid: 77061ca059da7f245a4a3ca3cc9d9932, type: 3}
+  - {fileID: 2526504986107335452, guid: 5f542dc61d86cf2458458731f7325b62, type: 3}
   exp_gain: 0
