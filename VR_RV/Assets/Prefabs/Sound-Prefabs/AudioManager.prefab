@@ -66,3 +66,90 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - play_sound: 0
+    name: Bakgrund
+    clip: {fileID: 8300000, guid: 6ff9c7912ea0aa74a85b3b6f0939d6ea, type: 3}
+    volume: 2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - play_sound: 0
+    name: BakgrundSug
+    clip: {fileID: 8300000, guid: 4eb9855619fa6cd479937614ddf1c3bb, type: 3}
+    volume: 2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - play_sound: 0
+    name: "Bipol\xE4rDiatemi"
+    clip: {fileID: 8300000, guid: a728cc33eb2ffed47852676c05bd5347, type: 3}
+    volume: 2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - play_sound: 0
+    name: "Borr(L\xE5ngsam)"
+    clip: {fileID: 8300000, guid: 5029886473c98b8428428f44fc582aed, type: 3}
+    volume: 2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - play_sound: 0
+    name: Borr(snabb)
+    clip: {fileID: 8300000, guid: da83133d0fa765b4c89269d9b684e4ee, type: 3}
+    volume: 2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - play_sound: 0
+    name: Borr(medel)
+    clip: {fileID: 8300000, guid: 1247d0ddc3f375e43a1be5eb66dd1bcf, type: 3}
+    volume: 2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - play_sound: 0
+    name: Borr(medel)2
+    clip: {fileID: 8300000, guid: cb2936397590fba4cb57826097af8794, type: 3}
+    volume: 2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - play_sound: 0
+    name: "Monopol\xE4rCut(gul)"
+    clip: {fileID: 8300000, guid: ae3fe33f352ecf54288d4a898a81df9f, type: 3}
+    volume: 2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - play_sound: 0
+    name: "Monopol\xE4rBurn(bl\xE5)"
+    clip: {fileID: 8300000, guid: 53da290f250e4064983a58de673ca5d9, type: 3}
+    volume: 2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - play_sound: 0
+    name: Sug(30s)
+    clip: {fileID: 8300000, guid: 1a75ad64c6699c54c82bb5489d6b43ad, type: 3}
+    volume: 2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - play_sound: 0
+    name: BlotBomull
+    clip: {fileID: 8300000, guid: b3f9072338aae1b4c8d80ce06594d15e, type: 3}
+    volume: 2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - play_sound: 0
+    name: "T\xE5ng(st\xE4nga)"
+    clip: {fileID: 8300000, guid: 20f67c5657b7a4443a8558385557354b, type: 3}
+    volume: 2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  audio_mixer_group: {fileID: 24300002, guid: 57d59eecf7eeb4f0cacbaa8aea15c304, type: 2}
+  audio_mixer: {fileID: 24100000, guid: 57d59eecf7eeb4f0cacbaa8aea15c304, type: 2}
+  volume_slider: {fileID: 0}

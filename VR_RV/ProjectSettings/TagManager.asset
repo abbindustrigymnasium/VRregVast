@@ -8,6 +8,7 @@ TagManager:
   - Rag
   - Interactable
   - Vacuum
+  - Task Display
   layers:
   - Default
   - TransparentFX
@@ -21,8 +22,6 @@ TagManager:
   - 
   - Drill1
   - Drill2
-  - 
-  - 
   - 
   - 
   - 
