@@ -194,7 +194,7 @@ public class TaskManager : MonoBehaviour
             }
             else
             {
-                task_display.text = "Uppgift:\n" + info.display_name + "\nSteg:\n" + Get_Active_Step_Name();
+                task_display.text = "Uppgift:\n" + info.display_name + "\n\nSteg:\n" + Get_Active_Step_Name();
 
             }
         }
